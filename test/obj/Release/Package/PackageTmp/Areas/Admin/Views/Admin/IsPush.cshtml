@@ -1,0 +1,251 @@
+﻿@model test.Models.ProductDetailModel
+
+@{
+    Layout = "~/Views/Shared/_DetailViewLayout.cshtml";
+    ViewBag.Title = Html.DisplayNameFor(m => m.Title);
+}
+
+<div class="container body-content" style="max-width:50%;">
+
+    <div id="wrapper" style="width:100%">
+        <div id="header">
+            <div id="logo"><a href="~/home/test" onmouseout="MM_swapImgRestore()" onmouseover="    MM_swapImage('Image79', '', '/images/logo-text2.png', 1)"><img src="~/images/logo-text.png" name="Image79" width="120" height="27" border="0" id="Image79" /></a></div>
+            <div id="functionBlock">
+                <ul id="navgation">
+
+                    <li>
+                        <label>
+                            <a href="~/home/Products">
+                                <span class="glyphicon glyphicon-home"></span>首頁
+                            </a>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <a href="~/home/Section">
+                                <span class="glyphicon glyphicon-chevron-right"></span>商品情報
+                            </a>
+                        </label>
+                    </li>
+                </ul>
+                <ul style="float:right">
+                    @if (HttpContext.Current.Request.Cookies["UIC"] == null)
+                    {
+                        <li>
+                            <label>
+                                <a href="javascript:window.open('/home/FurnitureDecorate','','menubar=no,status=yes,scrollbars=yes,top=10,left=100,toolbar=no,width=1630,height=930')" target="_blank" class="open3Durl" onmouseout="    MM_swapImgRestore()" onmouseover="    MM_swapImage('Image89', '', '/images/housemaker_2.png', 1)"><img src="~/images/housemaker.png" width="20px" style="margin-top:-8px" id="Image89" />3D虛擬擺設</a>
+                            </label>
+                            <label>
+                                <a href="javascript:void(0)" onclick="openlogin();">
+                                    <span class="glyphicon glyphicon-log-in"></span>
+                                    登入
+                                </a>
+                            </label>
+                            <label>
+                                <a href="~/home/regist"><span class="glyphicon glyphicon-edit"></span>註冊</a>
+                            </label>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <label style="font-size:16px;">
+                                Hi!
+                            </label>
+                            <label style="font-size:16px;margin-top:1px;">
+                                <a href="~/home/MemberSection" style="color:#0094ff;" onmouseover="$(this).css('color', '#FF0000')" onmouseout="$(this).css('color', '#0094ff')">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    @HttpUtility.UrlDecode(HttpContext.Current.Request.Cookies["UIC"]["MyName"])
+                                </a>
+                            </label>
+                            @if (HttpContext.Current.Request.Cookies["UIC"]["Role"] == "ADMIN")
+                            {
+                                <label>
+                                    <a href="~/admin/admin/ProductIndex"><span class="glyphicon glyphicon-edit"></span>後台管理</a>
+                                </label>
+                            }
+                            <label>
+                                <a href="~/home/ShopCart"><span class="glyphicon glyphicon-shopping-cart"></span>購物車</a>
+                            </label>
+                            <label>
+                                <a href="javascript:window.open('/home/FurnitureDecorate','','menubar=no,status=yes,scrollbars=yes,top=10,left=100,toolbar=no,width=1630,height=930')" target="_blank" class="open3Durl" onmouseout="    MM_swapImgRestore()" onmouseover="    MM_swapImage('Image89', '', '/images/housemaker_2.png', 1)"><img src="~/images/housemaker.png" width="20px" style="margin-top:-8px" id="Image89" />3D虛擬擺設</a>
+                            </label>
+                            <label>
+                                <a href="~/home/logout"><span class="glyphicon glyphicon-log-out"></span>登出</a>
+                            </label>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="container">
+
+
+
+            <link href="~/Content/blueimp-gallery.min.css" rel="stylesheet" />
+            <script src="~/JQuery/blueimp-gallery.min.js"></script>
+
+            @*<div id="indexEventBlock">*@
+
+            <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+                <div class="slides"></div>
+                <h3 class="title"></h3>
+                <a class="prev">‹</a>
+                <a class="next">›</a>
+                <a class="play-pause"></a>
+                <ol class="indicator"></ol>
+            </div>
+            <div id="links">
+                <a href="~/images/space_1.jpg" @*title="Banana"*@>
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Banana">*@
+                </a>
+                <a href="~/images/space_2.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Apple">*@
+                </a>
+                <a href="~/images/space_3.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+                <a href="~/images/space_4.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+                <a href="~/images/space_5.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+                <a href="~/images/space_6.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+                <a href="~/images/space_7.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+                <a href="~/images/space_8.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+<div class="main-content" id="notchart" style="margin:0 auto;width:50%">
+    <div class="row">
+        <div id="main-side" class="col-md-12" style="margin:0 auto;">
+            <div id="chart" class="row" style="width:100%;height:100%;float:left;">
+                <div id="main" style="width:100%;height:400px;margin-top:2%"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" style="width:100%">
+        <p class="gotop"><a href="#wrapper">↑TOP</a></p>
+        <h4>Fantasy　Copyright &copy;</h4>
+        @* <p>110台北市信義區東興路69號2F 客服專線：02-2762-8151 週一～週五9:00-12:00 13:00-18:00</p>*@
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var result;
+    var xcol;
+    var submiturl="IsPushApi";
+    var title = "各類推薦效益分析";
+    require.config({
+        paths: {
+            echarts: '../../Scripts/echart/'
+        }
+    });
+    var head = [];
+    var body = [{
+        name: '',
+        type: 'bar',
+        data: body,
+        markPoint: {
+            data: [
+                { type: 'max', name: '最大值' },
+                { type: 'min', name: '最小值' }
+            ]
+        }
+    }];
+    var option = {};
+    var echarts;
+    var total = true;
+    var income = false;
+    var final = false;
+
+    function submitdata() {
+
+        $.getJSON(submiturl, {}, function (res) {
+            result = res;
+            body = [];
+            head = ['分析推薦銷售量'];
+            xcol = res[0];
+
+
+            body.push({
+                name: '分析推薦銷售量',
+                type: 'bar',
+                data: res[1]
+            });
+
+
+            option = {
+                title: {
+                    text: title,
+                    subtext: ''
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data: head
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        mark: { show: true },
+                        dataView: { show: true, readOnly: false },
+                        magicType: { show: true, type: ['bar'] },
+                        restore: { show: true },
+                        saveAsImage: { show: true }
+                    }
+                },
+                calculable: true,
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: xcol
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value'
+                    }
+                ],
+                series: body
+            };
+            echarts.init(document.getElementById('main')).setOption(option);
+
+        });
+    }
+    require(['echarts',
+            'echarts/chart/bar'], function (ec) {
+                echarts = ec;
+                var myChart = ec.init(document.getElementById('main'));
+                submitdata();
+            });
+
+</script>

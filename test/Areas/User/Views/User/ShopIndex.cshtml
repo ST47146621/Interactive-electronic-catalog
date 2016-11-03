@@ -1,0 +1,55 @@
+﻿@model List<test.Models.ShopCart>
+@{
+    ViewBag.Title = "購物單管理";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDvzXUq7BpqMgVu960kL854aJQsH0U1Kfw&sensor=false&libraries=places"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/src/markerwithlabel.js"></script>
+}
+<style type="text/css">
+    /*google map label css*/
+    .labels {
+        color: red;
+        background-color: white;
+        font-family: "Lucida Grande", "Arial", sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        width: 40px;
+        border: 2px solid black;
+        white-space: nowrap;
+        margin-top: 5px;
+    }
+</style>
+
+<div class="col-sm-1">
+
+</div>
+<span id="Bar" hidden>1</span>
+<table class="table hover">
+    <tr><td>訂單編號</td><td>日期</td><td>狀態</td><td>總價</td><td>折扣</td><td></td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-sm-1">@item.ShopId</td>
+            <td class="col-sm-2">@item.Date</td>
+            <td class="col-sm-1">@item.Status</td>
+            <td class="col-sm-1">@item.Price</td>
+            <td class="col-sm-1">@item.Payment</td>
+            <td class="col-sm-2">
+                @*@Html.ActionLink("詳細資料", "ShopDetail", "User", new { ShopId = item.ShopId, area = "User" }, new { @data_toggle = "modal", @data_target = "#itemModal" })*@
+                @*/
+                    @Html.ActionLink("刪除", "ShopDelete", "User", new { ShopId = item.ShopId, area = "User" }, new { })
+                    /*@
+                @Html.ActionLink("運送路徑", "ShopLocation", "User", new { ShopId = item.ShopId, @area = "User" }, new { @data_toggle = "modal", @data_target = "#itemModal" })
+            </td>
+        </tr>
+    }
+</table>
+<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>

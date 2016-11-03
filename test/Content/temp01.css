@@ -1,0 +1,750 @@
+﻿@charset "utf-8";
+@import"global.css";
+@import"menu.css";
+@import"relatedLinks.css";
+/* 首頁用CSS */
+/* 右上活動banner區 */
+.newProdBlock{
+   width:680px;padding:15px;margin:0 auto
+}
+
+#indexEventBlock {
+	float: left;
+	margin-bottom: 5px;
+}
+#indexEventBlock ul {
+	width: 690px;
+	overflow: hidden;
+}
+#indexEventBlock li {
+	float: left;
+	margin: 0 0 4px 7px;
+	margin: 0 0 8px 7px\9;
+	.margin: 0 0 5px 7px;
+}
+#indexEventBlock li.first {
+	margin: 0;
+}
+#indexEventBlock li img {
+	border: solid 1px #fff;
+}
+#indexEventBlock li a {
+	/*display: block;*/
+}
+#indexEventBlock li a:hover {
+	zoom: 1;
+}
+#indexEventBlock li a:hover img, #indexEventBlock li a:active img {
+	border: solid 1px #7f0019;
+}
+#indexEventBlock p {
+	text-align: right;
+	margin-top: -3px;
+	.margin-top: 5px;
+	_margin-top: -3px;
+}
+/* 內容區 */
+#content {
+	width: 690px;
+	float: left;
+	overflow: hidden;
+}
+.conData {
+	width: 690px;
+	float: left;
+}
+/* 單元標題字 */
+.titleItem {
+	/*margin: 0 0 28px 0;*/
+	margin: 0;
+	padding-bottom: 5px;
+	width: 100%;
+	border-bottom: solid 1px #666;
+}
+.titleNobordItem {
+	margin: 0 0 15px 0;
+	padding-bottom: 25px;
+	width: 100%;
+}
+.titlebBigItem {
+	margin: 0 0 15px 0;
+	padding-bottom: 25px;
+	width: 100%;
+	border-bottom: dotted 1px #666;
+}
+/* 本月新商品 */
+.newProd {
+	width: 520px;
+	height: 185px;
+	margin: 10px auto 6px;
+}
+.newProdBlock {
+	margin: 28px 0 0;
+}
+.newProdlist {
+	width: 200px;
+	height: 100px;
+	float: left;
+	overflow: hidden;
+}
+.newProdlist p.photo {
+	width: 50px;
+	margin: 0 2px 0 8px;
+	_margin: 0 0 0 3px;
+	float: left;
+}
+.newProdlist div.prod {
+	float: left;
+	width: 90px;
+	/*_width: 85px;*/
+}
+.newProdlist div.prod h3 {
+	font: 400 11px/150% Arial, 新細明體; 
+	font-size: 8pt\9;
+	.font-size: 10px;
+	margin: 6px 0 0; 
+	text-decoration: underline;
+}
+.newProdlist strong {
+	font-weight: 900;
+	font-size: 11px;
+}
+.newProdlist a {
+	cursor: pointer;
+	color: #000;
+	text-decoration: none;
+}
+.newProdlist a:hover {
+	cursor: pointer;
+	color: #7f0019;
+	text-decoration: none;
+}
+/* 最新消息 */
+.newsBlock {
+	/*width: 520px;
+	height: 116px;*/
+	width: 494px;
+	/*height: 99px;*/
+	margin: 0 0 20px;
+	padding: 17px 13px;
+	background-color: #f1f1f1;
+	font: 400 11px/160% Arial, 新細明體;
+	color: #333;
+	float: left;
+	overflow: hidden;
+}
+.newsBlock h4 {
+	font-weight: 400;
+}
+.newsBlock a {
+	color: #333;
+	text-decoration: none;
+}
+.newsBlock a.detail {
+	color: #7f0019;
+	text-decoration: underline;
+}
+.newsBlock a:hover {
+	color: #7f0019;
+}
+.newsBlock p {
+	margin: 5px 0 0;
+	font-size: 12px;
+}
+.newsBlock strong {
+	font: 700 11px/120% Arial, 新細明體;
+	color: #999;
+	margin: 0 12px 0 0;
+}
+.newsBlock select {
+	font-size: 11px;
+	vertical-align: text-bottom;
+}
+/*MIJI Life*/
+.mujiLife {
+	width: 518px;
+	height: 159px;
+	border: solid 1px #ccc;
+	margin: 0 0 20px;
+	position: relative;
+	float: left;
+}
+.mujiLife a  {
+	text-decoration: none;
+}
+.mujiLifeEvent {
+	width: 490px;
+	height: 132px;
+	margin: 15px auto 0;
+	overflow: hidden;
+}
+.mujiLifeEvent div {
+	width: 240px;
+	font: 400 12px/120% Arial, 新細明體;
+	color: #333;
+	margin-top: 55px;
+	overflow: hidden;
+	float: left;
+}
+.mujiLifeEvent a:hover {
+	cursor:pointer;
+	zoom:1;
+}
+.mujiLifeEvent a:hover p img {
+	cursor:pointer;
+	border: solid 1px #7f0019;
+}
+.mujiLifeEvent div h5 {
+	font-weight: 700;
+	line-height: 250%;
+}
+.mujiLifeEven div p  {
+	font-weight: 400;
+}
+.mujiLifeEvent a:hover h5 {
+	color:#7f0019;
+}
+.mujiLifeEvent p.banner {
+	float: right;
+	width: 235px;
+	height: 132px;
+}
+.mujiLifeEvent p.banner img {
+	border: solid 1px #fff;
+}
+.mujiLifeName {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 1;
+}
+/* MIJI New Life 2010 */
+.mujiNewLife {
+	width: 520px;
+	float: left;
+	/*height: 185px;
+	margin: 10px auto 6px;*/
+	.margin: 0 0 10px;
+	_margin: 0;
+}
+.mujiNewLife ul {
+	margin: 13px 0 10px;
+}
+.mujiNewLife li {
+	float: left;
+	margin: 0 0 13px 12px;
+}
+.mujiNewLife li.first, .allEventList li.first {
+	margin: 0;
+}
+.mujiNewLife li img, .allEventList li img {
+	border: solid 1px #ccc;
+}
+.mujiNewLife li a, .allEventList li a {
+	/*display: block;*/
+}
+.mujiNewLife li a:hover {
+	zoom: 1;
+}
+.mujiNewLife li a:hover img, .mujiNewLife li a:active img, .allEventList li a:hover img, .allEventList li a:active img {
+	border: solid 1px #7f0019;
+}
+/*首頁下方banner*/
+ul.indexMUJIlink {
+}
+ul.indexMUJIlink li {
+	float: left;
+	margin: 0 0 0 12px;
+}
+ul.indexMUJIlink li.first {
+	float: left;
+	margin: 0;
+}
+/* 分類商品介紹區塊 */
+.sortIntroduce {
+	width: 520px;
+	display: block;
+	margin: 0 0 40px;
+	overflow: hidden;
+}
+span.sortBigPhoto {
+	width: 245px;
+	height: 245px;
+	float: left;
+}
+span.sortIntrodTit {
+	width: 256px;
+	float: right;
+	margin: 0 0 10px;
+}
+span.sortIntrodTxt {
+	width: 256px;
+	float: right;
+	font: 400 12px/130% Arial, 新細明體;
+	color: #333;
+}
+/* 活動特輯一覽列表3則 */
+.allEventList {
+	width: 520px;
+	float: left;
+	margin: 0 0 20px;
+}
+.allEventList ul {
+	margin: 10px 0 6px;
+	.margin-bottom: 19px;
+	overflow: hidden;
+}
+.allEventList ul li {
+	float: left;
+	width: 164px;
+	margin: 0 0 13px 13px;
+	overflow: hidden;
+}
+.allEventList p {
+	width: 520px;
+	text-align: right;
+	border-top: solid 1px #e8e8e8;
+	padding-top: 12px;
+	font-size: 12px;
+}
+.allEventList a:link, .allEventList a:visited, .allEventList a:active {
+	color: #333;
+}
+.allEventList a:hover {
+	color: #7f0019;
+}
+.allEventList h4 {
+	width: 100%;
+	height: 39px;
+	text-align: right;
+	background-color: #f5f5f5;
+	border-bottom: solid 1px #e8e8e8;
+	font: 400 12px/39px Arial, 新細明體;
+	color: #333;
+}
+.allEventList ol {
+	margin: 8px 0 6px;
+	.margin-bottom: 19px;
+	overflow: hidden;
+}
+.allEventList ol li {
+	float: left;
+	width: 125px;
+	height: 81px;
+	padding-bottom: 8px;
+	margin: 0 0 13px 6px;
+	border-bottom: solid 1px #e8e8e8;
+	overflow: hidden;
+}
+.allEventList ol img {
+	border: 0;
+}
+.allEventList ol a:hover img, .allEventList ol a:active img {
+	border: 0;
+}
+/* 商品分類 */
+ul.sortIntroduceLink {
+	width: 520px;
+	border-bottom: dotted 1px #666;
+	margin-top: -5px;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+ul.sortIntroduceLink li {
+	background: url(../images/iconRedArrow.gif) no-repeat 5px 5px;
+	padding-left: 15px;
+	font: 400 12px/17px Arial, 新細明體;
+	color: #333;
+}
+ul.sortIntroduceLink li.titIcon {
+	background: none;
+	float: left;
+}
+ul.sortIntroduceLink li.titTxt {
+	background: none;
+	float: left;
+}
+ul.sortIntroduceLink a:link, ul.sortIntroduceLink a:visited, ul.sortIntroduceLink a:active {
+	color: #333;
+}
+ul.sortIntroduceLink a:hover {
+	color: #7f0019;
+}
+/* 商品列表 */
+.prodListBlock {
+	border-top: solid 1px #666;
+	border-bottom: solid 1px #666;
+	width: 100%;
+	overflow: hidden;
+}
+.prodListBlock h3 {
+	font-weight: 400;
+	text-align: right;
+	height: 32px;
+	_height: 27px;
+	background-color: #f6f6f6;
+	padding-right: 11px;
+	line-height: 32px;
+	_padding-top: 5px;
+	overflow: hidden;
+}
+.prodListBlock h3 input {
+	vertical-align: middle;
+	.vertical-align: text-bottom;
+}
+ul.prodList {
+	border-top: solid 1px #e8e8e8;
+	width: 100%;
+	padding-top: 14px;
+	font: 400 12px/130% Arial, 新細明體;
+	color: #333;
+	overflow: hidden;
+}
+ul.prodList li {
+	width: 160px;
+	height: 150px;
+	margin: 0 0 0 14px;
+	float: left;
+}
+ul.prodList li.first {
+	margin: 0;
+}
+ul.prodList li a:link, ul.prodList li a:visited, ul.prodList li a:active {
+	color: #333;
+	text-decoration: none;
+}
+ul.prodList li a:hover {
+	color: #7f0019;
+}
+ul.prodList li h4 span {
+	font-size: 12px;
+	text-decoration: underline;
+	font-weight: 400;
+}
+ul.prodList li p span {
+	font-size: 15px;
+	font-weight: 700;
+}
+/* 商品介紹頁 */
+.prodDescription {
+	width: 100%;
+	.margin-bottom: 10px;
+	overflow: hidden;
+}
+.prodDescription a {
+	color: #000;
+	text-decoration: none;
+	width: 289px;
+	float: left;
+}
+.prodDescription a:hover {
+	color: #7f0019;
+	zoom: 1;
+	width: 289px;
+}
+.prodDescription p {
+	margin-bottom: 15px;
+	line-height: 30px;
+}
+.prodDescription p.photo {
+	float: left;
+	width: 289px;
+	overflow: hidden;
+}
+.prodDescription img{
+	border: solid 1px #fff;
+}
+.prodDescription a:hover img {
+	border: solid 1px #7f0019;
+}
+.prodDescription a:hover img.sphoto{
+	border: solid 1px #fff;
+	width: 13px;
+}
+.prodDescription span {
+	text-decoration: underline; 
+}
+.prodDescription ul {
+	float: right;
+	border-top: solid 1px #7f0019;
+	width: 207px;
+	background-color: #f5eedd;
+	font-size: 12px;
+	color: #000;
+}
+.prodDescription li {
+	float: right;
+	width: 195px;
+	padding: 11px 6px;
+	border-top: solid 4px #7f0019;
+}
+.prodDescription h3 {
+	font: 700 15px/20px Arial, 新細明體;
+	margin-top: 5px;
+}
+.prodDescription p.num {
+	margin-left: 5px;
+}
+.prodDescription ol {
+	padding: 2px 5px 0;
+	border: solid 1px #000;
+	width: 155px;
+	margin-left: 5px;
+	overflow: hidden;
+}
+.prodDescription ol li {
+	padding: 3px 0;
+	width: 155px;
+	border-top: dotted 1px #000;
+	
+}
+.prodDescription ol li.first {
+	border-top: 0; 
+}
+.prodDescription ol li span {
+	float: left;
+	text-decoration: none;
+	padding-right:10px;
+}
+.prodDescription ol li strong {
+	font-size: 15px;
+	line-height: 100%;
+	font-weight: 700;
+}
+
+/* 商品注意事項小字 */
+ul.prodDetailNote {
+	border-top: solid 1px #e8e8e8;
+	border-bottom: solid 1px #e8e8e8;
+	margin: 00px 0 42px;
+	padding: 8px 0;
+	width: 100%;
+	font-size: 12px;
+	overflow: hidden;
+}
+ul.prodDetailNote li {
+	overflow: hidden;
+}
+ul.prodDetailNote li.another {
+	border-top: solid 2px #e8e8e8;
+	margin-top: 8px;
+	padding-top: 8px;
+}
+ul.prodDetailNote img {
+	float: left;
+	margin: 5px 5px 0 0;
+	margin: 0 5px 0 0\9;
+}
+ul.prodDetailNote span {
+	float: left;
+	width: 455px;
+	margin: 0 5px;
+}
+ul.prodDetailNote ol {
+	float: left;
+	width: 455px;
+	margin: 0 0 0 5px;
+}
+ul.prodDetailNote ol li {
+	background: url(../images/iconRec.gif) no-repeat 0 4px;
+	padding-left: 6px;
+}
+ul.prodDetailNote ol li span.tit {
+	width: 110px;
+	margin-right: 10px;
+	float: left;
+}
+ul.prodDetailNote ol li span.con {
+	width: 320px;
+	margin: 0;
+	float: left;
+}
+/* 商品介紹表格資料 */
+.prodDetailBlock {
+	width: 520px;
+	margin: 0 0 30px;
+	overflow: hidden;
+	clear: both;
+}
+/* 搜尋表單 */
+table.searchform {
+	margin: 27px 0 10px 0;
+	border: solid 1px #ccc;
+	border-collapse: collapse;
+	font-size: 12px;
+}
+table.searchform th {
+	background-color: #f3f3f3;
+	padding: 15px 10px;
+	border-bottom: solid 1px #ccc;
+	border-right: dotted 1px #e7e7e7;
+	font-weight: 400;
+}
+table.searchform td {
+	padding: 10px 7px;
+	border-bottom: solid 1px #ccc;
+	border-right: dotted 1px #e7e7e7;
+}
+table.searchform p {
+	margin: 0 0 4px;
+}
+table.searchform input {
+	font-size: 12px;
+}
+p.btn {
+	width: 100%;
+	text-align: right;
+	margin-bottom: 5px;
+}
+/* 活動特輯一覽內容 */
+.campaignListCon {
+	width: 690px;
+	float: left;
+	margin: 0;
+	color: #4c4c4c;
+}
+.campaignListCon .titleItem{
+	padding-bottom: 24px;
+	margin-bottom: 16px;
+	border-bottom:dotted 1px #bbb;
+}
+.campaignListCon p {
+	font: 400 12px/16px Arial, 新細明體;
+}
+.campaignListModule li img{
+	border: solid 1px #ccc;
+}
+/*活動特輯共用模組*/
+.campaignListModule{
+	width: 690px;
+	float: left;
+}
+.campaignListModule .titleItem{
+	padding-bottom: 8px;
+	margin-bottom: 15px;
+	border-bottom:1px solid #666;
+}
+.campaignListModule .titleItem2{
+	padding-bottom: 8px;
+	margin-bottom: 15px;
+	border-bottom:none;
+}
+.campaignListModule li a{
+	display: block;
+}
+.campaignListModule li a:hover {
+	zoom: 1;
+}
+.campaignListModule li a:hover img, .campaignListModule li a:active img, .campaignListModule li a:hover img, .campaignListModule li a:active img {
+	border: solid 1px #7f0019;
+}
+/*頁籤模組*/
+.campaignListLabelCon{
+	width: 690px;
+	margin: 36px 0 25px 0;
+	margin: 36px 0 25px 0\9;
+	.margin: 36px 0 25px 0;
+	_margin: 0px 0 25px 0;
+	float: left;	
+}
+.campaignListLabelCon li a:hover img, .campaignListLabelCon li a:active img, .campaignListLabelCon li a:hover img, .campaignListLabelCon li a:active img {
+	border:none;
+}
+.campaignListLabelCon li img{
+	border:none;
+}
+ul.campaignListLabel {
+	border-bottom:solid 1px #666;
+	width: 690px; height: 26px;
+	overflow:hidden;
+	float: left;
+}
+ul.campaignListLabel li{
+	float: left;
+}
+/*banner340模組*/
+ul.campaignListM340{
+	float: left;
+	border-bottom: 1px solid #e8e8e8;
+	padding-bottom: 17px;
+	margin-bottom: 14px;
+	margin-bottom:14px\9;
+	.margin-bottom: 14px;
+	_margin-bottom: 0;
+}
+ul.campaignListM340 img{
+	margin-bottom: 7px;
+}
+ul.campaignListM340 li{
+	float: left;
+	width: 338px;
+	margin: 0 0 0 10px;
+	margin: 0 0 0 10px\9;
+	.margin: 0 0 0 12px;
+	_margin: 0 0 0 10px;
+}
+ul.campaignListM340 li span{
+	color: #7f0019;	
+}
+/*banner224模組*/
+ul.campaignListM224{
+	float: left;
+	_margin: 14px 0 18px;
+}
+ul.campaignListM224 li{
+	float: left;
+	width: 224px;
+	margin: 0 0 20px 9px;
+	_margin: 0 0 0 9px;
+	_padding-bottom: 20px;
+}
+.campaignListM340 li.first, .campaignListM224 li.first {
+	margin: 0;
+}
+/*活動特輯內頁*/
+.campaignListConArea{
+	padding-top:31px;
+}
+/* 最新消息列表 */
+ul.newsList {
+	border-bottom: solid 1px #666;
+	padding-bottom: 23px;
+	font: 400 12px/28px Arial, 新細明體;
+	color: #333;
+}
+ul.newsList li {
+}
+ul.newsList li a:link, ul.newsList li a:visited, ul.newsList li a:active {
+	color: #333;
+}
+ul.newsList li a:hover {
+	color: #7f0019;
+}
+ul.newsList span.date {
+	color: #838383;
+	margin: 0 16px 0 0;
+}
+/* 最新消息內容 */
+.newsContent {
+	width: 100%;
+	font: 400 12px/20px Arial, 新細明體;
+	color: #4c4c4c;
+}
+.newsContent p {
+	margin: 15px 0;
+}
+.newsContent p.date {
+	text-align: right;
+	border-bottom: solid 2px #7f0019;
+	color: #333;
+	margin: 0;
+}
+.newsContent h2 {
+	text-align: center;
+	font-size: 15px;
+	font-weight: 700;
+	color: #333;
+	margin: 13px 0 7px;
+	padding-bottom: 13px;
+	border-bottom: dotted 1px #ccc;
+}

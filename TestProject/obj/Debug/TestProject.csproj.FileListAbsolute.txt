@@ -1,0 +1,20 @@
+C:\Users\user\Desktop\test\TestProject\bin\Debug\TestProject.dll
+C:\Users\user\Desktop\test\TestProject\bin\Debug\TestProject.pdb
+C:\Users\user\Desktop\test\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\test\TestProject\obj\Debug\TestProject.dll
+C:\Users\user\Desktop\test\TestProject\obj\Debug\TestProject.pdb
+C:\Users\ericlinAAA\Desktop\test\TestProject\bin\Debug\TestProject.dll
+C:\Users\ericlinAAA\Desktop\test\TestProject\bin\Debug\TestProject.pdb
+C:\Users\ericlinAAA\Desktop\test\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
+C:\Users\ericlinAAA\Desktop\test\TestProject\obj\Debug\TestProject.dll
+C:\Users\ericlinAAA\Desktop\test\TestProject\obj\Debug\TestProject.pdb
+C:\Users\ericlinAAA\Desktop\test - eip\TestProject\bin\Debug\TestProject.dll
+C:\Users\ericlinAAA\Desktop\test - eip\TestProject\bin\Debug\TestProject.pdb
+C:\Users\ericlinAAA\Desktop\test - eip\TestProject\obj\Debug\TestProject.dll
+C:\Users\ericlinAAA\Desktop\test - eip\TestProject\obj\Debug\TestProject.pdb
+C:\Users\ericlinAAA\Desktop\test - eip\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
+C:\Users\ericlinAAA\Desktop\test - 複製\TestProject\bin\Debug\TestProject.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\TestProject\bin\Debug\TestProject.pdb
+C:\Users\ericlinAAA\Desktop\test - 複製\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
+C:\Users\ericlinAAA\Desktop\test - 複製\TestProject\obj\Debug\TestProject.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\TestProject\obj\Debug\TestProject.pdb

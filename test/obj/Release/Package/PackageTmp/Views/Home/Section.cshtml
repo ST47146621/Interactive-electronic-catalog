@@ -1,0 +1,391 @@
+﻿@*@model IPagedList<test.Models.SectionModel>*@
+@{
+    var category = ViewBag.Category;
+    var id = ViewBag.Id;
+    var tree = ViewBag.Tree;
+    var name = ViewBag.Name;
+    var newproduct = ViewBag.NewProduct;
+}
+
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+
+<body onload="MM_preloadImages('/images/nav01On.gif','/images/nav02On.gif','/images/nav04On.gif','/images/btnBlock_SubscribeOn.gif','/images/btnBlock_NoSubscribeOn.gif','/images/subnav01On.gif','/images/subnav02On.gif','/images/subnav03On.gif','/images/subnav04On.gif','/images/subnav05On.gif','/images/subnav06On.gif')">
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['aspnetForm'];
+        if (!theForm) {
+            theForm = document.aspnetForm;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+    </script>
+
+
+    <script language="Javascript">
+        function SubbtnEmail(btnid) {
+            if (window.event.keyCode == 13) {
+                var bn = document.getElementById(btnid) //eval(btnid);
+                bn.click();
+            }
+        }
+    </script>
+    @*   <script type='text/javascript'>function CheckValueEpaper(){var errMsg='';if(document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.length == 0) errMsg += '請輸入E-Mail！\n';if((document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.indexOf('.') == -1 || document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.indexOf('@') == -1 || document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.length < 10 || !(document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.indexOf('+') == -1) || !(document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.indexOf('/') == -1) || !(document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.indexOf('*') == -1)) && (!document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.length == 0)) errMsg += 'E-Mail輸入錯誤！\n';if(errMsg.length > 0) {alert(errMsg);  document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').focus(); return false;} else {return true;}}</script>*@
+    <script type='text/javascript'>
+function CheckSearch() {
+    var errMsg = '';
+    if (document.getElementById('ctl00_ContentPlaceHolder1_ProductSearchControl1_txtKeyWord').value.length == 0) errMsg += '請輸入關鍵字！\n';
+    if (document.getElementById('ctl00_ContentPlaceHolder1_ProductSearchControl1_txtKeyWord').value == '請輸入關鍵字') errMsg += '請輸入關鍵字！\n';
+    if (errMsg.length > 0) { alert(errMsg); document.getElementById('ctl00_ContentPlaceHolder1_ProductSearchControl1_txtKeyWord').focus(); return false; } else {
+        var name = document.getElementById('ctl00_ContentPlaceHolder1_ProductSearchControl1_txtKeyWord').value;
+        $.ajax({
+            url: 'SectionPartial',
+            data: { page: 1, id: '@id', name: name, newproduct: '@newproduct' },
+            type: "Get",
+
+            success: function (res) {
+                $("#grid").html(res);
+                menu_ok('@id', name, '@newproduct');
+            },
+
+            error: function (xhr, ajaxOptions, thrownError) {
+
+            }
+        });
+    }
+}</script>
+    <script type="text/javascript">
+        //<![CDATA[
+        function WebForm_OnSubmit() {
+            if (typeof (ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+            return true;
+        }
+        function showsearch() {
+            $("#searchfield").show();
+        }
+        function searchfield() {
+            var name = $("#searchname").val();
+            if (name == "") {
+                if ("@name" != null && "@name" != "") {
+                    name = "@name";
+                    //alert("I have a name: " + name);
+                }
+            }
+            var pstart = 0;//parseInt($("#pstart").val())
+            var pend = 0;//parseInt($("#pend").val())
+            if ($("#pend").val() == "") {//結束價格沒輸入
+                if ($("#pstart").val() == "") {
+                    //都沒輸入 不查詢價錢範圍
+                    MySearchFunc(name, pstart, pend);
+                } else {
+                    //有輸入起始價格 但沒輸入結束價錢 無法判定範圍
+                    alert("尚未輸入結束價格!");
+                }
+            } else {//結束價格有輸入
+                if ($("#pstart").val() == "") {
+                    //沒輸入起始價格 自動設為0
+                    $("#pstart").val("0");
+                    var pstart = parseInt($("#pstart").val());
+                    var pend = parseInt($("#pend").val());
+                    MySearchFunc(name, pstart, pend);
+                } else {//都有輸入 正常判斷
+                    var pstart = parseInt($("#pstart").val());
+                    var pend = parseInt($("#pend").val());
+                    if (!isNaN(pstart)) {
+                        if (parseInt(pstart) < 0) {
+                            alert("輸入不得為負!");
+                        } else {
+                            if (!isNaN(pend)) {
+                                if (parseInt(pend) < 0) {
+                                    alert("輸入不得為負!");
+                                } else {
+                                    if (pstart > pend) {
+                                        alert("價錢範圍錯誤!");
+                                    } else {
+                                        MySearchFunc(name, pstart, pend, '@newproduct');
+                                    }
+                                }
+                            } else {
+                                alert("價格請輸入數值型態!");
+                            }
+                        }
+                    } else {
+                        alert("價格請輸入數值型態!");
+                    }
+                }
+            }
+        }
+        function MySearchFunc(name, pstart, pend) {
+            $.ajax({
+                url: 'SectionPartial',
+                data: { page: 1, id: '@id', name: name, pstart: pstart, pend: pend, newproduct: '@newproduct' },
+                type: "Get",
+                success: function (res) {
+                    $("#grid").html(res);
+                    //PageGod('@id',name);12312
+                    menu_ok('@id', name, '@newproduct');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+
+                }
+            });
+        }
+        //]]>
+    </script>
+
+    <div>
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', document.getElementById('aspnetForm'));
+        Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$EpaperMailControl1$upEpaper'], ['ctl00$EpaperMailControl1$btnOrderEpaper', 'ctl00$EpaperMailControl1$btnCancelEpaper'], [], 90);
+        //]]>
+    </script>
+
+    <div id="wrapper">
+        <div id="header">
+            <div id="logo"><a href="~/home/test" onmouseout="MM_swapImgRestore()" onmouseover="    MM_swapImage('Image79', '', '/images/logo-text2.png', 1)"><img src="~/images/logo-text.png" name="Image79" width="120" height="27" border="0" id="Image79" /></a></div>
+            <div id="functionBlock">
+                <ul id="navgation">
+
+                    <li>
+                        <label>
+                            <a href="~/home/Products">
+                                <span class="glyphicon glyphicon-home"></span>首頁
+                            </a>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <a href="~/home/Section">
+                                <span class="glyphicon glyphicon-chevron-right"></span>商品情報
+                            </a>
+                        </label>
+                    </li>
+                </ul>
+                <ul style="float:right">
+                    @if (HttpContext.Current.Request.Cookies["UIC"] == null)
+                    {
+                        <li>
+                            <label>
+                                <a href="javascript:window.open('/home/FurnitureDecorate','','menubar=no,status=yes,scrollbars=yes,top=10,left=100,toolbar=no,width=1630,height=930')" target="_blank" class="open3Durl" onmouseout="    MM_swapImgRestore()" onmouseover="    MM_swapImage('Image89', '', '/images/housemaker_2.png', 1)"><img src="~/images/housemaker.png" width="20px" style="margin-top:-8px" id="Image89" />3D虛擬擺設</a>
+                            </label>
+                            <label>
+                                <a href="javascript:void(0)" onclick="openlogin();">
+                                    <span class="glyphicon glyphicon-log-in"></span>
+                                    登入
+                                </a>
+                            </label>
+                            <label>
+                                <a href="~/home/regist"><span class="glyphicon glyphicon-edit"></span>註冊</a>
+                            </label>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <label style="font-size:16px;">
+                                Hi!
+                            </label>
+                            <label style="font-size:16px;margin-top:1px;">
+                                <a href="~/home/MemberSection" style="color:#0094ff;" onmouseover="$(this).css('color', '#FF0000')" onmouseout="$(this).css('color', '#0094ff')">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    @HttpUtility.UrlDecode(HttpContext.Current.Request.Cookies["UIC"]["MyName"])
+                                </a>
+                            </label>
+                            @if (HttpContext.Current.Request.Cookies["UIC"]["Role"] == "ADMIN")
+                            {
+                                <label>
+                                    <a href="~/admin/admin/ProductIndex"><span class="glyphicon glyphicon-edit"></span>後台管理</a>
+                                </label>
+                            }
+                            <label>
+                                <a href="~/home/ShopCart"><span class="glyphicon glyphicon-shopping-cart"></span>購物車</a>
+                            </label>
+                            <label>
+                                <a href="javascript:window.open('/home/FurnitureDecorate','','menubar=no,status=yes,scrollbars=yes,top=10,left=100,toolbar=no,width=1630,height=930')" target="_blank" class="open3Durl" onmouseout="    MM_swapImgRestore()" onmouseover="    MM_swapImage('Image89', '', '/images/housemaker_2.png', 1)"><img src="~/images/housemaker.png" width="20px" style="margin-top:-8px" id="Image89" />3D虛擬擺設</a>
+                            </label>
+                            <label>
+                                <a href="~/home/logout"><span class="glyphicon glyphicon-log-out"></span>登出</a>
+                            </label>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div id="container">
+            <div id="menu">
+
+                <div id="searchBlock">
+                    <h4><a href="#" onclick="showsearch();">進階搜尋</a></h4>
+                    <p>
+                        <input name="ctl00$ContentPlaceHolder1$ProductSearchControl1$txtKeyWord" type="text" value="請輸入關鍵字" maxlength="20" id="ctl00_ContentPlaceHolder1_ProductSearchControl1_txtKeyWord" class="txt" onclick="this.value=''" style="width:100px;" />
+                        <input type="image" name="ctl00$ContentPlaceHolder1$ProductSearchControl1$btnSearch" id="ctl00_ContentPlaceHolder1_ProductSearchControl1_btnSearch" border="0" src="~/images/btnBlock_search.gif" alt="搜尋" onclick="javascript:return CheckSearch();" style="border-width:0px;" />
+                    </p>
+                </div>
+                <ul id="eventBlock">
+                    <li class="first">
+                        <label>
+                            <a href="~/home/products#ctl00_ContentPlaceHolder1_imgProduct"><img src="~/images/special.gif"><span style="font-size:14px;">活動特輯一覽</span></a>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <a href="/home/section?newproduct=true"><img src="~/images/new.gif"><span style="font-size:14px;">新商品一覽</span></a>
+                        </label>
+                    </li>
+                </ul>
+
+                <div id="categories">
+                    <label style="font-size:15px;">商品分類</label>
+                    <ul id="sortBlock">
+                        <li>
+                            <label><a href="~/home/section" style="font-size:14px;">傢俱</a></label>
+                            <ul>
+                                @foreach (var item in tree)
+                                {
+                                    <li>
+                                        <label>
+                                            <a href="~/home/section?Id=@item.Id"><span class="glyphicon glyphicon-chevron-right" style="font-size:5px;"></span><span style="font-size:14px;">@item.Name</span></a>
+                                        </label>
+                                    </li>
+                                }
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="content">
+                <div id="path"><label><a href="~/home/Products">首頁</a></label>&nbsp;＞&nbsp;<h1><label>@ViewBag.Category</label></h1></div>
+                @if (ViewBag.Search == null)
+                {
+                    <div id="searchfield" hidden>
+                        <label>
+                            商品名稱　<input type="text" class="mysearch" id="searchname" />　商品價格　自　<input type="text" class="mysearch" id="pstart" />　至　<input type="text" class="mysearch" id="pend" />
+                            　<button onclick="searchfield();"><b>搜尋</b></button>
+                        </label>
+                    </div>
+                }
+                else
+                {
+                    <div id="searchfield">
+                        <label>
+                            商品名稱　<input type="text" class="mysearch" id="searchname" />　商品價格　自　<input type="text" class="mysearch" id="pstart" />　至　<input type="text" class="mysearch" id="pend" />
+                            　<button onclick="searchfield();"><b>搜尋</b></button>
+                        </label>
+                    </div>
+                }
+
+                <div class="conData">
+                    <div class="titlebBigItem">
+                        <label style="font-size:25pt;">@ViewBag.Category</label><label style='color:#999;font-size:16pt' id="titleSearch"></label>
+                    </div>
+                    <div id="grid">
+                        @{Html.RenderAction("SectionPartial", new { Id = id });}
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            </strong>
+
+            <div id="footer">
+                <p class="gotop"><a href="#wrapper">↑TOP</a></p>
+                <h4>AReal Shop　Copyright &copy;</h4>
+                @* <p>110台北市信義區東興路69號2F 客服專線：02-2762-8151 週一～週五9:00-12:00 13:00-18:00</p>*@
+            </div>
+        </div>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-4782704-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+        <script type="text/javascript">_satellite.pageBottom();</script>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var Page_ValidationSummaries = new Array(document.getElementById("ctl00_EpaperMailControl1_vsPageError"));
+            var Page_Validators = new Array(document.getElementById("ctl00_EpaperMailControl1_rfvEMail"), document.getElementById("ctl00_EpaperMailControl1_revEMail"));
+            //]]>
+        </script>
+
+
+
+
+        <script type="text/javascript">
+            //<![CDATA[
+
+            document.getElementById('ctl00_EpaperMailControl1_vsPageError').dispose = function () {
+                Array.remove(Page_ValidationSummaries, document.getElementById('ctl00_EpaperMailControl1_vsPageError'));
+            }
+
+            var Page_ValidationActive = false;
+            if (typeof (ValidatorOnLoad) == "function") {
+                ValidatorOnLoad();
+            }
+
+            function ValidatorOnSubmit() {
+                if (Page_ValidationActive) {
+                    return ValidatorCommonOnSubmit();
+                }
+                else {
+                    return true;
+                }
+            }
+            Sys.Application.initialize();
+
+            document.getElementById('ctl00_EpaperMailControl1_rfvEMail').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ctl00_EpaperMailControl1_rfvEMail'));
+            }
+
+            document.getElementById('ctl00_EpaperMailControl1_revEMail').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ctl00_EpaperMailControl1_revEMail'));
+            }
+            //]]>
+        </script>
+        </form>
+
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 984262664;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <script src="~/JQuery/menu.js"></script>
+        <link href="~/Content/menuitem.css" rel="stylesheet" type="text/css">
+        <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        </div>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/984262664/?value=0&amp;guid=ON&amp;script=0" />
+            </div>
+        </noscript>
+</body>
+
+
+<style>
+    .mysearch {
+        width: 100px; /*height:18px;*/
+    }
+</style>

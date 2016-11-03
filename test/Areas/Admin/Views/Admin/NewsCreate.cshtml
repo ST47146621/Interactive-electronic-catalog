@@ -1,0 +1,59 @@
+﻿@model test.Models.NewsModel
+@{
+    List<SelectListItem> select = new List<SelectListItem>(){
+                   new SelectListItem(){Value="false",Text="否"},
+                   new SelectListItem(){Value="true",Text="是"}
+               };
+}
+@Styles.Render("~/Content/bootstrap")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/modernizr")
+<div class="modal-dialog" style="width:700px">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">新增最新消息</h4>
+        </div>
+        <div class="modal-body">
+            @using (Html.BeginForm("NewsCreate", "Admin", new { @area = "Admin" }, FormMethod.Post, new { @class = "form-horizontal", @id = "form", @enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Title, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-3">
+                        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Title, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Text, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextAreaFor(m => m.Text, new { @class = "form-control", @rows = "6" })
+                        @Html.ValidationMessageFor(m => m.Text, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+
+            }
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary" id="sendcreate">送出</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".god-label").removeAttr("text-align");
+        $(".god-label").attr("margin-left", "5px");
+        $("#sendcreate").click(function () {
+            $("#form").submit();
+        });
+        $(".btn-default").click(function () {
+            $("#itemModal").modal("hide");
+            $('#itemModal').one('hidden.bs.modal', function (e) {
+                $(this).removeData('bs.modal');
+            });
+        });
+    });
+</script>

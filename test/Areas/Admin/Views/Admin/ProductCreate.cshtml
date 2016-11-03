@@ -1,0 +1,157 @@
+﻿@model test.Models.ProductModel
+@{
+    List<SelectListItem> select = new List<SelectListItem>(){
+                   new SelectListItem(){Value="false",Text="否"},
+                   new SelectListItem(){Value="true",Text="是"}
+               };
+    List<SelectListItem> onshelf = new List<SelectListItem>(){
+                   new SelectListItem(){Value="true",Text="上架中"},
+                   new SelectListItem(){Value="false",Text="下架"}
+               };
+}
+@Styles.Render("~/Content/bootstrap")
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/modernizr")
+<div class="modal-dialog" style="width:700px">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">新增商品</h4>
+        </div>
+        <div class="modal-body">
+            @using (Html.BeginForm("ProductCreate", "Admin", new { @area = "Admin" }, FormMethod.Post, new { @class = "form-horizontal", @id = "form", @enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductId, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductId, "", new { @class = "label label-danger" })
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.LabelFor(m => m.OnShelf, new { @class = "control-label" })
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.DropDownListFor(m => m.OnShelf, onshelf, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.OnShelf, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PushHot, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-2">
+                        @Html.DropDownListFor(p => p.PushHot, select)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.LabelFor(m => m.Quantity, new { @class = "control-label god-label", })
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Quantity, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductName, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-7">
+                        @Html.TextBoxFor(m => m.ProductName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductName, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductCost, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => m.ProductCost, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductCost, "", new { @class = "label label-danger" })
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.LabelFor(m => m.ProductPrice, new { @class = "control-label god-label", })
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.TextBoxFor(m => m.ProductPrice, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductPrice, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductSpec, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextAreaFor(m => m.ProductSpec, new { @class = "form-control", @rows = "6" })
+                        @Html.ValidationMessageFor(m => m.ProductSpec, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductMemo, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextAreaFor(m => m.ProductMemo, new { @class = "form-control", @rows = "6" })
+                        @Html.ValidationMessageFor(m => m.ProductMemo, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductImgUrl1, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(m => m.ProductImgUrl1, new { @class = "form-control", @type = "file" })
+                        @Html.ValidationMessageFor(m => m.ProductImgUrl1, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductImgUrl2, new { @class = "col-sm-2 control-label" })
+
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(m => m.ProductImgUrl2, new { @class = "form-control", @type = "file" })
+                        @Html.ValidationMessageFor(m => m.ProductImgUrl2, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductImgUrl3, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(m => m.ProductImgUrl3, new { @class = "form-control", @type = "file" })
+                        @Html.ValidationMessageFor(m => m.ProductImgUrl3, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductImgUrl4, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(m => m.ProductImgUrl4, new { @class = "form-control", @type = "file" })
+                        @Html.ValidationMessageFor(m => m.ProductImgUrl4, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PColor, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @foreach (var item in Model.PColor)
+                        {
+                            <input type="checkbox" name="SetColor" value="@item.Id" />@item.Color1
+                        }
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PCategory, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @foreach (var item in Model.PCategory)
+                        {
+                            <input type="checkbox" name="SetCategory" value="@item.Id" />@item.Name
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary" id="sendcreate">送出</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".god-label").removeAttr("text-align");
+        $(".god-label").attr("margin-left", "5px");
+        $("#sendcreate").click(function () {
+            $("#form").submit();
+        });
+        $(".btn-default").click(function () {
+
+            $('#itemModal').on('hidden.bs.modal', function () {
+                $(this).removeData('bs.modal');
+            });
+        });
+    });
+</script>

@@ -1,0 +1,240 @@
+﻿@model test.Models.SaleReportModel
+
+@{
+    Layout = "~/Views/Shared/_DetailViewLayout.cshtml";
+    ViewBag.Title = Html.DisplayNameFor(m => m.Title);
+}
+<div class="container body-content" style="max-width: 92%;">
+
+    <div id="wrapper" style="width:100%">
+        <div id="header">
+            <div id="logo"><a href="~/home/test" onmouseout="MM_swapImgRestore()" onmouseover="    MM_swapImage('Image79', '', '/images/logo-text2.png', 1)"><img src="~/images/logo-text.png" name="Image79" width="120" height="27" border="0" id="Image79" /></a></div>
+            <div id="functionBlock">
+                <ul id="navgation">
+
+                    <li>
+                        <label>
+                            <a href="~/home/Products">
+                                <span class="glyphicon glyphicon-home"></span>首頁
+                            </a>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <a href="~/home/Section">
+                                <span class="glyphicon glyphicon-chevron-right"></span>商品情報
+                            </a>
+                        </label>
+                    </li>
+                </ul>
+                <ul style="float:right">
+                    @if (HttpContext.Current.Request.Cookies["UIC"] == null)
+                    {
+                        <li>
+                            <label>
+                                <a href="javascript:window.open('/home/FurnitureDecorate','','menubar=no,status=yes,scrollbars=yes,top=10,left=100,toolbar=no,width=1630,height=930')" target="_blank" class="open3Durl" onmouseout="    MM_swapImgRestore()" onmouseover="    MM_swapImage('Image89', '', '/images/housemaker_2.png', 1)"><img src="~/images/housemaker.png" width="20px" style="margin-top:-8px" id="Image89" />3D虛擬擺設</a>
+                            </label>
+                            <label>
+                                <a href="javascript:void(0)" onclick="openlogin();">
+                                    <span class="glyphicon glyphicon-log-in"></span>
+                                    登入
+                                </a>
+                            </label>
+                            <label>
+                                <a href="~/home/regist"><span class="glyphicon glyphicon-edit"></span>註冊</a>
+                            </label>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <label style="font-size:16px;">
+                                Hi!
+                            </label>
+                            <label style="font-size:16px;margin-top:1px;">
+                                <a href="~/home/MemberSection" style="color:#0094ff;" onmouseover="$(this).css('color', '#FF0000')" onmouseout="$(this).css('color', '#0094ff')">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    @HttpUtility.UrlDecode(HttpContext.Current.Request.Cookies["UIC"]["MyName"])
+                                </a>
+                            </label>
+                            @if (HttpContext.Current.Request.Cookies["UIC"]["Role"] == "ADMIN")
+                            {
+                                <label>
+                                    <a href="~/admin/admin/ProductIndex"><span class="glyphicon glyphicon-edit"></span>後台管理</a>
+                                </label>
+                            }
+                            <label>
+                                <a href="~/home/ShopCart"><span class="glyphicon glyphicon-shopping-cart"></span>購物車</a>
+                            </label>
+                            <label>
+                                <a href="javascript:window.open('/home/FurnitureDecorate','','menubar=no,status=yes,scrollbars=yes,top=10,left=100,toolbar=no,width=1630,height=930')" target="_blank" class="open3Durl" onmouseout="    MM_swapImgRestore()" onmouseover="    MM_swapImage('Image89', '', '/images/housemaker_2.png', 1)"><img src="~/images/housemaker.png" width="20px" style="margin-top:-8px" id="Image89" />3D虛擬擺設</a>
+                            </label>
+                            <label>
+                                <a href="~/home/logout"><span class="glyphicon glyphicon-log-out"></span>登出</a>
+                            </label>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="container">
+
+
+
+            <link href="~/Content/blueimp-gallery.min.css" rel="stylesheet" />
+            <script src="~/JQuery/blueimp-gallery.min.js"></script>
+
+            @*<div id="indexEventBlock">*@
+
+            <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+                <div class="slides"></div>
+                <h3 class="title"></h3>
+                <a class="prev">‹</a>
+                <a class="next">›</a>
+                <a class="play-pause"></a>
+                <ol class="indicator"></ol>
+            </div>
+            <div id="links">
+                <a href="~/images/space_1.jpg" @*title="Banana"*@>
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Banana">*@
+                </a>
+                <a href="~/images/space_2.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Apple">*@
+                </a>
+                <a href="~/images/space_3.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+                <a href="~/images/space_4.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+                <a href="~/images/space_5.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+                <a href="~/images/space_6.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+                <a href="~/images/space_7.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+                <a href="~/images/space_8.jpg">
+                    @* <img src="~/images/IndexBanner_605_1.jpg" alt="Orange">*@
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+<input type="hidden" id="localpath" value="@ViewBag.Path" />
+
+
+<div class="row" style="width:30%;height:100%;float:left;margin-left:5%;">
+    <div id="filter_block">
+        <div class="pull-left">
+            <table class="view-table" id="working">
+                <tr>
+                    <td>
+                        @Html.DropDownListFor(m => m.Select1, (IEnumerable<SelectListItem>)ViewBag.SelectorListItem)
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(m => m.Sign1, (IEnumerable<SelectListItem>)ViewBag.SignListItem)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Filter1, new { @class = "filter" })
+                    </td>
+                    <td>
+                        <button type="button" id="filter-btn" class="btn btn-default btn-item">過濾</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <table id="DataTable" class="table table-hover" data-title="@Html.DisplayNameFor(m => m.Title)"
+           data-ajaxurl="@Url.Action("SaleReport_JsonResult", "Admin", new { @area="Admin"})">
+        <thead>
+            <tr>
+                @foreach (var item in Model.DataTable)
+                {
+                    if (item.display.Equals(true))
+                    {
+                        <th data-name="@item.keyId" data-width="@(item.width)" data-type="@item.type">
+                            @Html.DisplayFor(modelItem => item.keyName)
+                        </th>
+                    }
+                    else
+                    {
+                        <th class="hidden" data-name="@item.keyId" data-width="@(item.width)" data-type="@item.type">
+                            @Html.DisplayFor(modelItem => item.keyName)
+                        </th>
+                    }
+                }
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<div id="chart" class="row" style="width:60%;height:100%;float:left;margin-left:2%" ondrop="Drop(event)" ondragover="AllowDrop(event)">
+    <ul id="unitTab" class="nav nav-tabs" style="margin-top:117px;">
+        <li class="active">
+            <a href="#tab1" data-toggle="tab" onclick="submittype = 1; submitdata(submittype);">月損益比較</a>
+        </li>
+        <li>
+            <a href="#tab2" data-toggle="tab" onclick="submittype = 2; submitdata(submittype);">季損益比較</a>
+        </li>
+        <li>
+            <a href="#tab3" data-toggle="tab" onclick="submittype = 3; submitdata(submittype);">年損益比較</a>
+        </li>
+    </ul>
+    <input type="checkbox" style="width:13px;height:13px;" checked onclick="checkclick();" />營收
+    <input type="checkbox" style="width:13px;height:13px;" checked onclick="checkclick();" />毛利
+    <input type="checkbox" style="width:13px;height:13px;" checked onclick="checkclick();" />利益
+    <div id="main" style="width:100%;height:400px;margin-top:2%"></div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/SaleReport")
+}
+
+@*<script type="text/javascript">
+    var submittype = 1;
+    var id;
+    var img;
+    var htmlobj;
+    var submitproduct = [];
+    function AllowDrop(event) {
+        event.preventDefault();
+    }
+    function Drag(event) {
+        id = $(event.currentTarget).data("id");
+        img = $(event.currentTarget).data("img");
+        $(event.currentTarget).html("");
+        $(event.currentTarget).attr("background", img);
+        $(event.currentTarget).attr("height", "60px");
+        $(event.currentTarget).attr("style", "background-repeat:no-repeat;background-position:right;background-size: 100% auto;");
+        htmlobj = $(event.currentTarget);
+    }
+    function Drop(event) {
+        if ($(event.currentTarget).attr("id") == "chart") {
+            if (htmlobj.parent("tr").children("td.td_checkbox").children("input").is(":checked")==false) {
+                submitproduct.push(id);
+                htmlobj.parent("tr").children("td.td_checkbox").children("input").attr("checked", "checked");
+                submitdata(submittype);
+            }
+        }
+        htmlobj.attr("background", "");
+        htmlobj.attr("height", "100%");
+        htmlobj.html("<div class='glyphicon glyphicon-menu-right' data-id='" + id + "' data-img='" + img + "'></div>");
+    }
+    function DropPic(obj){
+        obj.attr("background", "");
+        obj.attr("height", "100%");
+        obj.html("<div class='glyphicon glyphicon-menu-right' data-id='" + id + "' data-img='" + img + "'></div>");
+    }
+</script>*@

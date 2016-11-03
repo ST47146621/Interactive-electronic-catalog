@@ -1,0 +1,63 @@
+﻿@model test.Models.ColorNoValidModel
+@{
+    List<SelectListItem> select = new List<SelectListItem>(){
+                   new SelectListItem(){Value="false",Text="否"},
+                   new SelectListItem(){Value="true",Text="是"}
+               };
+}
+<div class="modal-dialog" style="width:700px">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">編輯顏色</h4>
+        </div>
+        <div class="modal-body">
+            @using (Html.BeginForm("ColorEdit", "Admin", new { @area = "Admin" }, FormMethod.Post, new { @class = "form-horizontal", @id = "form", @enctype = "multipart/form-data" }))
+            {
+
+
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.Id)
+                @*<div class="form-group">
+                        @Html.LabelFor(m => m.Id, new { @class = "col-sm-2 control-label" })
+                        <div class="col-sm-3">
+                            @Html.TextBoxFor(m => m.Id, new { @class = "form-control", @readonly = "readonly" })
+                            @Html.ValidationMessageFor(m => m.Id, "", new { @class = "label label-danger" })
+                        </div>
+                    </div>*@
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-4">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sharp, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-4">
+            @Html.TextBoxFor(m => m.Sharp, new { @class = "form-control", style = "background-color:" + Model.Sharp })
+            @Html.ValidationMessageFor(m => m.Sharp, "", new { @class = "label label-danger" })
+        </div>
+    </div>
+            }
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary" id="sendcreate">送出</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".god-label").removeAttr("text-align");
+        $(".god-label").attr("margin-left", "5px");
+        $("#sendcreate").click(function () {
+            $("#form").submit();
+        });
+        $(".btn-default").click(function () {
+
+            $('#itemModal').on('hidden.bs.modal', function () {
+                $(this).removeData('bs.modal');
+            });
+        });
+    });
+</script>

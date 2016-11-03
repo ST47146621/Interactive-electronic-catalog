@@ -1,0 +1,769 @@
+﻿@model test.Models.SectionDetailModel
+@{
+    var category = ViewBag.Category;
+    var categorycount = 0;
+    var id = ViewBag.Id;
+    var tree = ViewBag.Tree;
+    var name = ViewBag.Name;
+    var itemcount = 0;
+    var ispush = ViewBag.IsPush;
+}
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+<link href="~/Content/star-rating.css" rel="stylesheet" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<body onload="MM_preloadImages('/images/nav01On.gif','/images/nav02On.gif','/images/nav04On.gif','/images/btnBlock_SubscribeOn.gif','/images/btnBlock_NoSubscribeOn.gif','/images/subnav01On.gif','/images/subnav02On.gif','/images/subnav03On.gif','/images/subnav04On.gif','/images/subnav05On.gif','/images/subnav06On.gif')">
+    <div>
+        <input type="hidden" name="ctl00_ScriptManager1_HiddenField" id="ctl00_ScriptManager1_HiddenField" value="" />
+        <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+        <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTI3NjIwODA0MQ9kFgJmD2QWAgIDD2QWBAIBD2QWAgIBD2QWAmYPZBYGAgMPD2QWAh4Jb25LZXlkb3duBTZTdWJidG5FbWFpbCgnY3RsMDBfRXBhcGVyTWFpbENvbnRyb2wxX2J0bk9yZGVyRXBhcGVyJylkAgUPDxYCHg1PbkNsaWVudENsaWNrBSVqYXZhc2NyaXB0OnJldHVybiBDaGVja1ZhbHVlRXBhcGVyKCk7FgQeC29ubW91c2VvdmVyBVckZ2V0KCdjdGwwMF9FcGFwZXJNYWlsQ29udHJvbDFfYnRuT3JkZXJFcGFwZXInKS5zcmM9Jy9pbWFnZXMvYnRuQmxvY2tfU3Vic2NyaWJlT24uZ2lmJzseCm9ubW91c2VvdXQFWCRnZXQoJ2N0bDAwX0VwYXBlck1haWxDb250cm9sMV9idG5PcmRlckVwYXBlcicpLnNyYz0nL0ltYWdlcy9idG5CbG9ja19TdWJzY3JpYmVPZmYuZ2lmJztkAgcPDxYCHwEFJWphdmFzY3JpcHQ6cmV0dXJuIENoZWNrVmFsdWVFcGFwZXIoKTsWBB8CBVokZ2V0KCdjdGwwMF9FcGFwZXJNYWlsQ29udHJvbDFfYnRuQ2FuY2VsRXBhcGVyJykuc3JjPScvaW1hZ2VzL2J0bkJsb2NrX05vU3Vic2NyaWJlT24uZ2lmJzsfAwVbJGdldCgnY3RsMDBfRXBhcGVyTWFpbENvbnRyb2wxX2J0bkNhbmNlbEVwYXBlcicpLnNyYz0nL0ltYWdlcy9idG5CbG9ja19Ob1N1YnNjcmliZU9mZi5naWYnO2QCAg9kFhgCAQ9kFgQCAQ8PZBYCHgdvbmNsaWNrBQ10aGlzLnZhbHVlPScnZAIDDw8WAh8BBSBqYXZhc2NyaXB0OnJldHVybiBDaGVja1NlYXJjaCgpO2RkAgMPZBYCAgEPFgIeBFRleHQFwzE8bGk+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2xhXzEuZ2lmIiBhbHQ9Iuiho+aWmeWTgSIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNSIgLz48dWw+PGxpPjxhIGhyZWY9InNlY3Rpb24uYXNweD9DYXRJRD0xIiBvbm1vdXNlb3V0PSJNTV9zd2FwSW1nUmVzdG9yZSgpIiBvbm1vdXNlb3Zlcj0iTU1fc3dhcEltYWdlKCdJbWFnZUxpc3QxJywnJywnVXBsb2FkSW1hZ2UvR0NhdF8xX0xpc3QyLmpwZycsMSkiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvR0NhdF8xX0xpc3QxLmpwZyIgYWx0PSLnlLfoo50iIHdpZHRoPSIxNTAiIGhlaWdodD0iMjUiIGJvcmRlcj0iMCIgaWQ9IkltYWdlTGlzdDEiIC8+PC9hPjwvbGk+PGxpPjxhIGhyZWY9InNlY3Rpb24uYXNweD9DYXRJRD0yIiBvbm1vdXNlb3V0PSJNTV9zd2FwSW1nUmVzdG9yZSgpIiBvbm1vdXNlb3Zlcj0iTU1fc3dhcEltYWdlKCdJbWFnZUxpc3QyJywnJywnVXBsb2FkSW1hZ2UvR0NhdF8yX0xpc3QyLmpwZycsMSkiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvR0NhdF8yX0xpc3QxLmpwZyIgYWx0PSLlpbPoo50iIHdpZHRoPSIxNTAiIGhlaWdodD0iMjUiIGJvcmRlcj0iMCIgaWQ9IkltYWdlTGlzdDIiIC8+PC9hPjwvbGk+PGxpPjxhIGhyZWY9InNlY3Rpb24uYXNweD9DYXRJRD0zIiBvbm1vdXNlb3V0PSJNTV9zd2FwSW1nUmVzdG9yZSgpIiBvbm1vdXNlb3Zlcj0iTU1fc3dhcEltYWdlKCdJbWFnZUxpc3QzJywnJywnVXBsb2FkSW1hZ2UvR0NhdF8zX0xpc3QyLmpwZycsMSkiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvR0NhdF8zX0xpc3QxLmpwZyIgYWx0PSLlhZLnq6UiIHdpZHRoPSIxNTAiIGhlaWdodD0iMjUiIGJvcmRlcj0iMCIgaWQ9IkltYWdlTGlzdDMiIC8+PC9hPjwvbGk+PGxpPjxhIGhyZWY9InNlY3Rpb24uYXNweD9DYXRJRD00IiBvbm1vdXNlb3V0PSJNTV9zd2FwSW1nUmVzdG9yZSgpIiBvbm1vdXNlb3Zlcj0iTU1fc3dhcEltYWdlKCdJbWFnZUxpc3Q0JywnJywnVXBsb2FkSW1hZ2UvR0NhdF80X0xpc3QyLmpwZycsMSkiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvR0NhdF80X0xpc3QxLmpwZyIgYWx0PSLmnI3po77pm5zosqgiIHdpZHRoPSIxNTAiIGhlaWdodD0iMjUiIGJvcmRlcj0iMCIgaWQ9IkltYWdlTGlzdDQiIC8+PC9hPjwvbGk+PGxpPjxhIGhyZWY9InNlY3Rpb24uYXNweD9DYXRJRD01IiBvbm1vdXNlb3V0PSJNTV9zd2FwSW1nUmVzdG9yZSgpIiBvbm1vdXNlb3Zlcj0iTU1fc3dhcEltYWdlKCdJbWFnZUxpc3Q1JywnJywnVXBsb2FkSW1hZ2UvR0NhdF81X0xpc3QyLmpwZycsMSkiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvR0NhdF81X0xpc3QxLmpwZyIgYWx0PSLpnosu5YyFIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjI1IiBib3JkZXI9IjAiIGlkPSJJbWFnZUxpc3Q1IiAvPjwvYT48L2xpPjxsaT48YSBocmVmPSJzZWN0aW9uLmFzcHg/Q2F0SUQ9NiIgb25tb3VzZW91dD0iTU1fc3dhcEltZ1Jlc3RvcmUoKSIgb25tb3VzZW92ZXI9Ik1NX3N3YXBJbWFnZSgnSW1hZ2VMaXN0NicsJycsJ1VwbG9hZEltYWdlL0dDYXRfNl9MaXN0Mi5qcGcnLDEpIj48aW1nIHNyYz0iL1VwbG9hZEltYWdlL0dDYXRfNl9MaXN0MS5qcGciIGFsdD0i5YWn6KGj5Y+K5a625bGF5pyNIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjI1IiBib3JkZXI9IjAiIGlkPSJJbWFnZUxpc3Q2IiAvPjwvYT48L2xpPjxsaT48YSBocmVmPSJzZWN0aW9uLmFzcHg/Q2F0SUQ9MjUiIG9ubW91c2VvdXQ9Ik1NX3N3YXBJbWdSZXN0b3JlKCkiIG9ubW91c2VvdmVyPSJNTV9zd2FwSW1hZ2UoJ0ltYWdlTGlzdDI1JywnJywnVXBsb2FkSW1hZ2UvR0NhdF8yNV9MaXN0Mi5qcGcnLDEpIj48aW1nIHNyYz0iL1VwbG9hZEltYWdlL0dDYXRfMjVfTGlzdDEuanBnIiBhbHQ9Ik1VSkkgTGFibyIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNSIgYm9yZGVyPSIwIiBpZD0iSW1hZ2VMaXN0MjUiIC8+PC9hPjwvbGk+PC91bD48L2xpPjxsaT48aW1nIHNyYz0iL1VwbG9hZEltYWdlL0dDbGFfMi5naWYiIGFsdD0i55Sf5rS76Zuc6LKoIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjI1IiAvPjx1bD48bGk+PGEgaHJlZj0ic2VjdGlvbi5hc3B4P0NhdElEPTciIG9ubW91c2VvdXQ9Ik1NX3N3YXBJbWdSZXN0b3JlKCkiIG9ubW91c2VvdmVyPSJNTV9zd2FwSW1hZ2UoJ0ltYWdlTGlzdDcnLCcnLCdVcGxvYWRJbWFnZS9HQ2F0XzdfTGlzdDIuanBnJywxKSI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2F0XzdfTGlzdDEuanBnIiBhbHQ9Iue5lOWTgSIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNSIgYm9yZGVyPSIwIiBpZD0iSW1hZ2VMaXN0NyIgLz48L2E+PC9saT48bGk+PGEgaHJlZj0ic2VjdGlvbi5hc3B4P0NhdElEPTgiIG9ubW91c2VvdXQ9Ik1NX3N3YXBJbWdSZXN0b3JlKCkiIG9ubW91c2VvdmVyPSJNTV9zd2FwSW1hZ2UoJ0ltYWdlTGlzdDgnLCcnLCdVcGxvYWRJbWFnZS9HQ2F0XzhfTGlzdDIuanBnJywxKSI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2F0XzhfTGlzdDEuanBnIiBhbHQ9IuWutuWFtyIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNSIgYm9yZGVyPSIwIiBpZD0iSW1hZ2VMaXN0OCIgLz48L2E+PC9saT48bGk+PGEgaHJlZj0ic2VjdGlvbi5hc3B4P0NhdElEPTkiIG9ubW91c2VvdXQ9Ik1NX3N3YXBJbWdSZXN0b3JlKCkiIG9ubW91c2VvdmVyPSJNTV9zd2FwSW1hZ2UoJ0ltYWdlTGlzdDknLCcnLCdVcGxvYWRJbWFnZS9HQ2F0XzlfTGlzdDIuanBnJywxKSI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2F0XzlfTGlzdDEuanBnIiBhbHQ9IuaWh+WFtyIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNSIgYm9yZGVyPSIwIiBpZD0iSW1hZ2VMaXN0OSIgLz48L2E+PC9saT48bGk+PGEgaHJlZj0ic2VjdGlvbi5hc3B4P0NhdElEPTEwIiBvbm1vdXNlb3V0PSJNTV9zd2FwSW1nUmVzdG9yZSgpIiBvbm1vdXNlb3Zlcj0iTU1fc3dhcEltYWdlKCdJbWFnZUxpc3QxMCcsJycsJ1VwbG9hZEltYWdlL0dDYXRfMTBfTGlzdDIuanBnJywxKSI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2F0XzEwX0xpc3QxLmpwZyIgYWx0PSLmiLblpJbnlKjlk4EiIHdpZHRoPSIxNTAiIGhlaWdodD0iMjUiIGJvcmRlcj0iMCIgaWQ9IkltYWdlTGlzdDEwIiAvPjwvYT48L2xpPjxsaT48YSBocmVmPSJzZWN0aW9uLmFzcHg/Q2F0SUQ9MTIiIG9ubW91c2VvdXQ9Ik1NX3N3YXBJbWdSZXN0b3JlKCkiIG9ubW91c2VvdmVyPSJNTV9zd2FwSW1hZ2UoJ0ltYWdlTGlzdDEyJywnJywnVXBsb2FkSW1hZ2UvR0NhdF8xMl9MaXN0Mi5qcGcnLDEpIj48aW1nIHNyYz0iL1VwbG9hZEltYWdlL0dDYXRfMTJfTGlzdDEuanBnIiBhbHQ9Iumbu+WZqO+8juWupOWFp+WutumjviIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNSIgYm9yZGVyPSIwIiBpZD0iSW1hZ2VMaXN0MTIiIC8+PC9hPjwvbGk+PGxpPjxhIGhyZWY9InNlY3Rpb24uYXNweD9DYXRJRD0xMyIgb25tb3VzZW91dD0iTU1fc3dhcEltZ1Jlc3RvcmUoKSIgb25tb3VzZW92ZXI9Ik1NX3N3YXBJbWFnZSgnSW1hZ2VMaXN0MTMnLCcnLCdVcGxvYWRJbWFnZS9HQ2F0XzEzX0xpc3QyLmpwZycsMSkiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvR0NhdF8xM19MaXN0MS5qcGciIGFsdD0i5a625bqt5riF5r2U77yO5pS257SN55So5ZOBIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjI1IiBib3JkZXI9IjAiIGlkPSJJbWFnZUxpc3QxMyIgLz48L2E+PC9saT48bGk+PGEgaHJlZj0ic2VjdGlvbi5hc3B4P0NhdElEPTE0IiBvbm1vdXNlb3V0PSJNTV9zd2FwSW1nUmVzdG9yZSgpIiBvbm1vdXNlb3Zlcj0iTU1fc3dhcEltYWdlKCdJbWFnZUxpc3QxNCcsJycsJ1VwbG9hZEltYWdlL0dDYXRfMTRfTGlzdDIuanBnJywxKSI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2F0XzE0X0xpc3QxLmpwZyIgYWx0PSLlu5rlhbfvvI7ppJDlhbciIHdpZHRoPSIxNTAiIGhlaWdodD0iMjUiIGJvcmRlcj0iMCIgaWQ9IkltYWdlTGlzdDE0IiAvPjwvYT48L2xpPjwvdWw+PC9saT48bGk+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2xhXzMuZ2lmIiBhbHQ9Iue+juWuueS/nemkiiIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNSIgLz48dWw+PGxpPjxhIGhyZWY9InNlY3Rpb24uYXNweD9DYXRJRD0xNSIgb25tb3VzZW91dD0iTU1fc3dhcEltZ1Jlc3RvcmUoKSIgb25tb3VzZW92ZXI9Ik1NX3N3YXBJbWFnZSgnSW1hZ2VMaXN0MTUnLCcnLCdVcGxvYWRJbWFnZS9HQ2F0XzE1X0xpc3QyLmpwZycsMSkiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvR0NhdF8xNV9MaXN0MS5qcGciIGFsdD0i5rOh5r6h77yO6Iqs6aaZ55So5ZOBIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjI1IiBib3JkZXI9IjAiIGlkPSJJbWFnZUxpc3QxNSIgLz48L2E+PC9saT48bGk+PGEgaHJlZj0ic2VjdGlvbi5hc3B4P0NhdElEPTE2IiBvbm1vdXNlb3V0PSJNTV9zd2FwSW1nUmVzdG9yZSgpIiBvbm1vdXNlb3Zlcj0iTU1fc3dhcEltYWdlKCdJbWFnZUxpc3QxNicsJycsJ1VwbG9hZEltYWdlL0dDYXRfMTZfTGlzdDIuanBnJywxKSI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2F0XzE2X0xpc3QxLmpwZyIgYWx0PSLmuIXmvZTvvI7ooZvnlJ/nlKjlk4EiIHdpZHRoPSIxNTAiIGhlaWdodD0iMjUiIGJvcmRlcj0iMCIgaWQ9IkltYWdlTGlzdDE2IiAvPjwvYT48L2xpPjxsaT48YSBocmVmPSJzZWN0aW9uLmFzcHg/Q2F0SUQ9MTciIG9ubW91c2VvdXQ9Ik1NX3N3YXBJbWdSZXN0b3JlKCkiIG9ubW91c2VvdmVyPSJNTV9zd2FwSW1hZ2UoJ0ltYWdlTGlzdDE3JywnJywnVXBsb2FkSW1hZ2UvR0NhdF8xN19MaXN0Mi5qcGcnLDEpIj48aW1nIHNyYz0iL1VwbG9hZEltYWdlL0dDYXRfMTdfTGlzdDEuanBnIiBhbHQ9IuWIhuijne+8juaXheihjOeUqOWTgSIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNSIgYm9yZGVyPSIwIiBpZD0iSW1hZ2VMaXN0MTciIC8+PC9hPjwvbGk+PGxpPjxhIGhyZWY9InNlY3Rpb24uYXNweD9DYXRJRD0xOCIgb25tb3VzZW91dD0iTU1fc3dhcEltZ1Jlc3RvcmUoKSIgb25tb3VzZW92ZXI9Ik1NX3N3YXBJbWFnZSgnSW1hZ2VMaXN0MTgnLCcnLCdVcGxvYWRJbWFnZS9HQ2F0XzE4X0xpc3QyLmpwZycsMSkiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvR0NhdF8xOF9MaXN0MS5qcGciIGFsdD0i5b2p5aad55So5ZOBIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjI1IiBib3JkZXI9IjAiIGlkPSJJbWFnZUxpc3QxOCIgLz48L2E+PC9saT48bGk+PGEgaHJlZj0ic2VjdGlvbi5hc3B4P0NhdElEPTIwIiBvbm1vdXNlb3V0PSJNTV9zd2FwSW1nUmVzdG9yZSgpIiBvbm1vdXNlb3Zlcj0iTU1fc3dhcEltYWdlKCdJbWFnZUxpc3QyMCcsJycsJ1VwbG9hZEltYWdlL0dDYXRfMjBfTGlzdDIuanBnJywxKSI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2F0XzIwX0xpc3QxLmpwZyIgYWx0PSLkv53ppIrvvI7nvo7pq67nlKjlk4EiIHdpZHRoPSIxNTAiIGhlaWdodD0iMjUiIGJvcmRlcj0iMCIgaWQ9IkltYWdlTGlzdDIwIiAvPjwvYT48L2xpPjwvdWw+PC9saT48bGk+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2xhXzQuZ2lmIiBhbHQ9Iumjn+WTgSIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNSIgLz48dWw+PGxpPjxhIGhyZWY9InNlY3Rpb24uYXNweD9DYXRJRD0yMiIgb25tb3VzZW91dD0iTU1fc3dhcEltZ1Jlc3RvcmUoKSIgb25tb3VzZW92ZXI9Ik1NX3N3YXBJbWFnZSgnSW1hZ2VMaXN0MjInLCcnLCdVcGxvYWRJbWFnZS9HQ2F0XzIyX0xpc3QyLmpwZycsMSkiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvR0NhdF8yMl9MaXN0MS5qcGciIGFsdD0i6Kq/5ZGz5paZLumjn+WTgSIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNSIgYm9yZGVyPSIwIiBpZD0iSW1hZ2VMaXN0MjIiIC8+PC9hPjwvbGk+PGxpPjxhIGhyZWY9InNlY3Rpb24uYXNweD9DYXRJRD0yMyIgb25tb3VzZW91dD0iTU1fc3dhcEltZ1Jlc3RvcmUoKSIgb25tb3VzZW92ZXI9Ik1NX3N3YXBJbWFnZSgnSW1hZ2VMaXN0MjMnLCcnLCdVcGxvYWRJbWFnZS9HQ2F0XzIzX0xpc3QyLmpwZycsMSkiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvR0NhdF8yM19MaXN0MS5qcGciIGFsdD0i5p6c5a2QIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjI1IiBib3JkZXI9IjAiIGlkPSJJbWFnZUxpc3QyMyIgLz48L2E+PC9saT48bGk+PGEgaHJlZj0ic2VjdGlvbi5hc3B4P0NhdElEPTI0IiBvbm1vdXNlb3V0PSJNTV9zd2FwSW1nUmVzdG9yZSgpIiBvbm1vdXNlb3Zlcj0iTU1fc3dhcEltYWdlKCdJbWFnZUxpc3QyNCcsJycsJ1VwbG9hZEltYWdlL0dDYXRfMjRfTGlzdDIuanBnJywxKSI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9HQ2F0XzI0X0xpc3QxLmpwZyIgYWx0PSLpo7LmlpkiIHdpZHRoPSIxNTAiIGhlaWdodD0iMjUiIGJvcmRlcj0iMCIgaWQ9IkltYWdlTGlzdDI0IiAvPjwvYT48L2xpPjwvdWw+PC9saT5kAgUPFgIfBQWjATxsaSBjbGFzcz0iZmlyc3QiPjxhIGhyZWY9IkNhbXBhaWduLmFzcHg/SUQ9MTEzNCIgVGFyZ2V0PSJfc2VsZiI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9JbmRleEJhbm5lcl81OTdfMS5qcGciIGFsdD0i5pyJ5qmf5qOJIiB3aWR0aD0iNDEwIiBoZWlnaHQ9IjIwMCIgLz48L2E+PC9saT5kAgcPFgIfBQXuBDxsaT48YSBocmVmPSJDYW1wYWlnbi5hc3B4P0lEPTExNDMiIFRhcmdldD0iX3NlbGYiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvSW5kZXhCYW5uZXJfNjAzXzIuanBnIiBhbHQ9IuaYpeS/nemkiiIgd2lkdGg9IjEzMCIgaGVpZ2h0PSI5NSIgLz48L2E+PC9saT48bGk+PGEgaHJlZj0iQ2FtcGFpZ24uYXNweD9JRD0xMTQ1IiBUYXJnZXQ9Il9zZWxmIj48aW1nIHNyYz0iL1VwbG9hZEltYWdlL0luZGV4QmFubmVyXzYwMl8yLmpwZyIgYWx0PSLmlJzluLbkvr/liKkiIHdpZHRoPSIxMzAiIGhlaWdodD0iOTUiIC8+PC9hPjwvbGk+PGxpPjxhIGhyZWY9IkNhbXBhaWduLmFzcHg/SUQ9MTE0MSIgVGFyZ2V0PSJfc2VsZiI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9JbmRleEJhbm5lcl82MDFfMi5qcGciIGFsdD0i5pyJ5qmf5qOJ5re35Li55a+n6KSyIiB3aWR0aD0iMTMwIiBoZWlnaHQ9Ijk1IiAvPjwvYT48L2xpPjxsaT48YSBocmVmPSJodHRwOi8vd3d3Lm11amkudHcvbXVqaXdlZWtzLmFzcHgiIFRhcmdldD0iX3NlbGYiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvSW5kZXhCYW5uZXJfNjA0XzIuZ2lmIiBhbHQ9IuiJr+WTgemAsemWkyIgd2lkdGg9IjEzMCIgaGVpZ2h0PSI5NSIgLz48L2E+PC9saT5kAgkPDxYCHghJbWFnZVVybAUbfi9VcGxvYWRJbWFnZS9JbmRleENvZGUuanBnZGQCCw8WAh8FBY8RPGRpdiBjbGFzcz0ibmV3UHJvZGxpc3QiPjxhIGhyZWY9Ikl0ZW1fZGV0YWlsLmFzcHg/Q2F0SUQ9MjAmUGR0SUQ9MTAxJkNvZGVJRD00NTQ3MzE1MjUyNDExJk51bUlEPTAiPjxwIGNsYXNzPSJwaG90byI+PGltZyBzcmM9Ii9Qcm9kdWN0UElDLzQ1NDczMTUyNTI0MTFfNTAuanBnIiBhbHQ9Ik1VSknojYnmnKzmvaTmvqTkv53mv5XljJblpp3msLQvNDAwbWwiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgLz48L3A+PGRpdiBjbGFzcz0icHJvZCI+PGgzPk1VSknojYnmnKzmvaTmvqTkv53mv5XljJblpp3msLQvNDAwbWw8L2gzPjxwPuWDueagvCZuYnNwOzxzdHJvbmc+MSwxNDA8L3N0cm9uZz7lhYM8L3A+PC9kaXY+PC9hPjwvZGl2PjxkaXYgY2xhc3M9Im5ld1Byb2RsaXN0Ij48YSBocmVmPSJJdGVtX2RldGFpbC5hc3B4P0NhdElEPTkmUGR0SUQ9NjYmQ29kZUlEPTQ1NDczMTUyNTA5MTImTnVtSUQ9MCI+PHAgY2xhc3M9InBob3RvIj48aW1nIHNyYz0iL1Byb2R1Y3RQSUMvNDU0NzMxNTI1MDkxMl81MC5qcGciIGFsdD0i5qOJ57KX57mU562G6KKLL+Wkpy7ol43mop3ntIsiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgLz48L3A+PGRpdiBjbGFzcz0icHJvZCI+PGgzPuajieeyl+e5lOethuiiiy/lpKcu6JeN5qKd57SLPC9oMz48cD7lg7nmoLwmbmJzcDs8c3Ryb25nPjI5MDwvc3Ryb25nPuWFgzwvcD48L2Rpdj48L2E+PC9kaXY+PGRpdiBjbGFzcz0ibmV3UHJvZGxpc3QiPjxhIGhyZWY9Ikl0ZW1fZGV0YWlsLmFzcHg/Q2F0SUQ9MiZQZHRJRD0xMiZDb2RlSUQ9NDU0OTMzNzc2NDM2MSZOdW1JRD1XNVNFMjMwIj48cCBjbGFzcz0icGhvdG8iPjxpbWcgc3JjPSIvUHJvZHVjdFBJQy80NTQ5MzM3NzY0MzYxXzUwLmpwZyIgYWx0PSLlpbPmnInmqZ/mo4nmt7fkuLnlr6fotoXlvYjlipvnt4rouqvopLLol43oibIyNeWQiyIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiAvPjwvcD48ZGl2IGNsYXNzPSJwcm9kIj48aDM+5aWz5pyJ5qmf5qOJ5re35Li55a+n6LaF5b2I5Yqb57eK6Lqr6KSy6JeN6ImyMjXlkIs8L2gzPjxwPuWDueagvCZuYnNwOzxzdHJvbmc+MSw1OTA8L3N0cm9uZz7lhYM8L3A+PC9kaXY+PC9hPjwvZGl2PjxkaXYgY2xhc3M9Im5ld1Byb2RsaXN0Ij48YSBocmVmPSJJdGVtX2RldGFpbC5hc3B4P0NhdElEPTcmUGR0SUQ9NDUmQ29kZUlEPTQ1NDkzMzcwOTYxNDEmTnVtSUQ9MCI+PHAgY2xhc3M9InBob3RvIj48aW1nIHNyYz0iL1Byb2R1Y3RQSUMvNDU0OTMzNzA5NjE0MV81MC5qcGciIGFsdD0i5pyJ5qmf5qOJ5aSp56u657KX57SL6KKr5aWXL1Mv5re35rex6JeNIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIC8+PC9wPjxkaXYgY2xhc3M9InByb2QiPjxwPjxpbWcgc3JjPSJpbWFnZXMvaWNvbk5ldy5qcGciIGFsdD0iTkVXIiAvPjwvcD48aDM+5pyJ5qmf5qOJ5aSp56u657KX57SL6KKr5aWXL1Mv5re35rex6JeNPC9oMz48cD7lg7nmoLwmbmJzcDs8c3Ryb25nPjEsMjAwPC9zdHJvbmc+5YWDPC9wPjwvZGl2PjwvYT48L2Rpdj48ZGl2IGNsYXNzPSJuZXdQcm9kbGlzdCI+PGEgaHJlZj0iSXRlbV9kZXRhaWwuYXNweD9DYXRJRD04JlBkdElEPTgmQ29kZUlEPTQ1NDczMTUxMTcxNzgmTnVtSUQ9MCI+PHAgY2xhc3M9InBob3RvIj48aW1nIHNyYz0iL1Byb2R1Y3RQSUMvNDU0NzMxNTExNzE3OF81MC5qcGciIGFsdD0i5oe26aqo6aCt5qSF5aWXLuaru+iKseiJsi8zQSIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiAvPjwvcD48ZGl2IGNsYXNzPSJwcm9kIj48aDM+5oe26aqo6aCt5qSF5aWXLuaru+iKseiJsi8zQTwvaDM+PHA+5YO55qC8Jm5ic3A7PHN0cm9uZz4xLDIwMDwvc3Ryb25nPuWFgzwvcD48L2Rpdj48L2E+PC9kaXY+PGRpdiBjbGFzcz0ibmV3UHJvZGxpc3QiPjxhIGhyZWY9Ikl0ZW1fZGV0YWlsLmFzcHg/Q2F0SUQ9MSZQZHRJRD0yJkNvZGVJRD00NTQ5MzM3NzI5MjA5Jk51bUlEPU01U0I2MDMiPjxwIGNsYXNzPSJwaG90byI+PGltZyBzcmM9Ii9Qcm9kdWN0UElDLzQ1NDkzMzc3MjkyMDlfNTAuanBnIiBhbHQ9IueUt+acieapn+ajieijj+avm+mAo+W4veS4iuiho+mbnOeBsE0iIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgLz48L3A+PGRpdiBjbGFzcz0icHJvZCI+PGgzPueUt+acieapn+ajieijj+avm+mAo+W4veS4iuiho+mbnOeBsE08L2gzPjxwPuWDueagvCZuYnNwOzxzdHJvbmc+MSwzOTA8L3N0cm9uZz7lhYM8L3A+PC9kaXY+PC9hPjwvZGl2PmQCDQ8WAh8FBZ4EPGR0PjIwMTUuMDMuMTY8L2R0PjxkZD48YSBocmVmPSJuZXdzLmFzcHg/aWQ9NTYwIj5NVUpJ54Sh5Y2w6Imv5ZOBMjAxNeaYpeWkj+aWsOWTgeWxleekuuacgyAg5by35YyW5pyJ5qmf5qOJ57Sg5p2Q5L2/55SoIOaOqOWHuuacieapn+ajieS4uS4uLjwvYT48L2RkPjxkdD4yMDE1LjAzLjEzPC9kdD48ZGQ+PGEgaHJlZj0ibmV3cy5hc3B4P2lkPTU1OSI+5qOJ6LOq5biG5biD5YyF5LiL5p625Zue5pS26KiK5oGvPC9hPjwvZGQ+PGR0PjIwMTUuMDMuMDY8L2R0PjxkZD48YSBocmVmPSJuZXdzLmFzcHg/aWQ9NTU4Ij7pm7vlmajkv53lm7rmlL/nrZboqr/mlbTlhazlkYo8L2E+PC9kZD48ZHQ+MjAxNS4wMy4wNjwvZHQ+PGRkPjxhIGhyZWY9Im5ld3MuYXNweD9pZD01NTciPuiIiuasvuWjgeaOm+W8j0NE6Z+z6Z+/57WC5q2i57at5L+u5pyN5YuZ6YCa55+lPC9hPjwvZGQ+PGR0PjIwMTUuMDMuMDI8L2R0PjxkZD48YSBocmVmPSJuZXdzLmFzcHg/aWQ9NTU2Ij7jgIzmh7foiIrlkozpoqjlpKfosYbnsonou5/ns5XjgI3llYblk4HlhazlkYo8L2E+PC9kZD5kAg8PFgIfBQXSBDxkdD4yMDE1LjAzLjAyPC9kdD48ZGQ+PGEgaHJlZj0ibmV3cy5hc3B4P2lkPTU1NSI+5Z+66ZqG6ZaA5biC54ef5qWt5pmC6ZaT6Kq/5pW06YCa55+lPC9hPjwvZGQ+PGR0PjIwMTUuMDIuMjU8L2R0PjxkZD48YSBocmVmPSJuZXdzLmFzcHg/aWQ9NTU0Ij7nibnlrprllYblk4HnmoTljp/nlKLlnIvmqJnnpLrpjK/oqqTllZ/kuos8L2E+PC9kZD48ZHQ+MjAxNS4wMi4xMzwvZHQ+PGRkPjxhIGhyZWY9Im5ld3MuYXNweD9pZD01NTMiPk1VSknnhKHljbDoia/lk4HjgIzmlrDmmKXmir3mir3mqILjgI0gMi8xOS0yM+WWruethua2iOiyu+a7vzY2NuWFgyDmnInmqZ/mnIPkuqsuLi48L2E+PC9kZD48ZHQ+MjAxNS4wMi4wODwvZHQ+PGRkPjxhIGhyZWY9Im5ld3MuYXNweD9pZD01NTIiPuOAkOacgOaWsOWFrOWRiuOAkTIwMTXmmKXnr4DmnI3li5nmmYLplpPvvIE8L2E+PC9kZD48ZHQ+MjAxNS4wMi4wNTwvZHQ+PGRkPjxhIGhyZWY9Im5ld3MuYXNweD9pZD01NTEiPuiIh+iJr+WTgeWFseW6puaWsOW5tO+8jE1VSknnhKHljbDoia/lk4HjgIzlnJjlnJPjgI3ov47mlrDmmKUg5oOF5Lq656+A6ZmQ5a6a6bue5b+DIOeUnOicnOS4iuW4gjwvYT48L2RkPmQCEQ8WAh8FBeAHDQo8ZGl2IGNsYXNzPSJGZWF0dXJlZCI+DQogIDxoMT4gPGltZyBzcmM9ImltYWdlcy9pbmRleF90aXRsZTAxLmdpZiIgYWx0PSLooaPmnI3pm5zosqjnibnpm4YiIC8+DQogICAgPGRpdiBjbGFzcz0iaW5kZXhsaW5lIj4gPC9kaXY+DQogIDwvaDE+DQogIDxoMj4yMDE1IOiho+aWmeWTgTwvaDI+DQogIDxoMz7ntZDlkIjmo4nos6roiIfntbLos6rntKDmnZDvvIzoo73kvZzlh7rlhbfpq5jpm4XlhYnmvqTmhJ/nmoTluIPmlpnvvIzlhbzlhbflhKrpm4Xliaroo4HoiIfoiJLpganmhJ/nqb/okZfjgII8L2gzPg0KICAgPGRpdiBjbGFzcz0iQ2xvdGhCT1giPg0KICAgIDxsaSBjbGFzcz0idGl0bGUiPjxpbWcgc3JjPSJpbWFnZXMvaW5kZXhfdHJpYW5nbGUuZ2lmIiAvPjxhIGhyZWY9Imh0dHA6Ly93d3cubXVqaS5jb20vdHcvZ2FybWVudC8yMDE1c3MvIj4NCiAgICAgIDxwPueEoeWNsOiJr+WTgeeahOajiTwvcD4NCiAgICAgIDxpbWcgc3JjPSJpbWFnZXMvMjMyX2EuanBnIiBhbHQ9IueEoeWNsOiJr+WTgeeahOajiSIgLz48L2E+PC9saT4NCiAgICA8L2xpPg0KICA8L2Rpdj4NCiAgPGRpdiBjbGFzcz0iQ2xvdGhCT1giPg0KICAgIDxsaSBjbGFzcz0idGl0bGUiPjxpbWcgc3JjPSJpbWFnZXMvaW5kZXhfdHJpYW5nbGUuZ2lmIiAvPjxhIGhyZWY9Imh0dHA6Ly93d3cubXVqaS5jb20vdHcvc29ja3MvIj4NCiAgICAgIDxwPueEoeWNsOiJr+WTgeebtOinkuilqjwvcD4NCiAgICAgIDxpbWcgc3JjPSJpbWFnZXMvMjMyX2IuanBnIiBhbHQ9IueEoeWNsOiJr+WTgeebtOinkuilqiIgLz48L2E+PC9saT4NCiAgICA8L2xpPg0KICA8L2Rpdj4NCg0KICAgDQogIA0KICA8ZGl2IGNsYXNzPSJjbGVhciI+IDwvZGl2Pg0KICA8ZGl2IGNsYXNzPSJtb3JlbGlua19SIj4gPGEgaHJlZj0iY2FtcGFpZ25fbGlzdC5hc3B4I0NIMSI+5pu05aSa6KGj5pyN6Zuc6LKo54m56ZuGPC9hPjwvZGl2Pg0KICA8ZGl2IGNsYXNzPSJjbGVhciI+IDwvZGl2Pg0KPC9kaXY+DQpkAhMPFgIfBQX4FTwhRE9DVFlQRSBodG1sIFBVQkxJQyAiLS8vVzNDLy9EVEQgWEhUTUwgMS4wIFRyYW5zaXRpb25hbC8vRU4iPg0KPGh0bWwgbGFuZz0iemgtdHciPg0KPGhlYWQ+DQo8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVR5cGUiIGNvbnRlbnQ9InRleHQvaHRtbDsgY2hhcnNldD1iaWc1Ii8+DQo8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LUxhbmd1YWdlIiBjb250ZW50PSJ6aC10dyIvPg0KPGxpbmsgaHJlZj0iY3NzL2luZGV4LmNzcyIgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KPCEtLQ0KDQotLT4NCjwvc3R5bGU+DQo8L2hlYWQ+DQo8Ym9keT4NCjxkaXYgY2xhc3M9IkZlYXR1cmVkMiI+DQogIDxoMT48aW1nIHNyYz0iaW1hZ2VzL2luZGV4X3RpdGxlMDIuZ2lmIiBhbHQ9IueUn+a0u+mbnOiyqOeJuembhiIgLz4NCiAgICA8ZGl2IGNsYXNzPSJpbmRleGxpbmUiPjwvZGl2Pg0KICA8L2gxPg0KICA8aDI+5a625YW36YWN572u6Kuu6Kmi5pyN5YuZPC9oMj4NCiAgPGgzPuaCqOaDs+imgemBjuiRl+eEoeWNsOiJr+WTgeeahOeUn+a0u+WXjj8g5oiR5YCR5bCH56ut55uh5omA6IO954K65oKo6KaP5YqD5pyA6YGp5ZCI5oKo55qE5a625YW36YWN572u5o+Q5qGI44CCPC9oMz4NCiAgPGRpdiBjbGFzcz0ibGlmZUJPWDAxIj4NCiAgICA8bGkgY2xhc3M9InRpdGxlIj48YSBocmVmPSJDYW1wYWlnbi5hc3B4P0lEPTE4NyI+DQogICAgDQogICAgICA8aW1nIHNyYz0iaW1hZ2VzL2luZGV4aW1nXzM0LmpwZyIgYWx0PSLlrrblhbfphY3nva7oq67oqaLmnI3li5kiIC8+PC9hPjwvbGk+DQogICAgPC9saT4NCg0KICA8L2Rpdj4NCiAgPGRpdiBjbGFzcz0iY2xlYXIiPjwvZGl2Pg0KICA8ZGl2IGNsYXNzPSJmdXJuaXR1cmVCT1giPg0KIA0KICAgIDxsaSBjbGFzcz0idGl0bGUiPjxhIGhyZWY9ImllL2luZGV4LmFzcHgiPg0KICAgICAgPHA+5a625YW36LO86LK35pW05ZCI5pyN5YuZPC9wPg0KICAgICAgPGltZyBzcmM9ImltYWdlcy9pbmRleGltZ18zNy5qcGciIGFsdD0i5a625YW36LO86LK35pW05ZCI5pyN5YuZIiAvPjwvYT48L2xpPg0KICAgIDwvbGk+DQogICAgIDxsaSBjbGFzcz0idGl0bGUiPjxhIGhyZWY9Im11amlsaWZlL2JlZC8iPg0KICAgICAgPHA+54Sh5Y2w6Imv5ZOBIOaUtue0jeW6ijwvcD4NCiAgICAgIDxpbWcgc3JjPSJpbWFnZXMvaW5kZXhpbWdfMzkuanBnIiBhbHQ9IueEoeWNsOiJr+WTgSDmlLbntI3luooiIC8+PC9hPjwvbGk+DQogICAgPC9saT4NCiAgICAgPGxpIGNsYXNzPSJ0aXRsZSI+PGEgaHJlZj0ibXVqaWxpZmUvY29tYmluYWJsZS8iPg0KICAgICAgPHA+5pS257SN5a625YW3PC9wPg0KICAgICAgPGltZyBzcmM9ImltYWdlcy9pbmRleGltZ180MS5qcGciIGFsdD0i5pS257SN5a625YW3IiAvPjwvYT48L2xpPg0KICAgIDwvbGk+DQogICANCiAgPC9kaXY+DQogICAgICA8ZGl2IGNsYXNzPSJjbGVhciI+PC9kaXY+DQogICAgPGJyLz4NCiAgPC9oMT4NCiAgPGgyPueEoeWNsOiJr+WTgSDnlJ/mtLvmlrnlvI/mj5DmoYg8L2gyPg0KICA8aDQ+5b6e5Zau6Lqr55Sf5rS75Yiw5Zyo5a625bqt55Sf5rS744CC5rS76LqN5pa85a625YW36Zuc6LKo55qE5ZCE56iu55Sf5rS75pa55byP5o+Q5qGI44CCPC9oND4NCiANCiAgPGRpdiBjbGFzcz0iZ3JvY2VyeUJPWCI+DQogICAgPGxpIGNsYXNzPSJ0aXRsZSI+DQogICAgPGltZyBzcmM9ImltYWdlcy9pbmRleF90cmlhbmdsZTIuZ2lmIiAvPiANCiAgICA8YSBocmVmPSJtdWppbGlmZS9zdGF0aW9uZXJ5dmlldy8iPiAgDQogICAgICA8cD7mloflhbfpoqjmma88L3A+DQogICAgICA8aW1nIHNyYz0iaW1hZ2VzL2luZGV4aW1nXzQ1LmpwZyIgYWx0PSLmloflhbfpoqjmma8iIC8+PC9hPjwvbGk+DQogICAgPC9saT4NCiAgICAgPGxpIGNsYXNzPSJ0aXRsZSI+DQogICAgICA8aW1nIHNyYz0iaW1hZ2VzL2luZGV4X3RyaWFuZ2xlMi5naWYiIC8+IA0KICAgICA8YSBocmVmPSJDYW1wYWlnbi5hc3B4P0lEPTg1NCI+DQogICAgICA8cD7mjoPpmaQu5riF5r2U55So5ZOBPC9wPg0KICAgICAgPGltZyBzcmM9ImltYWdlcy9pbmRleGltZ180Ny5qcGciIGFsdD0i5o6D6ZmkLua4hea9lOeUqOWTgSIgLz48L2E+PC9saT4NCiAgICA8L2xpPg0KICAgICA8bGkgY2xhc3M9InRpdGxlIj4NCiAgICAgIDxpbWcgc3JjPSJpbWFnZXMvaW5kZXhfdHJpYW5nbGUyLmdpZiIgLz4gDQogICAgIDxhIGhyZWY9Im11amlsaWZlL2xpZ2h0LyI+DQogICAgICA8cD7nhKHljbDoia/lk4Eg5YWJ5bGF5a62PC9wPg0KICAgICAgPGltZyBzcmM9ImltYWdlcy9pbmRleGltZ180OS5qcGciIGFsdD0i54Sh5Y2w6Imv5ZOBIOWFieWxheWutiIgLz48L2E+PC9saT4NCiAgICA8L2xpPg0KICAgICA8bGkgY2xhc3M9InRpdGxlIj4NCiAgICAgIDxpbWcgc3JjPSJpbWFnZXMvaW5kZXhfdHJpYW5nbGUyLmdpZiIgLz4gDQogICAgIDxhIGhyZWY9IkNhbXBhaWduLmFzcHg/SUQ9MTAxMSI+DQogICAgICA8cD7nsKHmvZTnmoTnlKjppJDlmajlhbc8L3A+DQogICAgICA8aW1nIHNyYz0iaW1hZ2VzL2luZGV4aW1nXzUxLmpwZyIgYWx0PSLnsKHmvZTnmoTnlKjppJDlmajlhbciIC8+PC9hPjwvbGk+DQogICAgPC9saT4NCiAgIA0KICA8L2Rpdj4NCiAgDQogIDxkaXYgY2xhc3M9ImNsZWFyIj48L2Rpdj4NCiAgPGRpdiBjbGFzcz0ibW9yZWxpbmtfUiI+PGEgaHJlZj0iY2FtcGFpZ25fbGlzdC5hc3B4I0NIMiI+5pu05aSa55Sf5rS76Zuc6LKo54m56ZuGPC9hPjwvZGl2Pg0KICA8ZGl2IGNsYXNzPSJjbGVhciI+PC9kaXY+DQo8L2Rpdj4NCjwvYm9keT4NCjwvaHRtbD4NCmQCFQ8WAh8FBZcbPCFET0NUWVBFIGh0bWwgUFVCTElDICItLy9XM0MvL0RURCBYSFRNTCAxLjAgVHJhbnNpdGlvbmFsLy9FTiI+DQo8aHRtbCBsYW5nPSJ6aC10dyI+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PWJpZzUiLz4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtTGFuZ3VhZ2UiIGNvbnRlbnQ9InpoLXR3Ii8+DQo8bGluayBocmVmPSJjc3MvaW5kZXguY3NzIiByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIj4NCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQo8IS0tDQoucHJldmJ0biBhIHsNCgliYWNrZ3JvdW5kOiB1cmwoaW1hZ2VzL2luZGV4YnRuMDEuZ2lmKTsNCgl3aWR0aDogMTZweDsNCgloZWlnaHQ6IDUwcHg7DQoJZGlzcGxheTogYmxvY2s7DQp9DQoucHJldmJ0biBhOmhvdmVyIHsNCgliYWNrZ3JvdW5kLXBvc2l0aW9uOiBsZWZ0IGJvdHRvbTsNCn0NCi5wcmV2YnRuIGxpIHsNCglsaXN0LXN0eWxlOiBub25lOw0KCWZsb2F0OiBsZWZ0Ow0KCW1hcmdpbi1sZWZ0OiAxcHg7DQp9DQoubmV4dGJ0biBhIHsNCgliYWNrZ3JvdW5kOiB1cmwoaW1hZ2VzL2luZGV4YnRuMDIuZ2lmKTsNCgl3aWR0aDogMTZweDsNCgloZWlnaHQ6IDUwcHg7DQoJZGlzcGxheTogYmxvY2s7DQp9DQoubmV4dGJ0biBhOmhvdmVyIHsNCgliYWNrZ3JvdW5kLXBvc2l0aW9uOiBsZWZ0IGJvdHRvbTsNCn0NCi5uZXh0YnRuIGxpIHsNCglsaXN0LXN0eWxlOiBub25lOw0KCWZsb2F0OiBsZWZ0Ow0KCW1hcmdpbi1sZWZ0OiAxM3B4Ow0KfQ0KLS0+DQo8L3N0eWxlPg0KPC9oZWFkPg0KPGJvZHk+DQo8ZGl2IGNsYXNzPSJGZWF0dXJlZDMiPg0KICA8aDE+PGltZyBzcmM9ImltYWdlcy9pbmRleF90aXRsZTAzLmdpZiIgYWx0PSLnlJ/mtLvpm5zosqjnibnpm4YiIC8+DQogICAgPGRpdiBjbGFzcz0iaW5kZXhsaW5lIj48L2Rpdj4NCiAgPC9oMT4NCiAgPGRpdiBjbGFzcz0iY2xlYXIiPjwvZGl2Pg0KICA8ZGl2IGNsYXNzPSJmb29kQk9YIj4NCiAgICA8ZGl2IGNsYXNzPSJmb29kY2FtcGFpZ24iPg0KICAgIDxsaT48YSBocmVmPSJDYW1wYWlnbi5hc3B4P0lEPTExMTEiPjxpbWcgc3JjPSJpbWFnZXMvaW5kZXhpbWdfYy5qcGciIGFsdD0i5rqr5pqW576O5ZGzIiAvPjxzcGFuIGNsYXNzPSJ0aXRsZSI+5rqr5pqW576O5ZGzPC9zcGFuPjxzcGFuIGNsYXNzPSJkZXRhaWwiPuWGt+WkqeS6q+eUqOeGseeGseeahOaWmeeQhu+8jOaYr+WvkuWGt+WGrOaXpeS4reacgOajkueahOS6q+WPl+OAgjwvc3Bhbj48L2E+PC9saT4NCiAgICA8bGk+PGEgaHJlZj0iQ2FtcGFpZ24uYXNweD9JRD0xMDU0Ij48aW1nIHNyYz0iaW1hZ2VzL2luZGV4aW1nX2IuanBnIiBhbHQ9IuWFkuaZgue+juWRsyIgLz48c3BhbiBjbGFzcz0idGl0bGUiPuWFkuaZgue+juWRszwvc3Bhbj48c3BhbiBjbGFzcz0iZGV0YWlsIj7lsI/mmYLlgJnluLjlkIPnmoTpm7blmLTvvIzlhYXmu7/lhZLmmYLpm5zosqjlupfnmoTlm57mhrbjgII8L3NwYW4+PC9hPjwvbGk+DQogICAgPGxpPjxhIGhyZWY9IkNhbXBhaWduLmFzcHg/SUQ9MTAzMyI+PGltZyBzcmM9ImltYWdlcy9pbmRleGltZ19hYS5qcGciIGFsdD0i5ZKW5ZOp5aW95pmC5YWJIiAvPjxzcGFuIGNsYXNzPSJ0aXRsZSI+5ZKW5ZOp5aW95pmC5YWJPC9zcGFuPjxzcGFuIGNsYXNzPSJkZXRhaWwiPuWIuua/gOmjn+assueahOWSluWTqemkkOaQremFjemjr+W+jOeUnOm7nu+8jOa2iOaakemAj+W/g+a2vOOAgjwvc3Bhbj48L2E+PC9saT4NCiAgICAgIA0KICAgICANCiAgICA8L2Rpdj4NCiAgICA8ZGl2IGNsYXNzPSJjbGVhciI+PC9kaXY+DQogICAgPGRpdiBjbGFzcz0ibW9yZWxpbmtfUiI+PGEgaHJlZj0iY2FtcGFpZ25fbGlzdC5hc3B4I0NINCI+5pu05aSa6aOf5ZOB54m56ZuGPC9hPjwvZGl2Pg0KICAgIDxkaXYgY2xhc3M9ImNsZWFyIj48L2Rpdj4NCiAgICA8aDU+5paw5ZWG5ZOBDQogICAgICA8ZGl2IGNsYXNzPSJpbmRleGxpbmUyIj48L2Rpdj4NCiAgICA8L2g1Pg0KICAgIDxkaXYgaWQ9ImZvb2QiIGNsYXNzPSJzZWN0aW9uIj4NCiAgICAgIDxkaXYgY2xhc3M9Im5ld2ltZ2ZpcnN0Ij48YSBocmVmPSJpdGVtX2RldGFpbC5hc3B4P0NhdElEPTIzJlBkdElEPTEwOCZDb2RlSUQ9NDU0NzMxNTkxNTI3OSZOdW1JRD0wIj48aW1nIHNyYz0iaW1hZ2VzLzQ1NDczMTU5MTUyNzlfOTUuanBnIiAvPjwvYT48L2Rpdj4NCiAgICAgIDxkaXYgY2xhc3M9Im5ld2ltZyI+PGEgaHJlZj0iaXRlbV9kZXRhaWwuYXNweD9DYXRJRD0yMyZQZHRJRD0xMDkmQ29kZUlEPTQ1NDczMTU5MTAyNjcmTnVtSUQ9MCI+PGltZyBzcmM9ImltYWdlcy80NTQ3MzE1OTEwMjY3Xzk1LmpwZyIgLz48L2E+PC9kaXY+DQogICAgICA8ZGl2IGNsYXNzPSJuZXdpbWciPjxhIGhyZWY9Iml0ZW1fZGV0YWlsLmFzcHg/Q2F0SUQ9MjMmUGR0SUQ9MTEwJkNvZGVJRD00NTQ3MzE1NTQ5NTczJk51bUlEPTAiPjxpbWcgc3JjPSJpbWFnZXMvNDU0NzMxNTU0OTU3M185NS5qcGciIC8+PC9hPjwvZGl2Pg0KICAgICAgPGRpdiBjbGFzcz0ibmV3aW1nIj48YSBocmVmPSJpdGVtX2RldGFpbC5hc3B4P0NhdElEPTIzJlBkdElEPTExMSZDb2RlSUQ9NDU0NzMxNTIzMTI0OSZOdW1JRD0wIj48aW1nIHNyYz0iaW1hZ2VzLzQ1NDczMTUyMzEyNDlfOTUuanBnIiAvPjwvYT48L2Rpdj4NCiAgICAgIDxkaXYgY2xhc3M9Im5ld2ltZyI+PGEgaHJlZj0iaXRlbV9kZXRhaWwuYXNweD9DYXRJRD0yMyZQZHRJRD0xMDkmQ29kZUlEPTQ1NDczMTU5MTAxMTMmTnVtSUQ9MCI+PGltZyBzcmM9ImltYWdlcy80NTQ3MzE1OTEwMTEzXzk1LmpwZyIgLz48L2E+PC9kaXY+DQogICAgICA8ZGl2IGNsYXNzPSJuZXdpbWciPjxhIGhyZWY9Iml0ZW1fZGV0YWlsLmFzcHg/Q2F0SUQ9MjMmUGR0SUQ9MTE0JkNvZGVJRD00NTQ3MzE1OTEyNDA3Jk51bUlEPTAiPjxpbWcgc3JjPSJpbWFnZXMvNDU0NzMxNTkxMjQwN185NS5qcGciIC8+PC9hPjwvZGl2Pg0KICAgICAgPGRpdiBjbGFzcz0ibmV3aW1nIj48YSBocmVmPSJpdGVtX2RldGFpbC5hc3B4P0NhdElEPTIzJlBkdElEPTExMiZDb2RlSUQ9NDU0NzMxNTkxMDcxNyZOdW1JRD0wIj48aW1nIHNyYz0iaW1hZ2VzLzQ1NDczMTU5MTA3MTdfOTUuanBnIiAvPjwvYT48L2Rpdj4NCiAgICAgIDxkaXYgY2xhc3M9Im5ld2ltZyI+PGEgaHJlZj0iaXRlbV9kZXRhaWwuYXNweD9DYXRJRD0yMyZQZHRJRD0xMjMmQ29kZUlEPTQ1NDczMTU1NTQ3MjAmTnVtSUQ9MCI+PGltZyBzcmM9ImltYWdlcy80NTQ3MzE1NTU0NzIwXzk1LmpwZyIgLz48L2E+PC9kaXY+DQogICAgICA8ZGl2IGNsYXNzPSJjbGVhciI+PC9kaXY+DQogICAgICA8ZGl2IGNsYXNzPSJtb3JlbGlua19SIj48YSBocmVmPSJuZXdfbGlzdC5hc3B4Ij7mm7TlpJrmlrDllYblk4E8L2E+PC9kaXY+DQogICAgICA8ZGl2IGNsYXNzPSJjbGVhciI+PC9kaXY+DQogICAgPC9kaXY+DQogIDwvZGl2Pg0KPC9kaXY+DQo8L2JvZHk+DQo8L2h0bWw+DQpkAhcPZBYCAgEPFgIfBQXzBzxsaSBjbGFzcz0iZmlyc3QiPjxhIGhyZWY9Im11amljYXJkLmFzcHgiIFRhcmdldD0iX3NlbGYiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvQmFubmVyXzQuZ2lmIiB3aWR0aD0iMTMwIiBhbHQ9Ik1VSkkgQ2FyZCIgLz48L2E+PC9saT48bGkgPjxhIGhyZWY9Imh0dHA6Ly93d3cuYm9va3MuY29tLnR3L2V4ZXAvYXNzcC5waHAvbWt0LS1NVUpJL3dlYi9mbGFnc2hpcF8wMDAwMDAzNjE0IiBUYXJnZXQ9Il9ibGFuayI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9CYW5uZXJfMy5naWYiIHdpZHRoPSIxMzAiIGFsdD0i5Y2a5a6i5L6GIiAvPjwvYT48L2xpPjxsaSA+PGEgaHJlZj0iaHR0cDovL3d3dy43bmV0LmNvbS50dy83bmV0L3J1aTAwMmcuZmFjZXM/Y2F0aWQ9MzcmbGFkb3NpZGc9OTcwOTAmaWNtcGlkPU5BMDA1IiBUYXJnZXQ9Il9ibGFuayI+PGltZyBzcmM9Ii9VcGxvYWRJbWFnZS9CYW5uZXJfOS5qcGciIHdpZHRoPSIxMzAiIGFsdD0iN25FVCIgLz48L2E+PC9saT48bGkgPjxhIGhyZWY9Imh0dHA6Ly9tdWppLnNob3AucmFrdXRlbi50dy8iIFRhcmdldD0iX2JsYW5rIj48aW1nIHNyYz0iL1VwbG9hZEltYWdlL0Jhbm5lcl8yLmdpZiIgd2lkdGg9IjEzMCIgYWx0PSLmqILlpKkiIC8+PC9hPjwvbGk+PGxpID48YSBocmVmPSJjYXRhbG9nLmFzcHgiIFRhcmdldD0iX3NlbGYiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvQmFubmVyXzUuanBnIiB3aWR0aD0iMTMwIiBhbHQ9IlBERuS4i+i8iSIgLz48L2E+PC9saT48bGkgPjxhIGhyZWY9ImpvYi5hc3B4IiBUYXJnZXQ9Il9zZWxmIj48aW1nIHNyYz0iL1VwbG9hZEltYWdlL0Jhbm5lcl8xLmpwZyIgd2lkdGg9IjEzMCIgYWx0PSLkurrmiY3li5/pm4YiIC8+PC9hPjwvbGk+PGxpID48YSBocmVmPSJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS9tdWppLnR3P3Y9d2FsbCIgVGFyZ2V0PSJfYmxhbmsiPjxpbWcgc3JjPSIvVXBsb2FkSW1hZ2UvQmFubmVyXzcuZ2lmIiB3aWR0aD0iMTMwIiBhbHQ9IkZC57KJ57Wy5ZyYIiAvPjwvYT48L2xpPmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgMFJ2N0bDAwJEVwYXBlck1haWxDb250cm9sMSRidG5PcmRlckVwYXBlcgUoY3RsMDAkRXBhcGVyTWFpbENvbnRyb2wxJGJ0bkNhbmNlbEVwYXBlcgU5Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRQcm9kdWN0U2VhcmNoQ29udHJvbDEkYnRuU2VhcmNoc7il2HU3xKYt825LGMQ4zMx+qZk=" />
+    </div>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var theForm = document.forms['aspnetForm'];
+        if (!theForm) {
+            theForm = document.aspnetForm;
+        }
+        function __doPostBack(eventTarget, eventArgument) {
+            if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                theForm.__EVENTTARGET.value = eventTarget;
+                theForm.__EVENTARGUMENT.value = eventArgument;
+                theForm.submit();
+            }
+        }
+        //]]>
+    </script>
+
+
+    <script src="~/Scripts/star-rating.js"></script>
+
+    <script language="Javascript">
+        function SubbtnEmail(btnid) {
+            if (window.event.keyCode == 13) {
+                var bn = document.getElementById(btnid) //eval(btnid);
+                bn.click();
+            }
+        }
+    </script>
+    @*   <script type='text/javascript'>function CheckValueEpaper(){var errMsg='';if(document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.length == 0) errMsg += '請輸入E-Mail！\n';if((document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.indexOf('.') == -1 || document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.indexOf('@') == -1 || document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.length < 10 || !(document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.indexOf('+') == -1) || !(document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.indexOf('/') == -1) || !(document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.indexOf('*') == -1)) && (!document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').value.length == 0)) errMsg += 'E-Mail輸入錯誤！\n';if(errMsg.length > 0) {alert(errMsg);  document.getElementById('ctl00_EpaperMailControl1_txtOrderEmail').focus(); return false;} else {return true;}}</script>*@
+    <script type='text/javascript'>
+    var tempobj;
+    function CheckSearch() {
+        var errMsg = '';
+        if (document.getElementById('ctl00_ContentPlaceHolder1_ProductSearchControl1_txtKeyWord').value.length == 0) errMsg += '請輸入關鍵字！\n';
+        if (document.getElementById('ctl00_ContentPlaceHolder1_ProductSearchControl1_txtKeyWord').value == '請輸入關鍵字') errMsg += '請輸入關鍵字！\n';
+        if (errMsg.length > 0) { alert(errMsg); document.getElementById('ctl00_ContentPlaceHolder1_ProductSearchControl1_txtKeyWord').focus(); return false; } else {
+            var name = document.getElementById('ctl00_ContentPlaceHolder1_ProductSearchControl1_txtKeyWord').value;
+            $.ajax({
+                url: 'SectionPartial',
+                data: { page: 1, id: '@id', name: name },
+                type: "Get",
+
+                success: function (res) {
+                    $("#grid").html(res);
+                    menu_ok('@id', name);
+                },
+
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
+        }
+    }
+    function detailcart(productId) {
+        if ($("#logstatus").val() == "0") {
+            $("#itemModal").modal("show");
+            $.ajax({
+                url: "login?ReturnUrl=Section",
+                success: function (data) {
+                    $("#itemModal").html(data);
+                }
+            });
+        } else {
+            if ('@ispush'==''){
+                $.getJSON("AddToCart", { ProductId: productId, IsPush: null }, function (res) {
+                    if (res == true) {
+                        alert("加入購物車成功!!");
+                    } else {
+                        //alert("商品已在購物車!!");
+                    }
+                });
+                }else{
+                $.getJSON("AddToCart", { ProductId: productId, IsPush: '@ispush' }, function (res) {
+                    if (res == true) {
+                        alert("加入購物車成功!!");
+                    } else {
+                        //alert("商品已在購物車!!");
+                    }
+                });
+            }
+                
+        }
+    }
+    function selectreply(obj) {
+        try {
+            tempobj.css("background-color", "#FFFFFF");
+        } catch (exception) { }
+        obj.css("background-color", "#f6fe48");
+        $("#replyto").html(obj.data("name"));
+        $("#replytoid").val(obj.data("id"));
+        $("#replytopid").val(obj.data("productid"));
+        //alert($("#replyto").html() + ", " + $("#replytoid").val() + ", " + $("#replytopid").val());
+        tempobj = obj;
+    }
+    function replyto() {
+        var rid = $("#replytoid").val();
+        var pid = $("#MainProductId").html();
+        var replyContext = $("#replyContext").val();
+        if (rid != null && rid != "" && replyContext != "") {
+            $.ajax({
+                url: 'replyto',
+                data: { Id: rid, ProductId: pid, replyContext: replyContext },
+                type: "Get",
+
+                success: function (res) {
+                    window.location.href = "/home/productdetail?ProductId=" + pid;
+                }
+            });
+        } else {
+            alert("請確認收件者及內文!!");
+        }
+    }
+    function reply() {
+        var pid = $("#MainProductId").html();
+        var replyContext = $("#replyContext").val();
+        if (replyContext != "") {
+            $.ajax({
+                url: 'reply',
+                data: { ProductId: pid, replyContext: replyContext },
+                type: "Get",
+
+                success: function (res) {
+                    window.location.href = "/home/productdetail?ProductId=" + pid;
+                }
+            });
+        } else {
+            alert("請確認內文!!");
+        }
+    }
+    </script>
+    <script type="text/javascript">
+        //<![CDATA[
+        function WebForm_OnSubmit() {
+            if (typeof (ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+            return true;
+        }
+        //]]>
+    </script>
+
+    <div>
+
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AA98EE0D" />
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgLC8PX7BgL+yZ+IBALDm83CDwKF7rSnBwKC/rnXDwL5oqbGC7XGYldj85ZrFF3yitlf5+58xpIm" />
+    </div>
+    <script type="text/javascript">
+        //<![CDATA[
+        Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', document.getElementById('aspnetForm'));
+        Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$EpaperMailControl1$upEpaper'], ['ctl00$EpaperMailControl1$btnOrderEpaper', 'ctl00$EpaperMailControl1$btnCancelEpaper'], [], 90);
+        //]]>
+    </script>
+
+    <div id="wrapper" style="">
+        <div id="header">
+            <div id="logo"><a href="~/home/test" onmouseout="MM_swapImgRestore()" onmouseover="    MM_swapImage('Image79', '', '/images/logo-text2.png', 1)"><img src="~/images/logo-text.png" name="Image79" width="120" height="27" border="0" id="Image79" /></a></div>
+            <div id="functionBlock">
+                <ul id="navgation">
+
+                    <li>
+                        <label>
+                            <a href="~/home/Products">
+                                <span class="glyphicon glyphicon-home"></span>首頁
+                            </a>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <a href="~/home/Section">
+                                <span class="glyphicon glyphicon-chevron-right"></span>商品情報
+                            </a>
+                        </label>
+                    </li>
+                </ul>
+                <ul style="float:right">
+                    @if (HttpContext.Current.Request.Cookies["UIC"] == null)
+                    {
+                        <li>
+                            <label>
+                                <a href="javascript:window.open('/home/FurnitureDecorate','','menubar=no,status=yes,scrollbars=yes,top=10,left=100,toolbar=no,width=1630,height=930')" target="_blank" class="open3Durl" onmouseout="    MM_swapImgRestore()" onmouseover="    MM_swapImage('Image89', '', '/images/housemaker_2.png', 1)"><img src="~/images/housemaker.png" width="20px" style="margin-top:-8px" id="Image89" />3D虛擬擺設</a>
+                            </label>
+                            <label>
+                                <a href="javascript:void(0)" onclick="openlogin();">
+                                    <span class="glyphicon glyphicon-log-in"></span>
+                                    登入
+                                </a>
+                            </label>
+                            <label>
+                                <a href="~/home/regist"><span class="glyphicon glyphicon-edit"></span>註冊</a>
+                            </label>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <label style="font-size:16px;">
+                                Hi!
+                            </label>
+                            <label style="font-size:16px;margin-top:1px;">
+                                <a href="~/home/MemberSection" style="color:#0094ff;" onmouseover="$(this).css('color', '#FF0000')" onmouseout="$(this).css('color', '#0094ff')">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    @HttpUtility.UrlDecode(HttpContext.Current.Request.Cookies["UIC"]["MyName"])
+                                </a>
+                            </label>
+                            @if (HttpContext.Current.Request.Cookies["UIC"]["Role"] == "ADMIN")
+                            {
+                                <label>
+                                    <a href="~/admin/admin/ProductIndex"><span class="glyphicon glyphicon-edit"></span>後台管理</a>
+                                </label>
+                            }
+                            <label>
+                                <a href="~/home/ShopCart"><span class="glyphicon glyphicon-shopping-cart"></span>購物車</a>
+                            </label>
+                            <label>
+                                <a href="javascript:window.open('/home/FurnitureDecorate','','menubar=no,status=yes,scrollbars=yes,top=10,left=100,toolbar=no,width=1630,height=930')" target="_blank" class="open3Durl" onmouseout="    MM_swapImgRestore()" onmouseover="    MM_swapImage('Image89', '', '/images/housemaker_2.png', 1)"><img src="~/images/housemaker.png" width="20px" style="margin-top:-8px" id="Image89" />3D虛擬擺設</a>
+                            </label>
+                            <label>
+                                <a href="~/home/logout"><span class="glyphicon glyphicon-log-out"></span>登出</a>
+                            </label>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+        <div id="container">
+            <div id="path"><label><a href="~/home/Section">全部商品</a></label>&nbsp;＞&nbsp;<h1><label id="MainProductId">@Model.ProductId</label></h1></div>
+            <div style="height:20px;"><div style="width:88%;float:left;"><label style="font-size:22pt">@Model.ProductName</label></div><div style="width:12%;float:left;margin-top:18px"><label><a href="javascript:void(0)" style="float:right" onclick="detailcart('@Model.ProductId');"><span class="glyphicon glyphicon-shopping-cart"></span>加入購物車</a></label></div></div>
+            <div id="titlebar">
+                <div id="keywordfield">
+                    @foreach (var categoryitem in Model.ProductCategory)
+                    {
+                        if (categorycount == 0)
+                        {
+                            categorycount = 1;
+                            <label><a href="~/home/section?Id=@categoryitem.Id" class="god_href">@categoryitem.ProductCategory.Name</a></label>
+                        }
+                        else
+                        {
+                            <label>
+                                ,<a href="~/home/section?Id=@categoryitem.Id" class="god_href">@categoryitem.ProductCategory.Name</a>
+                            </label>
+                        }
+                    }
+                </div>
+                <input id="input-21e" value="@Model.Star" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs">
+            </div>
+            <div id="productpic">
+                <div class="bs-example">
+                    <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            @if (@Model.ProductImgUrl2 != null)
+                            {
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                            }
+                            @if (@Model.ProductImgUrl3 != null)
+                            {
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            }
+                            @if (@Model.ProductImgUrl4 != null)
+                            {
+                                <li data-target="#myCarousel" data-slide-to="3"></li>
+                            }
+                        </ol>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item">
+                                <div class="item" style="display:table-cell;vertical-align:middle;">
+                                    <img src="@Model.ProductImgUrl1" style="max-width:400px;max-height:300px" />
+                                </div>
+                            </div>
+                            @if (@Model.ProductImgUrl2 != null)
+                            {
+                                <div class="item">
+                                    <div class="item" style="display:table-cell;vertical-align:middle;">
+                                        <img src="@Model.ProductImgUrl2" style="max-width:400px;max-height:300px" />
+                                    </div>
+                                </div>
+                            }
+                            @if (@Model.ProductImgUrl3 != null)
+                            {
+                                <div class="item">
+                                    <div class="item" style="display:table-cell;vertical-align:middle;">
+                                        <img src="@Model.ProductImgUrl3" style="max-width:400px;max-height:300px" />
+                                    </div>
+                                </div>
+                            }
+                            @if (@Model.ProductImgUrl4 != null)
+                            {
+                                <div class="item">
+                                    <div class="item" style="display:table-cell;vertical-align:middle;">
+                                        <img src="@Model.ProductImgUrl4" style="max-width:400px;max-height:300px" />
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <!-- Carousel nav -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="productbody">
+                <table style="word-break:break-all">
+                    <thead>
+                        <tr>
+                            <td class="col-sm-2 bodytext"><label class="word-font">商品價格:</label></td>
+                            <td class="col-sm-10">@if (Model.OrgPrice != null)
+                            {<label class="word-font" style="color:#ff0000;text-shadow: 0px 0px 0px black;font-size:16pt">@Model.ProductPrice 元</label> }
+                            else
+                            { <label class="word-font">@Model.ProductPrice 元</label>}@if(Model.OrgPrice!=null){<label style="font-size:11pt"><s>(原價:@Model.OrgPrice 元)</s></label>}</td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-2 bodytext"><label class="word-font">上架日期:</label></td>
+                            <td class="col-sm-10"><label class="word-font">@Model.Time</label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-2 bodytext"><label class="word-font">商品規格:</label></td>
+                            <td class="col-sm-10"><label class="word-font">@Html.Raw(Model.ProductSpec)</label></td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-2 bodytext"><label class="word-font">商品顏色:</label></td>
+                            <td class="col-sm-10">
+                                <div class="colors">
+                                    @if (Model.Sharp != null)
+                                    {
+                                        foreach (var sharp in Model.Sharp)
+                                        {
+                                            <div><span style="background:@sharp"></span></div>
+                                        }
+                                    }
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-sm-2 bodytext"><label class="word-font">商品描述:</label></td>
+                            <td class="col-sm-10"><label class="word-font">@Html.Raw(Model.ProductMemo)</label></td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#powerTab" role="tab" data-toggle="tab"><label>關聯推薦</label></a></li>
+                <li><a href="#pidTab" role="tab" data-toggle="tab"><label>問與答</label></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="powerTab">
+
+                    @if (Model.categoryitem != null)
+                    {
+                        if (Model.categoryitem.Count != 0)
+                        {
+                            <div id="categorylike">
+                                <div><label style="font-size:16pt">同類型商品</label></div>
+
+                                @foreach (var item in Model.categoryitem)
+                                {
+                                    <div style="width:180px;float:left;margin-left:15px">
+                                        <a href="~/home/productdetail?IsPush=2&ProductId=@item.ProductId" class="god_href">
+                                            <div style="display:table-cell;vertical-align:middle;">
+                                                <img src="@item.ProductImgUrl" width="180px" height="180px" />
+                                            </div>
+                                            <div style="text-align:center">
+                                                <span>@item.ProductName</span>
+                                            </div>
+                                        </a>
+                                        <div style="text-align:center">
+                                            <input id="input-21e" value="@item.Star" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" disabled>
+                                        </div>
+                                        <div style="text-align:center">
+                                            <span>@item.ProductPrice 元</span>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    }
+                    @if (Model.detailitem != null)
+                    {
+                        if (Model.detailitem.Count != 0)
+                        {
+                            <div id="maylike">
+                                <div><label style="font-size:16pt">您可能也會喜歡</label></div>
+
+                                @foreach (var item in Model.detailitem)
+                                {
+                                    <div style="width:180px;float:left;margin-left:15px">
+                                        <a href="~/home/productdetail?IsPush=3&ProductId=@item.ProductId" class="god_href">
+                                            <div style="display:table-cell;vertical-align:middle;">
+                                                <img src="@item.ProductImgUrl" width="180px" height="180px" />
+                                            </div>
+                                            <div style="text-align:center">
+                                                <span>@item.ProductName</span>
+                                            </div>
+                                        </a>
+                                        <div style="text-align:center">
+                                            <input id="input-21e" value="@item.Star" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" disabled>
+                                        </div>
+                                        <div style="text-align:center">
+                                            <span>@item.ProductPrice 元</span>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    }
+                    @if (Model.matchitem != null)
+                    {
+                        if (Model.matchitem.Count != 0)
+                        {
+                            <div id="matchlike">
+                                <div><label style="font-size:13pt">@Model.UserStatus</label></div>
+
+                                @foreach (var item in Model.matchitem)
+                                {
+                                    <div style="width:180px;float:left;margin-left:15px">
+                                        <a href="~/home/productdetail?IsPush=4&ProductId=@item.ProductId" class="god_href">
+                                            <div style="display:table-cell;vertical-align:middle;">
+                                                <img src="@item.ProductImgUrl" width="180px" height="180px" />
+                                            </div>
+                                            <div style="text-align:center">
+                                                <span>@item.ProductName</span>
+                                            </div>
+                                        </a>
+                                        <div style="text-align:center">
+                                            <input id="input-21e" value="@item.Star" type="number" class="rating" min=0 max=5 step=0.5 data-size="xs" disabled>
+                                        </div>
+                                        <div style="text-align:center">
+                                            <span>@item.ProductPrice 元</span>
+                                        </div>
+                                    </div>
+                                }
+
+                            </div>
+                        }
+                    }
+
+                </div>
+                <div class="tab-pane" id="pidTab">
+
+                    @if (Model.replyitem == null)
+                    {
+
+                    }
+                    else
+                    {
+                        if (Model.replyitem.Count == 0)
+                        {
+                            <div><label style="font-size:13pt;margin-top:5px;">暫無最新回應!!</label></div>
+                        }
+                        for (var i = 0; i < Model.replyitem.Count; i++)
+                        {
+                            if (Model.replyitem[i].RId != null)
+                            {
+                                <div style="background-color:#e8e5e5;font-size:13pt;width:100%;margin-top:5px;">
+                                    <div>
+                                        <div>
+                                            <label>@Model.replyitem[i].Account :</label>
+                                        </div>
+                                        <div>
+                                            <label>@Html.Raw(Model.replyitem[i].Text)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                if (i < Model.replyitem.Count - 1)
+                                {
+                                    if (Model.replyitem[i + 1].RId != null)
+                                    {
+                                        <div style="font-size:13pt;width:100%;margin-top:5px;">
+                                            <div>
+                                                <label>@Model.replyitem[i].Name :</label>
+                                            </div>
+                                            <div>
+                                                <label>@Html.Raw(Model.replyitem[i].Text)</label>
+                                            </div>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div style="font-size:13pt;width:100%;margin-top:5px;" onclick="selectreply($(this));" data-id="@Model.replyitem[i].Id" data-name="@Model.replyitem[i].Name" data-productid="@Model.replyitem[i].ProductId">
+                                            <div>
+                                                <label>@Model.replyitem[i].Name :</label>
+                                            </div>
+                                            <div>
+                                                <label>@Html.Raw(Model.replyitem[i].Text)</label>
+                                            </div>
+                                        </div>
+                                    }
+
+                                }
+                                else
+                                {
+                                    if (Model.replyitem[i].RId == null)
+                                    {
+                                        <div style="font-size:13pt;width:100%;margin-top:5px;" onclick="selectreply($(this));" data-id="@Model.replyitem[i].Id" data-name="@Model.replyitem[i].Name" data-productid="@Model.replyitem[i].ProductId">
+                                            <div>
+                                                <label>@Model.replyitem[i].Name :</label>
+                                            </div>
+                                            <div>
+                                                <label>@Html.Raw(Model.replyitem[i].Text)</label>
+                                            </div>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div style="font-size:13pt;width:100%;margin-top:5px;">
+                                            <div>
+                                                <label>@Model.replyitem[i].Name :</label>
+                                            </div>
+                                            <div>
+                                                <label>@Html.Raw(Model.replyitem[i].Text)</label>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+
+
+
+                            }
+
+                        }
+                    }
+                    @if (HttpContext.Current.Request.Cookies["UIC"]!=null)
+                    {
+                        if (HttpContext.Current.Request.Cookies["UIC"]["Role"] == "ADMIN")
+                        {
+                            <div style="font-size:13pt;margin-top:30px;">
+                                <label>回覆對象 :</label><label id="replyto"></label><input type="hidden" id="replytoid" /><input type="hidden" id="replytopid" />
+                            </div>
+                            <div>
+                                <textarea cols="50" rows="8" id="replyContext"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-success" style="margin-top:5px" onclick="replyto();">回覆</button><input type="hidden" id="replytopid" value="@Model.ProductId" />
+                        }
+                        else
+                        {
+                            <div style="font-size:13pt;margin-top:30px;">
+                                <label>留言 :</label>
+                            </div>
+                            <div>
+                                <textarea cols="50" rows="8" id="replyContext"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-success" style="margin-top:5px" onclick="reply();">回覆</button>
+                        }
+                    }
+
+
+                </div>
+
+
+                <div id="footer">
+                    <p class="gotop"><a href="#wrapper">↑TOP</a></p>
+                    <h4>Fantasy　Copyright &copy;</h4>
+
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-4782704-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+        <script type="text/javascript">_satellite.pageBottom();</script>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var Page_ValidationSummaries = new Array(document.getElementById("ctl00_EpaperMailControl1_vsPageError"));
+            var Page_Validators = new Array(document.getElementById("ctl00_EpaperMailControl1_rfvEMail"), document.getElementById("ctl00_EpaperMailControl1_revEMail"));
+            //]]>
+        </script>
+
+
+
+
+        <script type="text/javascript">
+            //<![CDATA[
+
+            document.getElementById('ctl00_EpaperMailControl1_vsPageError').dispose = function () {
+                Array.remove(Page_ValidationSummaries, document.getElementById('ctl00_EpaperMailControl1_vsPageError'));
+            }
+
+            var Page_ValidationActive = false;
+            if (typeof (ValidatorOnLoad) == "function") {
+                ValidatorOnLoad();
+            }
+
+            function ValidatorOnSubmit() {
+                if (Page_ValidationActive) {
+                    return ValidatorCommonOnSubmit();
+                }
+                else {
+                    return true;
+                }
+            }
+            Sys.Application.initialize();
+
+            document.getElementById('ctl00_EpaperMailControl1_rfvEMail').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ctl00_EpaperMailControl1_rfvEMail'));
+            }
+
+            document.getElementById('ctl00_EpaperMailControl1_revEMail').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ctl00_EpaperMailControl1_revEMail'));
+            }
+            //]]>
+        </script>
+
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 984262664;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+        </script>
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+        </script>
+        <script src="~/JQuery/menu.js"></script>
+
+        <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        </div>
+        <noscript>
+            <div style="display:inline;">
+                <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/984262664/?value=0&amp;guid=ON&amp;script=0" />
+            </div>
+        </noscript>
+</body>
+<style>
+    .god_href {
+        color: #0094ff;
+    }
+
+        .god_href:hover {
+            color: #ff0000;
+        }
+
+    .rating-active {
+        width: 230px;
+        float: right;
+        margin-top: -15px;
+    }
+
+    #keywordfield {
+        float: left;
+    }
+
+    #titlebar {
+        height: 30px;
+        margin-top: 30px;
+    }
+
+    /*image gallery*/
+
+    h2 {
+        margin: 0;
+        color: #666;
+        padding-top: 90px;
+        font-size: 52px;
+        font-family: "trebuchet ms", sans-serif;
+    }
+
+    .item {
+        /*background: #333;*/
+        text-align: center;
+        height: 300px !important;
+        width: 400px !important;
+    }
+
+    .carousel {
+        margin-top: 20px;
+        width: 400px;
+    }
+
+    .bs-example {
+        margin: 0 auto;
+        width: 400px;
+    }
+
+    .word-font {
+        font-size: 13pt;
+    }
+
+    .bodytext {
+        vertical-align: text-top;
+        text-align: right;
+    }
+
+    #categorylike {
+        margin-top: 10px;
+        height: 330px;
+    }
+
+    #maylike {
+        margin-top: 10px;
+        height: 330px;
+        /*margin-top: 350px;*/
+    }
+
+    #matchlike {
+        margin-top: 10px;
+        height: 330px;
+        /*margin-top: 350px;*/
+    }
+
+    div.colors div {
+        margin-top: 3px;
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        float: left;
+    }
+
+        div.colors div span {
+            width: 15px;
+            height: 15px;
+            display: block;
+            border-radius: 50%;
+        }
+
+            div.colors div span:hover {
+                width: 17px;
+                height: 17px;
+                margin: -1px 0 0 -1px;
+            }
+</style>
+<style>
+    span {
+        display: inline-block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-family: "Yu Gothic", SimHei;
+    }
+</style>

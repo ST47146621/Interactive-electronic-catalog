@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "周銷售量比較";
+    Layout = "~/Areas/Admin/Views/Shared/_NewLayout.cshtml";
+}
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1.1", { packages: ["corechart"] });
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        $.ajaxSettings.async = false;
+        var result;
+        $.getJSON("WeekChart", {}, function (res) {
+            result = res;
+        });
+        for (var j = 1; j < result.length; j++) {
+            for (var i = 1; i < result[j].length; i++) {
+                result[j][i] = parseInt(result[j][i]);
+            }
+        }
+        var data = google.visualization.arrayToDataTable(result);
+        var d = new Date();
+        var n = (d.getMonth()+1);
+        var options = {
+            title: n+'月份-周銷售量比較',
+            hAxis: { title: '周' },
+            vAxis: { minValue: 0 }
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('columnchart_material'));
+
+        chart.draw(data, options);
+    }
+</script>
+<span id="Bar" hidden>3</span>
+<div id="columnchart_material" style="width: 1024px; height: 600px;"></div>

@@ -1,0 +1,33 @@
+﻿@model List<test.Models.ShopCartModel>
+@{
+    ViewBag.Title = "購物單管理";
+}
+<span id="Bar" hidden>2</span>
+<table class="table hover">
+    <tr><td>購物單單號</td><td>會員帳號</td><td>狀態</td><td></td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-sm-1">@item.ShopId</td>
+            <td class="col-sm-1">@item.Account</td>
+            @if (item.Status == true)
+            {
+                <td class="col-sm-1">已結帳</td>
+            }
+            else
+            {
+                <td class="col-sm-1">未結帳</td>
+            }
+            <td class="col-sm-2">
+                @Html.ActionLink("明細", "ShopCartDetail", "Home", new { Id=item.ShopId}, new { @data_toggle = "modal", @data_target = "#itemModal" })
+                @*@Html.ActionLink("刪除", "Delete", "Home", new { }, new { })*@
+            </td>
+        </tr>
+    }
+</table>
+<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>

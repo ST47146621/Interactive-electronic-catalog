@@ -1,0 +1,59 @@
+﻿@model test.Models.MemberEditModel
+<div class="modal-header">
+    <h4 class="modal-title" id="myModalLabel">修改</h4>
+</div>
+<div class="modal-body">
+    @using (Ajax.BeginForm("MemberEdit", "Admin2", new{@area="Admin2"},
+                new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "body", HttpMethod = "POST" }, new { @class = "form-horizontal", id = "modalForm" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.Account)
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name, new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-8">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "label label-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Phone, new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-8">
+                @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "label label-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Birth, new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-8">
+                @Html.TextBoxFor(m => m.Birth, new { @class = "form-control datepicker", @readonly = "readonly" })
+                @Html.ValidationMessageFor(m => m.Birth, "", new { @class = "label label-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Addr, new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-8">
+                @Html.TextBoxFor(m => m.Addr, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Addr, "", new { @class = "label label-danger" })
+            </div>
+        </div>
+    }
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+    <button type="button" class="btn btn-success">送出</button>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".btn-success").click(function () {
+            $("#modalForm").submit();
+        });
+        $(".btn-default").click(function () {
+            $("#itemModal").modal("hide");
+            $('#itemModal').one('hidden.bs.modal', function (e) {
+                $(this).removeData('bs.modal');
+            });
+        });
+    });
+    $(".datepicker").datepicker({ format: 'yyyy/mm/dd' });
+</script>

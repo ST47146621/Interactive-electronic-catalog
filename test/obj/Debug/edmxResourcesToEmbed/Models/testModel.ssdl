@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ARealShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="Account" />
+    </Key>
+    <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" />
+    <Property Name="Addr" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="10" />
+    <Property Name="Name" Type="nvarchar" MaxLength="10" />
+    <Property Name="Birth" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductImgUrl" Type="nvarchar(max)" />
+    <Property Name="ProductSpec" Type="nvarchar(max)" />
+    <Property Name="ProductPrice" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductImage">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ProductId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ProductImgUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PurchaseStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ShopCart">
+    <Key>
+      <PropertyRef Name="ShopId" />
+    </Key>
+    <Property Name="Account" Type="nvarchar" MaxLength="20" />
+    <Property Name="ShopId" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Price" Type="int" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Payment" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="ShopCartList">
+    <Key>
+      <PropertyRef Name="ShopId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ShopId" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="varchar" MaxLength="10" />
+    <Property Name="Quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__ProductIm__Produ__1ED998B2">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="ProductImage" Type="Self.ProductImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductImage">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCart__Accoun__21B6055D">
+    <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+    <End Role="ShopCart" Type="Self.ShopCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Account" />
+      </Principal>
+      <Dependent Role="ShopCart">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCartL__Produ__276EDEB3">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="ShopCartList" Type="Self.ShopCartList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ShopCartList">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCartL__ShopI__267ABA7A">
+    <End Role="ShopCart" Type="Self.ShopCart" Multiplicity="1" />
+    <End Role="ShopCartList" Type="Self.ShopCartList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShopCart">
+        <PropertyRef Name="ShopId" />
+      </Principal>
+      <Dependent Role="ShopCartList">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShopCart_PurchaseStatus">
+    <End Role="PurchaseStatus" Type="Self.PurchaseStatus" Multiplicity="0..1" />
+    <End Role="ShopCart" Type="Self.ShopCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ShopCart">
+        <PropertyRef Name="Payment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ARealShopModelStoreContainer">
+    <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductImage" EntityType="Self.ProductImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseStatus" EntityType="Self.PurchaseStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShopCart" EntityType="Self.ShopCart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShopCartList" EntityType="Self.ShopCartList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ProductIm__Produ__1ED998B2" Association="Self.FK__ProductIm__Produ__1ED998B2">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductImage" EntitySet="ProductImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCart__Accoun__21B6055D" Association="Self.FK__ShopCart__Accoun__21B6055D">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="ShopCart" EntitySet="ShopCart" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCartL__Produ__276EDEB3" Association="Self.FK__ShopCartL__Produ__276EDEB3">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ShopCartList" EntitySet="ShopCartList" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCartL__ShopI__267ABA7A" Association="Self.FK__ShopCartL__ShopI__267ABA7A">
+      <End Role="ShopCart" EntitySet="ShopCart" />
+      <End Role="ShopCartList" EntitySet="ShopCartList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShopCart_PurchaseStatus" Association="Self.FK_ShopCart_PurchaseStatus">
+      <End Role="PurchaseStatus" EntitySet="PurchaseStatus" />
+      <End Role="ShopCart" EntitySet="ShopCart" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

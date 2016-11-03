@@ -1,0 +1,155 @@
+﻿@charset "utf-8";
+/* 共用樣式含天地及麵包屑 */
+body {
+	background: #fff url(../images/bodyBg.gif) repeat-x 0 0;
+	margin: 0;
+}
+input.txt { 
+	border: solid 1px #7f9db9; 
+	vertical-align: top; 
+	font: 400 11px/16px Arial, 新細明體;
+	font-size: 10px\9;
+	height: 16px;
+}
+/*button {border: 0; background: transparent;}*/
+/*整頁寬*/
+#wrapper { 
+	width: 870px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+/* 共用天 */
+#header {
+	height: 81px;
+	width: 100%;
+	overflow: hidden;
+}
+#logo {
+	margin: 12px 0 14px 15px;
+}
+#btn_GlobalSite a {
+	margin-top: 3px;
+	float: right;
+	background: url(../images/btnRed_GS_over.gif) no-repeat 0 0;
+}
+#btn_GlobalSite a:hover img { 
+	visibility: hidden; 
+}
+#functionBlock {
+}
+ul#navgation {
+	margin-left: 15px;
+	_margin-left: 8px;
+	height: 28px;
+	float: left;
+}
+ul#navgation li {
+	float: left;
+	margin: 0 15px 0 0;
+}
+#subscribeEdm {
+	float: right;
+	text-align: right;
+	margin: 2px 0 0 0;
+}
+/* 中間區塊 */
+#container {
+	width: 100%;
+	margin: 29px 0 0;
+}
+/* 麵包屑 */
+#path {
+	font: 400 11px/120% Arial, 新細明體;
+	.font-size: 10px;
+	color: #999;
+	margin-bottom: 18px;
+}
+#path a {
+	color: #333;
+}
+#path h1 {
+	font: 400 11px/120% Arial, 新細明體;
+	.font-size: 10px;
+	display: inline;
+}
+/* 頁碼 */
+.pageNum {
+	height: 40px;
+	font: 400 11px/40px Arial, 新細明體;
+}
+span.total {
+	float: left;
+	width: 50%;
+}
+.pageNum ol {
+	float: right;
+	text-align: right;
+	width: 50%;
+	letter-spacing:-.333em;/*去縫隙用*/
+}
+.pageNum ol li {
+	display: inline;
+	margin: 0 0 0 4px;
+	/*padding: 4px;*/
+	color: #0a0a0a;
+	letter-spacing:normal;/*去縫隙用*/
+}
+.pageNum ol li a {
+	background-color: #f1f1f1;
+	text-decoration: none;
+	color: #333;
+	padding: 2px 4px;
+}
+.pageNum ol li a.nobg {
+	background: none;
+	text-decoration: underline;
+}
+/* 分享至社群平台 */
+ul.shareto {
+	width: 100%;
+	text-align: right;
+	font: 400 11px/14px Arial, 新細明體;
+	color: #555;
+	letter-spacing:-.333em;/*去縫隙用*/
+	margin: 0 0 32px 0;
+}
+ul.shareto li {
+	display: inline;
+	margin: 0 0 0 7px;
+	letter-spacing:normal;/*去縫隙用*/
+}
+ul.shareto img {
+	vertical-align: top;
+}
+/* 共用地 */
+#footer {
+	width: 100%;
+	float: left;
+	text-align: lesf;
+	margin: 15px auto;
+	overflow: hidden;
+}
+#footer p {
+	padding: 2px 0 0;
+}
+#footer p.gotop {
+	text-align: right;
+	margin-bottom: 8px;
+	width: 100%;
+}
+#footer p.gotop a {
+	color: #000;
+}
+#footer h4 {
+	border-top: solid 1px #000;
+	font-weight: 400;
+	padding: 8px 0 0;
+}
+
+
+/* 20150318 修改nav選單間距 */
+
+ul#navgation li {
+	float: left;
+	margin: 0 5px 0 0;
+}

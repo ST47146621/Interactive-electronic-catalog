@@ -1,0 +1,124 @@
+﻿@model test.Models.LoginModel
+@{
+    Layout = null;
+}
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")
+@Styles.Render("~/Content/bootstrap")
+@Scripts.Render("~/bundles/modernizr")
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel"><label>會員登入</label></h4>
+        </div>
+        <div class="modal-body">
+            <form class="form-horizontal" id="modalForm" method="post">
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(p => p.ReturnUrl)
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="account" style="font-size:18px"><b>登入帳號</b></label>
+                    <div class="col-sm-4">
+                        @Html.TextBoxFor(p => p.account, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="password" style="font-size:18px"><b>登入密碼</b></label>
+                    <div class="col-sm-4">
+                        @Html.PasswordFor(p => p.password, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label id="errormsg" class="col-sm-8 control-label" style="color:#ff0000"></label>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-9">
+                        <div class="checkbox col-sm-4">
+                            <label><b>
+                                @Html.CheckBoxFor(p => p.rememberMe)
+                                @Html.DisplayName("記住我")
+                                </b>
+                            </label>
+                        </div>
+                        <div class="checkbox col-sm-4">
+                            <label><b><a href="/home/regist">註冊</a></b></label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-success">送出</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var a;
+    $(document).ready(function () {
+
+        $(".btn-success").click(function () {
+            //$("#modalForm").one('submit', otherDoPost);
+            $("#modalForm").ajaxSubmit({
+                type: 'post',
+                url: "/Home/Login",
+                success: function (data) {
+                    if (data.status == true) {//成功
+                        window.location.href = data.ReturnUrl;
+                    } else {
+                        $("#errormsg").html(data);
+                    }
+                },
+                error: function (XmlHttpRequest, textStatus, errorThrown) {
+                    alert("error");
+                }
+            });
+            return false;
+        });
+        $(".btn-default").click(function () {
+
+            $('#itemModal').on('hidden.bs.modal', function () {
+                $(this).removeData('bs.modal');
+            });
+        });
+    });
+
+</script>
+
+
+<style>
+    #login-dv {
+        min-height: 300px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+
+        #login-dv input {
+            text-transform: uppercase;
+        }
+        a {
+  font-size:16px;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #bb0909;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family:"Yu Gothic", SimHei;
+}
+
+</style>

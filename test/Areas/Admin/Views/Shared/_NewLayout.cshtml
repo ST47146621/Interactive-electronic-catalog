@@ -1,0 +1,73 @@
+﻿<link href="~/Content/Background.css" rel="stylesheet" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://cache0.bigcartel.com/api/4/api.eur.js" type="text/javascript"></script>
+<script src="http://cache0.bigcartel.com/theme_assets/57/1.1.2/theme.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat|Playfair+Display" />
+<title>@ViewBag.Head</title>
+@*@Styles.Render("~/Content/css")*@
+@Styles.Render("~/Content/bootstrap")
+@RenderSection("styles", required: false)
+@{
+    string actionlink = ViewBag.Head;
+}
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+<div class="wrapper">
+    <header>
+        <div class="inner clear">
+            <a class="logo" href="/"></a>
+            <nav class="nav-main">
+                <ul class="clear">
+                    <li>
+                        <a class="dropdown-trigger" href="">@ViewBag.Ul<span class="nav-caret">v</span></a>
+                        <ul class="dropdown">
+                            <li><a href="/Admin/Admin/ProductIndex">產品資料</a></li>
+                            @*<li><a href="/Admin/Admin/MemberIndex">會員帳號管理</a></li>*@
+                            <li><a href="/Admin/Admin/ShopCartIndex">購物單管理</a></li>
+                            <li><a href="/Admin/Admin/WeekIndex">周銷售量比較</a></li>
+                            <li><a href="/Admin/Admin/MonthIndex">月銷售量比較</a></li>
+                            <li><a href="/Admin/Admin/YearIndex">年銷售量比較</a></li>
+                            <li><a href="/Admin/Admin/HotIndex">熱門商品推薦</a></li>
+                            <li><a href="/Home/LogOut">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="javascript:void(0)" class="mobile-nav-trigger"><span class="icon-menu"></span></a>
+            </nav>
+        </div>
+        <nav class="nav-mobile clear">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li>
+                    <a class="accordion-trigger" href="javascript:void(0)">Products <span class="nav-caret">v</span></a>
+                    <ul class="accordion">
+                        <li><a href="/products">View All</a></li>
+                        <li><a href="/category/slippers">Slippers</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main clear">
+        <div class="inner clear">
+            @RenderBody()
+        </div>
+    </section>
+
+
+</div><!-- End wrapper -->
+
+<footer>
+    <div class="inner">
+        <span class="copyright">
+            Copyright 2015 <a href="http://melanie-f.com">Areal Shop</a>
+        </span>
+    </div>
+</footer>
+
+
+<div class="color-block-products"></div>
+

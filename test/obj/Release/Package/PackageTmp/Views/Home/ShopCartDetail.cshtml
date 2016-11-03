@@ -1,0 +1,70 @@
+﻿@model test.Models.ShopCartDetailModel
+<div class="modal-header">
+    <h4 class="modal-title" id="myModalLabel">購物單明細</h4>
+</div>
+<div class="modal-body">
+@using (Ajax.BeginForm("", "", null,
+                new AjaxOptions { }, new { @class = "form-horizontal" }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.ShopId, new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-8">
+                @Html.TextBoxFor(m => m.ShopId, new { @class = "form-control",@disabled="disabled" })
+            </div>
+        </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Account, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-8">
+            @Html.TextBoxFor(m => m.Account, new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-8">
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Status, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-8">
+            @Html.TextBoxFor(m => m.Status, new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Price, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-8">
+            @Html.TextBoxFor(m => m.Price, new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Date, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-8">
+            @Html.TextBoxFor(m => m.Date, new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Payment, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-8">
+            @Html.TextBoxFor(m => m.Payment, new { @class = "form-control", @disabled = "disabled" })
+        </div>
+    </div>
+}
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".btn-success").click(function () {
+            $("#modalForm").submit();
+        });
+        $(".btn-default").click(function () {
+            $("#itemModal").modal("hide");
+            $('#itemModal').one('hidden.bs.modal', function (e) {
+                $(this).removeData('bs.modal');
+            });
+        });
+    });
+    //$(".datepicker").datepicker({ format: 'yyyy/mm/dd' });
+</script>

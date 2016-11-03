@@ -1,0 +1,312 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+}
+a{
+ outline: none; /* for Firefox */
+ hlbr:expression(this.onFocus=this.blur()); /* for IE */
+}
+/*.Featured {
+	width:680px;
+	height:312px;
+	border:1px solid #ccc;
+	margin-bottom:30px;
+}
+.Featured h1 {
+	margin:15px;
+}
+.Featured h2 {
+	margin:10px 0 0 15px;
+	font:bold 15px/3px Arial, 新細明體;
+}
+.Featured h3 {
+	margin:10px 0 0 15px;
+	font:400 12px/18px Arial, 新細明體;
+}*/
+.indexline {
+	background-color:#e7e7e7;
+	width:490px;
+	height:1px;
+	margin-top:10px;
+}
+.indexline2 {
+	background-color:#e7e7e7;
+	width:490px;
+	height:1px;
+	margin:10px 0;
+	
+}
+.ClothBOX {
+	margin:5px 0 0 15px;
+	float:left;
+
+}
+.ClothBOX li {
+	background:url(images/index_triangle.gif) no-repeat;
+	font:bold 12px/5px Arial, 新細明體;
+	list-style:none;
+	width:210px;
+}
+.ClothBOX li p {
+	padding:5px 0 0 10px;
+}
+.ClothBOX li a {
+	text-decoration:none;
+	color:#222;
+}
+.ClothBOX li a img {
+	border:1px solid #ccc;
+	width:210px;
+	height:125px;
+}
+.ClothBOX li a:hover img {
+	border:1px solid #7f0019;
+}
+.ClothBOX li a:hover {
+	color:#7f0019;
+}
+.morelink_R a {
+	float:right;
+	font:400 12px Arial, 新細明體;
+	color:#222;
+	margin:15px 15px 0 0;
+}
+.morelink_R a:hover {
+	color:#7f0019;
+}
+
+.clear {
+	clear:both;
+}
+.Featured2 {
+	width:680px;
+	/*height:690px;*/
+	border:1px solid #ccc;
+	margin-bottom:30px;
+}
+.Featured2 h1 {
+	margin:15px;
+}
+.Featured2 h2 {
+	margin:10px 0 0 15px;
+	font:bold 15px/3px Arial, 新細明體;
+}
+.Featured2 h3 {
+	margin:10px 0 0 15px;
+	font:400 12px/18px Arial, 新細明體;
+	margin-bottom:10px;
+}
+.Featured2 h4 {
+	margin:10px 0 0 15px;
+	font:400 12px Arial, 新細明體;
+}
+.lifeBOX01 {
+	margin:5px 0 0 15px;
+	float:left;
+}
+.lifeBOX01 li {
+	background:url(images/index_triangle.gif) no-repeat;
+	font:bold 12px/5px Arial, 新細明體;
+	list-style:none;
+	width:645px;
+}
+.lifeBOX01 li p {
+	padding:5px 0 0 10px;
+}
+.lifeBOX01 li a {
+	text-decoration:none;
+	color:#222;
+}
+.lifeBOX01 li a img {
+	border:1px solid #ccc;
+	width:645px;
+	height:215px;
+}
+.lifeBOX01 li a:hover img {
+	border:1px solid #7f0019;
+}
+.lifeBOX01 li a:hover {
+	color:#7f0019;
+}
+.furnitureBOX {
+	margin:15px 0 0 3px;
+}
+.furnitureBOX li {
+	font:bold 12px/5px Arial, 新細明體;
+	list-style:none;
+	width:154px;
+	float:left;
+	margin-left:11px;
+}
+.furnitureBOX li a {
+	text-decoration:none;
+	color:#222;
+}
+.furnitureBOX li a img {
+	border:1px solid #ccc;
+	width:154px;
+	height:90px;
+}
+.furnitureBOX li a:hover img {
+	border:1px solid #7f0019;
+}
+.furnitureBOX li a:hover {
+	color:#7f0019;
+}
+.groceryBOX {
+	margin:5px 0 0 3px;
+}
+.groceryBOX li {
+	background:url(images/index_triangle.gif) no-repeat;
+	background-position:left 7px;
+	font:bold 12px/10px Arial, 新細明體;
+	list-style:none;
+	width:120px;
+	float:left;
+	margin-left:12px;
+}
+.groceryBOX li p {
+	padding:0 0 0 10px;
+}
+.groceryBOX li a {
+	text-decoration:none;
+	color:#222;
+}
+.groceryBOX li a img {
+	border:1px solid #ccc;
+	width:120px;
+	height:96px;
+}
+.groceryBOX li a:hover img {
+	border:1px solid #7f0019;
+}
+.groceryBOX li a:hover {
+	color:#7f0019;
+}
+/*.Featured3 {
+	width:680px;
+	height:388px;
+	border:1px solid #ccc;
+	margin-bottom:30px;
+}
+.Featured3 h1 {
+	margin:15px;
+}*/
+.foodBOX {
+	margin:5px 0 0 15px;
+}
+.foodcampaign li {
+	float:left;
+	display: block;
+	margin-right: 10px;
+	width: 156px;
+	height:147px;
+	background: #f5f2e9;
+}
+.foodcampaign li a:hover {
+	background: #f5eedd;
+
+}
+.foodcampaign li a {
+	display: block;
+	text-decoration: none;
+	width: 136px;
+	padding: 10px;
+}
+.foodcampaign li a img {
+	display: block;
+	border: 1px solid #f5f2e9;
+	height: 66px;
+	vertical-align: text-bottom;
+	margin-bottom: 5px;
+	-ms-interpolation-mode: bicubic;
+}
+.foodcampaign li a:hover img.photo {
+	border: 1px solid #7F0019;
+}
+.foodcampaign li .title {
+	display: block;
+	text-decoration: none;
+	font:bold 12px/18px Arial, 新細明體;
+	color:#222
+}
+.title p { margin-bottom:10px; margin-top:8px;}
+.foodcampaign li .detail {
+	display: block;
+	margin-top: 5px;
+	font:400 12px/15px Arial, 新細明體;
+	color:#222
+}
+.foodcampaign li a:hover .detail {
+	color:#191919;
+}
+.newproductsBOX {
+	margin-top:20px;
+}
+.newproductsBOX h5 {
+	font:bold 12px/15px Arial, 新細明體;
+	color:#222
+}
+.prevbtn a {
+	background:url(images/indexbtn01.gif);
+	width:16px;
+	height:50px;
+	display:block;
+}
+.prevbtn a:hover {
+	background-position:left bottom;
+}
+.prevbtn li {
+	list-style:none;
+	float:left;
+}
+.newimgfirst {
+	float:left;
+}
+.newimgfirst img {  width:50px; height:50px;
+}
+.newimg {
+	float:left;
+}
+.newimg img { margin-left:12px; width:50px; height:50px;
+}
+
+
+.ClothBOX li {
+	background:url(images/index_triangle.gif) no-repeat;
+	font:bold 12px/5px Arial, 新細明體;
+	list-style:none;
+	width:210px;
+}
+.newbox { margin-bottom:30px;}
+#food h5{ font-weight:bold;}
+.titletop a{ background:url(images/index_triangle2.gif) no-repeat; width:232px; height:14px; display:block;}
+.titletop a:hover {background-position:left bottom;}
+.title img { float:left; }
+a {
+  font-size:16px;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bb0909;
+  text-decoration: none;
+}
+a:focus{
+    color: #bb0909;
+  text-decoration: none;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  color:#000
+}
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family:"Yu Gothic", SimHei;
+}

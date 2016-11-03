@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-test-20140929144057;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-test-20140929144057.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ericlinAAA\\Desktop\\test_bak\\test\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="ARealShopEntities-Web.config Connection String" description="ARealShopEntities 應用程式在 web.config 中用來存取資料庫的連接字串。" defaultValue="metadata=res://*/Models.ARealShopModel.csdl|res://*/Models.ARealShopModel.ssdl|res://*/Models.ARealShopModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=163.17.136.196;initial catalog=Fantasy;user id=sa;password=iabf.2014;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ericlinAAA\\Desktop\\test_bak\\test\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ARealShopEntities']/@connectionString" />
+  </parameter>
+</parameters>

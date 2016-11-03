@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title | ArealShop</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/detailCss")
+    @Styles.Render("~/Content/dataTables/css")
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div class="main-content" id="notchart" ondrop="Drop(event)" ondragover="AllowDrop(event)">
+        <div class="row">
+            <div id="main-side" class="col-md-12">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/scripts/noty")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/public")
+    @Scripts.Render("~/bundles/scripts/datatables")
+    @Scripts.Render("~/bundles/detailMain")
+    <script>
+        var _root = "";
+    </script>
+    <script src="~/api/proxies"></script>
+    <script src="~/Scripts/echart/echarts.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

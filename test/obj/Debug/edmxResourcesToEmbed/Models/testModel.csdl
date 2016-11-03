@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ARealShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="Account" />
+    </Key>
+    <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Addr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Birth" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ShopCart" Relationship="Self.FK__ShopCart__Accoun__21B6055D" FromRole="Member" ToRole="ShopCart" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImgUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductSpec" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPrice" Type="Int32" />
+    <NavigationProperty Name="ProductImage" Relationship="Self.FK__ProductIm__Produ__1ED998B2" FromRole="Product" ToRole="ProductImage" />
+    <NavigationProperty Name="ShopCartList" Relationship="Self.FK__ShopCartL__Produ__276EDEB3" FromRole="Product" ToRole="ShopCartList" />
+  </EntityType>
+  <EntityType Name="ProductImage">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ProductId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ProductImgUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__ProductIm__Produ__1ED998B2" FromRole="ProductImage" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="PurchaseStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ShopCart" Relationship="ARealShopModel.FK_ShopCart_PurchaseStatus" FromRole="PurchaseStatus" ToRole="ShopCart" />
+  </EntityType>
+  <EntityType Name="ShopCart">
+    <Key>
+      <PropertyRef Name="ShopId" />
+    </Key>
+    <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ShopId" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Payment" Type="Byte" />
+    <NavigationProperty Name="Member" Relationship="Self.FK__ShopCart__Accoun__21B6055D" FromRole="ShopCart" ToRole="Member" />
+    <NavigationProperty Name="ShopCartList" Relationship="Self.FK__ShopCartL__ShopI__267ABA7A" FromRole="ShopCart" ToRole="ShopCartList" />
+    <NavigationProperty Name="PurchaseStatus" Relationship="ARealShopModel.FK_ShopCart_PurchaseStatus" FromRole="ShopCart" ToRole="PurchaseStatus" />
+  </EntityType>
+  <EntityType Name="ShopCartList">
+    <Key>
+      <PropertyRef Name="ShopId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ShopId" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="Self.FK__ShopCartL__Produ__276EDEB3" FromRole="ShopCartList" ToRole="Product" />
+    <NavigationProperty Name="ShopCart" Relationship="Self.FK__ShopCartL__ShopI__267ABA7A" FromRole="ShopCartList" ToRole="ShopCart" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__ShopCart__Accoun__21B6055D">
+    <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+    <End Role="ShopCart" Type="Self.ShopCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Account" />
+      </Principal>
+      <Dependent Role="ShopCart">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductIm__Produ__1ED998B2">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="ProductImage" Type="Self.ProductImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductImage">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCartL__Produ__276EDEB3">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="ShopCartList" Type="Self.ShopCartList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ShopCartList">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCartL__ShopI__267ABA7A">
+    <End Role="ShopCart" Type="Self.ShopCart" Multiplicity="1" />
+    <End Role="ShopCartList" Type="Self.ShopCartList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShopCart">
+        <PropertyRef Name="ShopId" />
+      </Principal>
+      <Dependent Role="ShopCartList">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ARealShopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Member" EntityType="Self.Member" />
+    <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="ProductImage" EntityType="Self.ProductImage" />
+    <EntitySet Name="PurchaseStatus" EntityType="Self.PurchaseStatus" />
+    <EntitySet Name="ShopCart" EntityType="Self.ShopCart" />
+    <EntitySet Name="ShopCartList" EntityType="Self.ShopCartList" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK__ShopCart__Accoun__21B6055D" Association="Self.FK__ShopCart__Accoun__21B6055D">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="ShopCart" EntitySet="ShopCart" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductIm__Produ__1ED998B2" Association="Self.FK__ProductIm__Produ__1ED998B2">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductImage" EntitySet="ProductImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCartL__Produ__276EDEB3" Association="Self.FK__ShopCartL__Produ__276EDEB3">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ShopCartList" EntitySet="ShopCartList" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCartL__ShopI__267ABA7A" Association="Self.FK__ShopCartL__ShopI__267ABA7A">
+      <End Role="ShopCart" EntitySet="ShopCart" />
+      <End Role="ShopCartList" EntitySet="ShopCartList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShopCart_PurchaseStatus" Association="ARealShopModel.FK_ShopCart_PurchaseStatus">
+      <End Role="PurchaseStatus" EntitySet="PurchaseStatus" />
+      <End Role="ShopCart" EntitySet="ShopCart" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_ShopCart_PurchaseStatus">
+    <End Type="ARealShopModel.PurchaseStatus" Role="PurchaseStatus" Multiplicity="0..1" />
+    <End Type="ARealShopModel.ShopCart" Role="ShopCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ShopCart">
+        <PropertyRef Name="Payment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

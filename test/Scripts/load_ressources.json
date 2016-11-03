@@ -1,0 +1,28 @@
+{
+  "preload_files":[
+    {
+      "src" : "img/slipper-red.png",
+      "type" : "image"
+    },
+    {
+      "src" : "img/slipper-yellow.png",
+      "type" : "image"
+    },
+    {
+      "src" : "img/slipper-grey.png",
+      "type" : "image"
+    },
+    {
+      "src" : "img/slipper-blue.png",
+      "type" : "image"
+    },
+    {
+      "src" : "img/sprite-b.png",
+      "type" : "image"
+    },
+    {
+      "src" : "media/loop.mp3",
+      "type" : "video"
+    }
+  ]
+}

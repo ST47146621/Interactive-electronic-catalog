@@ -1,0 +1,148 @@
+﻿@model List<test.Models.DriverLocation>
+@using Newtonsoft.Json;
+
+<div class="modal-header">
+    <h4 class="modal-title" id="myModalLabel">修改</h4>
+</div>
+<div class="modal-body">
+    @Html.Hidden("data", JsonConvert.SerializeObject(Model))
+    <div id="mapDiv" style="height:600px;width:100%;"></div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="closewndow btn btn-default" data-dismiss="modal">關閉</button>
+</div>
+<script>
+    var result;
+    var defaulticon = new google.maps.MarkerImage("../../images/car_default.png", new google.maps.Size(32, 32), new google.maps.Point(0, 0), new google.maps.Point(15, 22));
+    var nowicon = new google.maps.MarkerImage("../../mages/car_highspeed.png", new google.maps.Size(32, 32), new google.maps.Point(0, 0), new google.maps.Point(15, 22));
+    var zindex;
+    var map;
+    var num;
+    $(function () {
+        $("#itemModal .modal-dialog").width(1000);
+
+        $(".closewndow").on("click", function () {
+            $("#itemModal .modal-dialog").width(598);
+        })
+
+        $('#itemModal').on('shown.bs.modal', function (e) {
+            result = JSON.parse($("#data").val());
+            var point = ($.isEmptyObject(result) ? new google.maps.LatLng(24.186003, 120.699605) : new google.maps.LatLng(result[0].Latitude, result[0].Longitude));
+            
+            var mapOptions = {
+                zoom: 18,
+                center: point,
+                minZoom: 8,
+                streetViewControl: false,
+                zoomControl: false,
+                scaleControl: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("mapDiv"), mapOptions);
+
+            zindex = google.maps.Marker.MAX_ZINDEX + 1;
+            SetAllPoint(result);
+        })        
+    })
+
+
+    function SetAllPoint(result) {
+        if (!(result.length < 2)) {
+            var line = [];
+            for (var i in result) {
+                setOverLay(result[i], i);
+                line.push(new google.maps.LatLng(result[i].Latitude, result[i].Longitude));
+            }
+            var linePath = new google.maps.Polyline({
+                path: line,
+                strokeColor: "blue",
+                strokeOpacity: 0.5,
+                strokeWeight: 6
+            });
+
+            linePath.setMap(map);
+            num = 1;
+            zoomToShowAllMarkers(); //設定畫面視野範圍包含全部"點"
+        } else if (result.length == 1) {
+            setOverLay(result[0], 0);
+        }
+    }
+
+    function setOverLay(data, i) {
+        var marker;
+        var point = new google.maps.LatLng(data.Latitude, data.Longitude)
+        /* if (i == 0) {
+             marker = new MarkerWithLabel({
+                 position: point,
+                 map: map,
+                 labelContent: "S",
+                 labelAnchor: new google.maps.Point(20, 0),
+                 labelClass: "labels", // the CSS class for the label
+                 labelStyle: { opacity: 0.75 },
+                 zindex: zindex
+             });
+         }
+         else*/ if (i == (result.length - 1)) {
+            marker = new MarkerWithLabel({
+                position: point,
+                map: map,
+                labelContent: "Now",
+                labelAnchor: new google.maps.Point(20, 0),
+                labelClass: "labels", // the CSS class for the label
+                labelStyle: { opacity: 0.75 },
+                zindex: zindex
+            });
+        }
+        else {
+            marker = new MarkerWithLabel({
+                position: point,
+                map: map,
+                labelContent: num,
+                labelAnchor: new google.maps.Point(20, 0),
+                labelClass: "labels", // the CSS class for the label
+                labelStyle: { opacity: 0.75 },
+                zindex: zindex
+            });
+        }
+        marker.setMap(map);
+    }
+
+    function onDrivingListRowClick(lng, lat) {
+        map.panTo(new google.maps.LatLng(lat, lng));
+
+        if (targetMarker == null) {
+            targetMarker = new google.maps.Marker({ position: new google.maps.LatLng(lat, lng), icon: highlight });
+            targetMarker.setMap(map);
+        } else {
+            targetMarker.setPosition(new google.maps.LatLng(lat, lng));
+        }
+    }
+
+    function zoomToShowAllMarkers() {
+        //  Create a new viewpoint bound
+        var bounds = new google.maps.LatLngBounds();
+
+        //  Go through each...
+        for (var i = 0, Len = result.length; i < Len; i++) {
+            //  And increase the bounds to take this point
+            bounds.extend(new google.maps.LatLng(result[i].Latitude, result[i].Longitude));
+        }
+        //  Fit these bounds to the map
+        //map.fitBounds(bounds);
+        if (bounds.getCenter().lng() != 0 && bounds.getCenter().lat() != 0) {
+            map.setCenter(bounds.getCenter());
+
+            var GLOBE_WIDTH = 256; // a constant in Google's map projection
+            var west = bounds.getSouthWest().lng();
+            var east = bounds.getNorthEast().lng();
+            var angle = east - west;
+            if (angle < 0) {
+                angle += 360;
+            }
+            var zoom = Math.round(Math.log($("#mapDiv").width() * 360 / angle / GLOBE_WIDTH) / Math.LN2);
+            map.setZoom(zoom - 1);
+        } else {
+            map.setCenter(new google.maps.LatLng((24.186003, 120.699605)));
+        }
+    }
+</script>

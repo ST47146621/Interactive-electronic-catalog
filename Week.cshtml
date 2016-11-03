@@ -1,0 +1,29 @@
+﻿
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1.1", { packages: ["bar"] });
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Week', '產品A', '產品B', '產品C', '產品D'],
+          ['1', 2504, 1004, 560, 1300],
+          ['2', 1500, 950, 500, 1500],
+          ['3', 1150, 2100, 1400, 1500],
+          ['4', 1800, 1600, 2000, 1650],       
+
+        ]);
+
+        var options = {
+            chart: {
+                title: '周銷售量比較',
+                subtitle: ' 月份:1 ',
+            }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, options);
+    }
+</script>
+
+<div id="columnchart_material" style="width: 1350px; height: 750px;"></div>

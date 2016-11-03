@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="63e656e1eeb548808ee9c0222c7dec33" Name="Diagram1">
+        <EntityTypeShape EntityType="ARealShopModel.AllViews" Width="1.5" PointX="5.75" PointY="7.125" />
+        <EntityTypeShape EntityType="ARealShopModel.AllViewsColumn" Width="1.5" PointX="8" PointY="7" />
+        <EntityTypeShape EntityType="ARealShopModel.CategoryTable" Width="1.5" PointX="5.25" PointY="11.25" />
+        <EntityTypeShape EntityType="ARealShopModel.Color" Width="1.5" PointX="3" PointY="19.125" />
+        <EntityTypeShape EntityType="ARealShopModel.Company" Width="1.5" PointX="0.75" PointY="12" />
+        <EntityTypeShape EntityType="ARealShopModel.DetailURL" Width="1.5" PointX="0.75" PointY="1.875" />
+        <EntityTypeShape EntityType="ARealShopModel.DriverLocation" Width="1.5" PointX="8.25" PointY="3" />
+        <EntityTypeShape EntityType="ARealShopModel.Member" Width="1.5" PointX="3.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ARealShopModel.News" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="ARealShopModel.Product" Width="1.5" PointX="3" PointY="12" />
+        <EntityTypeShape EntityType="ARealShopModel.ProductCategory" Width="1.5" PointX="3" PointY="8.375" />
+        <EntityTypeShape EntityType="ARealShopModel.ProductColor" Width="1.5" PointX="5.25" PointY="14.125" />
+        <EntityTypeShape EntityType="ARealShopModel.ProductImage" Width="1.5" PointX="5.25" PointY="29.125" />
+        <EntityTypeShape EntityType="ARealShopModel.ProductPayment" Width="1.5" PointX="10.75" PointY="1.875" />
+        <EntityTypeShape EntityType="ARealShopModel.ProductRating" Width="1.5" PointX="5.25" PointY="17.125" />
+        <EntityTypeShape EntityType="ARealShopModel.PurchaseStatus" Width="1.5" PointX="3.75" PointY="5.375" />
+        <EntityTypeShape EntityType="ARealShopModel.Reply" Width="1.5" PointX="8.25" PointY="13.625" />
+        <EntityTypeShape EntityType="ARealShopModel.ShopCart" Width="1.5" PointX="6" PointY="2.625" />
+        <EntityTypeShape EntityType="ARealShopModel.ShopCartList" Width="1.5" PointX="8.25" PointY="9.875" />
+        <AssociationConnector Association="ARealShopModel.FK_AllViewsColumn_AllViews" />
+        <AssociationConnector Association="ARealShopModel.FK_CategoryTable_Product" />
+        <AssociationConnector Association="ARealShopModel.FK_CategoryTable_ProductCategory" />
+        <AssociationConnector Association="ARealShopModel.FK_ProductColor_Color" />
+        <AssociationConnector Association="ARealShopModel.FK_Product_Company" />
+        <AssociationConnector Association="ARealShopModel.FK_ProductCategory_Company" />
+        <AssociationConnector Association="ARealShopModel.FK_DriverLocation_ShopCart_ShopId" />
+        <AssociationConnector Association="ARealShopModel.FK__ShopCart__Accoun__21B6055D" />
+        <AssociationConnector Association="ARealShopModel.FK_ProductRating_Member" />
+        <AssociationConnector Association="ARealShopModel.FK_Reply_Member" />
+        <AssociationConnector Association="ARealShopModel.FK__ProductIm__Produ__1ED998B2" />
+        <AssociationConnector Association="ARealShopModel.FK__ShopCartL__Produ__276EDEB3" />
+        <AssociationConnector Association="ARealShopModel.FK_ProductColor_Product" />
+        <AssociationConnector Association="ARealShopModel.FK_ProductRating_Product" />
+        <AssociationConnector Association="ARealShopModel.FK_Reply_Product" />
+        <AssociationConnector Association="ARealShopModel.FK_ShopCart_PurchaseStatus" />
+        <AssociationConnector Association="ARealShopModel.FK_Reply_Reply" />
+        <AssociationConnector Association="ARealShopModel.FK__ShopCartL__ShopI__267ABA7A" />
+        <EntityTypeShape EntityType="ARealShopModel.ApkUrl" Width="1.5" PointX="10.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

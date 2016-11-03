@@ -1,0 +1,48 @@
+﻿@model IPagedList<test.Models.ShopHistoryModel>
+@{
+    var removeline = true;
+}
+<table class="col-sm-12 table table-bordered">
+    <thead>
+        <tr style="background-color:#f5f2e9"><th class="col-sm-3">購物單編號</th><th class="col-sm-2">結帳日期</th><th class="col-sm-2">金額</th><th class="col-sm-2">付款方式</th><th class="col-sm-3">付款狀態</th></tr>
+    </thead>
+    @if (Model.Count() == 0)
+    {
+        <tr style="background-color:#fcfbf4"><td colspan="12">無消費紀錄</td></tr>
+    }
+    else
+    {
+        foreach (var item in Model)
+        {
+            removeline = true;
+            <tr onclick="showitem($(this));" class="closeitem" style="background-color:#fcfbf4"><td>@item.ShopId</td><td>@item.Date</td><td>@item.Price 元</td><td>@item.Payment</td><td>@item.PayStatus</td></tr>
+            <tr hidden>
+                <td colspan="12">
+                    <table class="table-responsive col-sm-12">
+                        @foreach (var list in item.item)
+                        {
+                            if (removeline)
+                            {
+                                removeline = false;
+                                <tr><td style="border-top:0px;">@list.ProductName</td><td style="border-top:0px;">數量：</td><td style="border-top:0px;">@list.Quantity</td><td style="border-top:0px;">價格：</td><td style="border-top:0px;">@list.Price 元</td></tr>
+                            }
+                            else
+                            {
+                                <tr><td>@list.ProductName</td><td>數量：</td><td>@list.Quantity</td><td>價格：</td><td>@list.Price 元</td></tr>
+                            }
+
+                        }
+                    </table>
+                </td>
+            </tr>
+        }
+    }
+</table>
+<div id="pageitem">
+    @Html.PagedListPager(Model, page => Url.Action("HistoryPartial", new { page }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions
+       {
+           InsertionMode = InsertionMode.Replace,
+           HttpMethod = "post",
+           UpdateTargetId = "Table",
+       }))
+</div>

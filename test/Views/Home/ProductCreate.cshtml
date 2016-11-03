@@ -1,0 +1,153 @@
+﻿@model test.Models.ProductModel
+@{
+    Layout = null;
+}
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")
+@Styles.Render("~/Content/bootstrap")
+@Scripts.Render("~/bundles/modernizr")
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">新增</h4>
+        </div>
+        <div class="modal-body">
+            @using (Html.BeginForm("ProductCreate", "Home", FormMethod.Post, new { @class = "form-horizontal", @id = "company-form", @enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductId, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductId, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductName, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.ProductName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductName, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductSpec, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextAreaFor(m => m.ProductSpec, new { @class = "form-control", @rows = "6" })
+                        @Html.ValidationMessageFor(m => m.ProductSpec, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductPrice, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.ProductPrice, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductPrice, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary">送出</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var a;
+    $(document).ready(function () {
+
+        $(".btn-success").click(function () {
+            //$("#modalForm").one('submit', otherDoPost);
+            $("#modalForm").ajaxSubmit({
+                type: 'post',
+                url: "/Home/Login",
+                success: function (data) {
+                    if (data == true) {//成功
+                        window.location.href = "/Home/Products";
+                    } else {
+                        $("#errormsg").html(data);
+                    }
+                },
+                error: function (XmlHttpRequest, textStatus, errorThrown) {
+                    alert("error");
+                }
+            });
+            return false;
+        });
+        $(".btn-default").click(function () {
+
+            $('#itemModal').on('hidden.bs.modal', function () {
+                $(this).removeData('bs.modal');
+            });
+        });
+    });
+
+</script>
+
+@*@{
+    ViewBag.Title = "Create";
+}
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")
+@Styles.Render("~/Content/bootstrap")
+@Scripts.Render("~/bundles/modernizr")
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">新增</h4>
+        </div>
+        <div class="modal-body">
+            @using (Html.BeginForm("ProductCreate", "Home", FormMethod.Post, new { @class = "form-horizontal", @id = "company-form", @enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductId, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductId, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductName, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.ProductName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductName, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductSpec, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextAreaFor(m => m.ProductSpec, new { @class = "form-control", @rows = "6" })
+                        @Html.ValidationMessageFor(m => m.ProductSpec, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductPrice, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.ProductPrice, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductPrice, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary">送出</button>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".btn-primary").click(function () {
+            $("#company-form").submit();
+        });
+        $(".btn-default").click(function () {
+            $("#itemModal").modal("hide");
+            $('#itemModal').one('hidden.bs.modal', function (e) {
+                $(this).removeData('bs.modal');
+            });
+        });
+    });
+
+</script>*@

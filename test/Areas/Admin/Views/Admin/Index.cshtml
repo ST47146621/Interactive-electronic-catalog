@@ -1,0 +1,216 @@
+﻿@model test.Models.BigModel
+@{
+    ViewBag.Title = "Index";
+}
+<blockquote style="font-family:標楷體">
+    <h2><b>ARealShop後臺管理</b></h2>
+</blockquote>
+<div class="tab-v1">
+    <div class="col-sm-2">
+        <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li role="presentation" class="active"><a href="#tb1" data-toggle="tab">產品資料</a></li>
+            <li role="presentation"><a href="#tb2" data-toggle="tab">會員帳號管理</a></li>
+            <li role="presentation"><a href="#tb3" data-toggle="tab">購物單管理</a></li>
+            <li role="presentation"><a href="#tb4" class="b" data-toggle="tab">周銷售量比較</a></li>
+            <li role="presentation"><a href="#tb5" class="b" data-toggle="tab">月銷售量比較</a></li>
+            <li role="presentation"><a href="#tb6" class="b" data-toggle="tab">年銷售量比較</a></li>
+            <li role="presentation"><a href="#tb7" class="b" data-toggle="tab">熱門商品推薦</a></li>
+        </ul>
+    </div>
+    <div class="col-sm-8">
+        <div class="tab-content">
+            <div id="tb1" class="tab-pane fade active in">
+                <div class="row col-sm-6">
+                    <div class="col-sm-1">
+                        @Html.ActionLink("新增", "Create", "Home", new {area="Admin" }, new { @class = "btn btn-primary", @data_toggle = "modal", @data_target = "#itemModal" })
+                    </div>
+
+                    <table class="table hover">
+                        <tr><td>商品編號</td><td>商品名稱</td><td>價格</td><td></td></tr>
+                        @foreach (var item in Model.a)
+                    {
+                    <tr>
+                        <td class="col-sm-1">@item.ProductId</td>
+                        <td class="col-sm-2">@item.ProductName</td>
+                        <td class="col-sm-1">@item.ProductPrice</td>
+                        <td class="col-sm-2">
+                            @Html.ActionLink("修改", "Edit", "Home", new { Id = item.ProductId }, new { @data_toggle = "modal", @data_target = "#itemModal" })
+                            @Html.ActionLink("刪除", "Delete", "Home", new { Id = item.ProductId }, new { })
+                        </td>
+                    </tr>
+                    }
+                    </table>
+                </div>
+
+            </div>
+            <div id="tb2" class="tab-pane fade">
+                <div class="row col-sm-6">
+                    <div class="col-sm-1">
+                        @Html.ActionLink("新增", "MemberCreate", "Home", new { }, new { @class = "btn btn-primary", @data_toggle = "modal", @data_target = "#itemModal" })
+                    </div>
+
+                    <table class="table hover">
+                        <tr><td>會員帳號</td><td>會員名稱</td><td>電話</td><td>生日</td><td></td></tr>
+                        @foreach (var item in Model.c)
+                    {
+                    <tr>
+                        <td class="col-sm-1">@item.Account</td>
+                        <td class="col-sm-1">@item.Name</td>
+                        <td class="col-sm-1">@item.Phone</td>
+                        <td class="col-sm-1">@item.Birth</td>
+                        <td class="col-sm-2">
+                            @Html.ActionLink("修改", "MemberEdit", "Home", new { }, new { @data_toggle = "modal", @data_target = "#itemModal" })
+                            @Html.ActionLink("刪除", "MemberDelete", "Home", new { }, new { })
+                        </td>
+                    </tr>
+                    }
+                    </table>
+                </div>
+            </div>
+            <div id="tb3" class="tab-pane fade">
+                <div class="row col-sm-6">
+                    <div class="col-sm-1">
+                        @Html.ActionLink("新增", "Create", "Home", new { }, new { @class = "btn btn-primary", @data_toggle = "modal", @data_target = "#itemModal" })
+                    </div>
+
+                    <table class="table hover">
+                        <tr><td>購物單單號</td><td>會員帳號</td><td>狀態</td><td></td></tr>
+                        @foreach (var item in Model.b)
+                    {
+                    <tr>
+                        <td class="col-sm-1">@item.ShopId</td>
+                        <td class="col-sm-1">@item.Account</td>
+                        @if (item.Status == true)
+                            {
+                            <td class="col-sm-1">已結帳</td>
+                            }
+                            else
+                            {
+                            <td class="col-sm-1">未結帳</td>
+                            }
+                        <td class="col-sm-2">
+                            @Html.ActionLink("明細", "Dick", "Home", new { }, new { @data_toggle = "modal", @data_target = "#itemModal1" })
+                            @Html.ActionLink("刪除", "Delete", "Home", new { }, new { })
+                        </td>
+                    </tr>
+                    }
+                    </table>
+                </div>
+            </div>
+            <div id="tb4" class="tab-pane fade active in">
+                <div style="width:800px;height:600px;">
+                    <div id="aaa" style="width:800px; height:600px;" class="c b4"></div>
+                </div>
+            </div>
+            <div id="tb5" class="tab-pane fade active in">
+                <div style="width:800px;height:600px;">
+                    <div id="bbb" style="width:800px; height:600px;" class="c b5"></div>
+                </div>
+            </div>
+            <div id="tb6" class="tab-pane fade active in">
+                <div style="width:800px;height:600px;">
+                    <div id="ccc" style="width:800px; height:600px;" class="c b6"></div>
+                </div>
+            </div>
+            <div id="tb7" class="tab-pane fade active in">
+                <div style="width:800px;height:600px;">
+                    <div id="ddd" style="width:800px; height:600px;" class="c b7"><img src="~/123.jpg"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="itemModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    $(".c").attr("style", "width:800px; height:600px;margin-left:900px;opacity:0;");
+    $(".b").click(function () {
+        $(".b" + $(this).attr("href").substring(3)).attr("style", "width:800px; height:600px;opacity:1;");
+    });
+    google.load("visualization", "1.1", { packages: ["bar"] });
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Week', 'HU型辦公桌* 便宜 *', '檯面型摺疊桌', '活動櫃', '磁性白板', '人體工學椅'],
+          ['1', 2504, 1004, 560, 1300,1200],
+          ['2', 1500, 950, 500, 1500,1400],
+          ['3', 1150, 2100, 1400, 1500,400],
+          ['4', 1800, 1600, 2000, 1650,1800],
+          ['5', 1200, 1300, 2000, 1770,1200]
+        ]);
+
+        var options = {
+            chart: {
+                title: '周銷售量比較',
+                subtitle: ' 月份:1 ',
+            }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('aaa'));
+
+        chart.draw(data, options);
+
+
+        data = google.visualization.arrayToDataTable([
+          ['Month', 'HU型辦公桌* 便宜 *', '檯面型摺疊桌', '活動櫃', '磁性白板', '人體工學椅'],
+          ['1', 10416, 3386, 2133, 5416,1200],
+          ['2', 9272, 3875, 2142, 6260,1400],
+          ['3', 4753, 9810, 5680, 6120,800],
+          ['4', 7530, 6500, 7512, 7120,9200],
+          ['5', 10416, 3386, 2133, 5416,4000],
+          ['6', 9272, 3875, 2142, 6260,2120],
+          ['7', 4753, 9810, 5680, 6120,2825],
+          ['8', 7530, 6500, 7512, 7120,6322],
+          ['9', 10416, 3386, 2133, 5416,7139],
+          ['10', 9272, 3875, 2142, 6260,8825],
+          ['11', 4753, 9810, 5680, 6120,1125],
+          ['12', 7530, 6500, 7512, 7120,9000]
+
+        ]);
+
+        options = {
+            chart: {
+                title: '月銷售量比較',
+                subtitle: ' 年度:2014 月份: 1-12',
+            }
+        };
+
+        var bbb = new google.charts.Bar(document.getElementById('bbb'));
+
+        bbb.draw(data, options);
+
+        data = google.visualization.arrayToDataTable([
+              ['Year', 'HU型辦公桌* 便宜 *', '檯面型摺疊桌', '活動櫃', '磁性白板', '人體工學椅'],
+              ['2014', 125000, 40640, 25600, 65000,77000],
+              ['2015', 111270, 46500, 25710, 75120,45000],
+              ['2016', 65460, 11250, 35600, 90010,44350],
+              ['2017', 102130, 54540, 70350, 101200,21320]
+        ]);
+
+        options = {
+            chart: {
+                title: '年銷售量比較',
+                subtitle: '  年度: 2014-2017',
+            }
+        };
+
+        var ccc = new google.charts.Bar(document.getElementById('ccc'));
+
+        ccc.draw(data, options);
+
+        
+    }
+    
+</script>

@@ -1,0 +1,54 @@
+body{background:#000;}
+#wrap{margin:0 auto;width:1000px;border:1px solid #000;}
+#container{height:700px;width:1000px;}
+
+.pp{position:absolute;width:21px;height:20px;background:url(../images/03.png) no-repeat;padding:20px;background-position:20px}
+.p{position:absolute;width:21px;height:20px;background:url(../images/04.png) no-repeat;padding:20px;background-position:20px}
+#v1 .plus1,#v2 .plus1{top:340px;left:-20px;}
+#v1 .plus2,#v2 .plus2{top:310px;left:120px;}
+#v1 .plus3,#v2 .plus3{top:460px;left:310px;}
+#v1 .plus4,#v2 .plus4{top:430px;left:480px;}
+#v1 .plus5,#v2 .plus5{top:410px;left:860px;}
+#v1 .plus_1,#v2 .plus_1{top:340px;left:980px;}
+#v1 .plus_2,#v2 .plus_2{top:310px;left:1120px;}
+#v1 .plus_3,#v2 .plus_3{top:460px;left:1310px;}
+#v1 .plus_4,#v2 .plus_4{top:430px;left:1480px;}
+#v1 .plus_5,#v2 .plus_5{top:410px;left:1860px;}
+
+
+#v1{height:700px;width:2000px;}
+#v1 .v1-1{width:2000px;height:200px;background:url(../images/before-top.png) repeat-x;/*padding-bottom:145px;*/background-position:0px;margin-top:0;float:left;}
+#v1 .v1-2{width:2000px;height:200px;background:url(../images/01.png) repeat-x;/*padding-bottom:165px;*/background-position:0px;margin-top:0px;float:left}
+#v1 .v1-3{width:2000px;height:300px;background:url(../images/before.png) repeat-x;/*padding-bottom:269px;*/background-position:0px;margin-top:0px;float:left}
+#v1 .v1-4{width:2000px;height:12px;background:url(../images/before-bottom.png) repeat-x;/*padding-bottom:12px;*/background-position:0px;margin-top:-12px;float:left}
+#v1 .v1-5{position:relative;width:71px;height:30px;left:135px;top:70px;background:url(../images/before-fly.png) no-repeat;}
+#v1 .v1-6{position:relative;width:70px;height:34px;left:140px;top:350px;background:url(../images/before-man.png) no-repeat;}
+#v1 .message{position:relative;width:333px;height:250px;left:5px;top:29px;background:url(../images/message.png) no-repeat;}
+#v1 .v1-7{position:relative;width:15px;height:15px;left:303px;top:-2px;background:url(../images/close.png) no-repeat;background-position:15px;}
+#v1 .v1-8{position:absolute;width:120px;height:110px;left:250px;top:5px;background:url(../images/05.png) no-repeat;}
+
+
+#v2{height:730px;width:2000px;}
+#v2 .v1-1{width:2000px;height:200px;background:url(../images//after-top.png) repeat-x;background-position:0px;/*padding-bottom:145px;*/margin-top:0;float:left;}
+#v2 .v1-2{width:2000px;height:200px;background:url(../images/02.png) repeat-x;background-position:0px;/*padding-bottom:165px;*/margin-top:0px;float:left}
+#v2 .v1-3{width:2000px;height:300px;background:url(../images/after.png) repeat-x;background-position:0px;/*padding-bottom:269px;*/margin-top:0px;float:left}
+#v2 .v1-4{width:2000px;height:12px;background:url(../images/after-bottom.png) repeat-x;background-position:0px;/*padding-bottom:12px;*/margin-top:-12px;float:left}
+#v2 .v1-5{position:relative;width:71px;height:30px;left:135px;top:70px;background:url(../images/after-fly.png) no-repeat;}
+#v2 .v1-6{position:relative;width:70px;height:34px;left:140px;top:350px;background:url(../images/after-man.png) no-repeat;}
+#v2 .message{position:relative;width:333px;height:250px;left:5px;top:29px;background:url(../images/message.png) no-repeat;}
+#v2 .v1-7{position:relative;width:15px;height:15px;left:303px;top:-2px;background:url(../images/close.png) no-repeat;background-position:15px;}
+#v2 .v1-8{position:absolute;width:120px;height:110px;left:250px;top:5px;background:url(../images/05.png) no-repeat;}
+
+
+#down{width:1000px;height:118px;background:url(../images/button.png) no-repeat;}
+#down .b1{width:162px;height:50px;float:left;background:url(../images/b1.png) no-repeat;position:relative;top:12px;left:15px;background-position:-162px;}
+#down .b2{width:162px;height:50px;float:left;background:url(../images/b2.png) no-repeat;position:relative;top:12px;left:15px;background-position:-324px;}
+#down .b3{width:161px;height:50px;float:left;background:url(../images/b3.png) no-repeat;position:relative;top:12px;left:15px;background-position:-324px;}
+#down .b4{width:161px;height:50px;float:left;background:url(../images/b4.png) no-repeat;position:relative;top:12px;left:15px;background-position:-324px;}
+#down .b5{width:162px;height:50px;float:left;background:url(../images/b5.png) no-repeat;position:relative;top:12px;left:15px;background-position:-324px;}
+#down .b6{width:162px;height:50px;float:left;background:url(../images/b6.png) no-repeat;position:relative;top:12px;left:15px;background-position:-324px;}
+#down .b1-1{width:111px;height:28px;float:left;background:url(../images/b1-1.png) no-repeat;position:relative;top:18px;left:154px;background-position:-224px;}
+#down .b2-2{width:111px;height:28px;float:left;background:url(../images/b2-2.png) no-repeat;position:relative;top:18px;left:154px;background-position:-224px;}
+#down .b3-3{width:111px;height:28px;float:left;background:url(../images/b3-3.png) no-repeat;position:relative;top:18px;left:154px;background-position:-224px;}
+#down .b4-4{width:111px;height:28px;float:left;background:url(../images/b4-4.png) no-repeat;position:relative;top:18px;left:154px;background-position:-224px;}
+#down .b5-5{width:112px;height:28px;float:left;background:url(../images/b5-5.png) no-repeat;position:relative;top:18px;left:154px;background-position:-224px;}

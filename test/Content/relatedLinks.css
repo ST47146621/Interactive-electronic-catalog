@@ -1,0 +1,75 @@
+﻿@charset "utf-8";
+/* 右側區塊 */
+.relatedLinks{
+	/*width: 148px;*/
+	width: 128px;
+	border: solid 1px #ccc;
+	/*margin: 27px 0 10px;*/
+	margin: 0 0 10px;
+	padding: 0 10px;
+	float: right;
+	overflow: hidden;
+}
+.relatedLinks h4{
+	margin: 10px 0 0;
+}
+/* MUJ外部商場的連結BANNER */
+.relatedLinks ul{
+}
+.relatedLinks ul li{
+	float: left;
+	padding: 14px 0;
+	border-top: solid 1px #ccc;
+}
+.relatedLinks ul li.first{
+	border: 0;
+}
+/* 本月新商品 */
+.relatedLinks ol{
+	width: 128px;
+	margin: 0 auto;
+}
+.relatedLinks ol li{
+	float: left;
+	font: 400 12px/130% Arial, 新細明體;
+	color: #333;
+	width: 128px;
+	display: block;
+}
+.relatedLinks ol li span{
+	text-decoration: underline;
+}
+.relatedLinks ol li a:link, .relatedLinks ol li a:visited, .relatedLinks ol li a:active{
+	color: #333;
+}
+.relatedLinks ol li a:hover {
+	color: #7f0019;
+}
+.relatedLinks ol li p{
+	text-align: center;
+	margin: 20px 0;
+}
+.relatedLinks ol li h5{
+	font-weight: 400;
+	margin: 0 0 12px;
+}
+/* RSS訂閱 */
+p.rss {
+	width: 150px;
+	float: right;
+}
+p.rss img {
+	border: solid 1px #ccc;
+}
+p.rss a {
+	display: block;
+}
+p.rss a:hover {
+	zoom: 1;
+}
+p.rss a:hover img, p.rss a:active img {
+	border: solid 1px #7f0019;
+}
+
+
+

@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "月銷售量比較";
+}
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1.1", { packages: ["corechart"] });
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+        $.ajaxSettings.async = false;
+        var result;
+        $.getJSON("MonthChart", {}, function (res) {
+            result = res;
+        });
+        for (var j = 1; j < result.length; j++) {
+            for (var i = 1; i < result[j].length; i++) {
+                result[j][i] = parseInt(result[j][i]);
+            }
+        }
+        var data = google.visualization.arrayToDataTable(result/*[
+          ['Month', '產品A', '產品B', '產品C', '產品D'],
+          ['1', 10416, 3386, 2133, 5416],
+          ['2', 9272, 3875, 2142, 6260],
+          ['3', 4753, 9810, 5680, 6120],
+          ['4', 7530, 6500, 7512, 7120],
+          ['5', 10416, 3386, 2133, 5416],
+          ['6', 9272, 3875, 2142, 6260],
+          ['7', 4753, 9810, 5680, 6120],
+          ['8', 7530, 6500, 7512, 7120],
+          ['9', 10416, 3386, 2133, 5416],
+          ['10', 9272, 3875, 2142, 6260],
+          ['11', 4753, 9810, 5680, 6120],
+          ['12', 7530, 6500, 7512, 7120]
+
+        ]*/);
+        var d = new Date();
+        var n = d.getFullYear();
+        var options = {
+            title: n + '年-月銷售量比較',
+            hAxis: { title: '月' },
+            vAxis: { minValue: 0 }
+        };/*= {
+            chart: {
+                title: '月銷售量比較',
+                subtitle: ' 年度:2014 月份: 1-12',
+            }
+        };*/
+
+        var chart = new google.visualization.AreaChart(document.getElementById('columnchart_material'));
+
+        chart.draw(data, options);
+    }
+</script>
+<span id="Bar" hidden>4</span>
+<div id="columnchart_material" style="width: 1024px; height: 600px;"></div>

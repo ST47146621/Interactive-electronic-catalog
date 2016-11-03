@@ -1,0 +1,140 @@
+﻿@model IPagedList<test.Models.SectionModel>
+@{
+    var id = ViewBag.Id;
+    var name = ViewBag.Name;
+    var newproduct = ViewBag.NewProduct;
+}
+
+<div style="height:1000px;">
+    @if (Model.Count() != 0)
+    {
+        foreach (var item in Model)
+        {
+            <div class="product">
+                <div class="info-large">
+                    <h4>@item.ProductName</h4>
+                </div>
+                <div class="make3D">
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <div style="height: 500px; display: table-cell; vertical-align: middle;">
+                            <img src="@item.ProductImgUrl1" alt="" style="vertical-align: middle;" />
+                        </div>
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">加到購物車<input type="hidden" value="@item.ProductId" /></div>
+                        <div class="view_gallery">更多圖片</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$@item.ProductPrice</span>
+                                <span class="product_name">@item.ProductName</span>
+                                <p class="memo" data-id="@item.ProductId">@item.ProductMemo1</p>
+
+                                <div class="product-options">
+                                    <strong>顏色</strong>
+                                    <div class="colors">
+                                        @if (item.Sharp != null)
+                                        {
+                                            foreach (var sharp in item.Sharp)
+                                            {
+                                                <div><span style="background:@sharp"></span></div>
+                                            }
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-back">
+                        <div class="shadow"></div>
+                        <div class="carousel">
+                            <ul class="carousel-container">
+                                @if (item.ProductImgUrl2 == null && item.ProductImgUrl3 == null && item.ProductImgUrl4 == null)
+                                {
+                                    <li>
+                                        <div style="height: 500px; display: table-cell; vertical-align: middle;">
+                                            <img src="@item.ProductImgUrl1" alt="" style="width: 100%; vertical-align: middle;" />
+                                        </div>
+                                    </li>
+                                }
+                                else
+                                {
+                                    if (item.ProductImgUrl2 != null)
+                                    {
+                                        <li>
+                                            <div style="height: 500px; display: table-cell; vertical-align: middle;">
+                                                <img src="@item.ProductImgUrl2" alt="" style="width: 100%;  vertical-align: middle;" />
+                                            </div>
+                                        </li>
+                                    }
+                                    if (item.ProductImgUrl3 != null)
+                                    {
+                                        <li>
+                                            <div style="height: 500px; display: table-cell; vertical-align: middle;">
+                                                <img src="@item.ProductImgUrl3" alt="" style="width: 100%;  vertical-align: middle;" />
+                                            </div>
+                                        </li>
+                                    }
+                                    if (item.ProductImgUrl4 != null)
+                                    {
+                                        <li>
+                                            <div style="height: 500px; display: table-cell; vertical-align: middle;">
+                                                <img src="@item.ProductImgUrl4" alt="" style="width: 100%; vertical-align: middle;" />
+                                            </div>
+                                        </li>
+                                    }
+                                }
+
+                            </ul>
+                            <div class="arrows-perspective">
+                                <div class="carouselPrev">
+                                    <div class="y"></div>
+                                    <div class="x"></div>
+                                </div>
+                                <div class="carouselNext">
+                                    <div class="y"></div>
+                                    <div class="x"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-back">
+                            <div class="cy"></div>
+                            <div class="cx"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <label>查無商品資料!!</label>
+    }
+
+</div>
+<div id="pageitem">
+    @Html.PagedListPager(Model, page => Url.Action("SectionPartial", new { page }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions
+       {
+           InsertionMode = InsertionMode.Replace,
+           HttpMethod = "post",
+           UpdateTargetId = "grid",
+       }))
+</div>
+<script>
+    $(document).ready(function () {
+        if ('@name' == null) {
+            menu_ok('@id', "", '@newproduct');
+            //PageGod('@id', "");
+        } else {
+            menu_ok('@id', '@name', '@newproduct');
+            //PageGod('@id', '@name');
+        }
+    });
+    function openitem(myhref) {
+        var productid = $(myhref).parent().parent().data("id");
+        ////$("#itemModal").modal("show");
+        //window.open("productdetail?ProductId=" + productid);
+        location.href = "/home/productdetail?ProductId=" + productid;
+    }
+</script>

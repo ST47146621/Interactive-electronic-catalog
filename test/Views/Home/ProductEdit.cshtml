@@ -1,0 +1,70 @@
+﻿@model test.Models.ProductModel
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">修改</h4>
+        </div>
+        <div class="modal-body">
+            @using (Ajax.BeginForm("ProductEdit", "Home", null,
+                new AjaxOptions { InsertionMode = InsertionMode.Replace, UpdateTargetId = "body", HttpMethod = "POST" }, new { @class = "form-horizontal", id = "modalForm" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.ProductId)
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductName, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.ProductName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductName, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ProductSpec, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-8">
+            @Html.TextAreaFor(m => m.ProductSpec, new { @class = "form-control",@rows="6" })
+            @Html.ValidationMessageFor(m => m.ProductSpec, "", new { @class = "label label-danger" })
+        </div>
+    </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductPrice, new { @class = "col-sm-2 control-label" })
+                    <div class="col-sm-8">
+                        @Html.TextBoxFor(m => m.ProductPrice, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ProductPrice, "", new { @class = "label label-danger" })
+                    </div>
+                </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PColor, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-4">
+            @foreach (var item in Model.PColor)
+            {
+                <input type="checkbox" name="SetColor" value="@item.Id" />@item.Color1
+            }
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PCategory, new { @class = "col-sm-2 control-label" })
+        <div class="col-sm-4">
+            @foreach (var item in Model.PCategory)
+            {
+                <input type="checkbox" name="SetCategory" value="@item.Id" />@item.Name
+            }
+        </div>
+    </div>
+            }
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-success">送出</button>
+        </div>
+        
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".btn-success").click(function () {
+            $("#modalForm").submit();
+        });
+        $(".btn-default").click(function () {
+
+            $('#itemModal').on('hidden.bs.modal', function () {
+                $(this).removeData('bs.modal');
+            });
+        });
+    });
+    
+</script>

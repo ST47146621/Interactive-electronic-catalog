@@ -1,0 +1,24 @@
+﻿@model IPagedList<test.Models.ProductModel>
+<table class="table hover">
+    <tr><td>商品編號</td><td>商品名稱</td><td>價格</td><td></td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-sm-2">@item.ProductId</td>
+            <td class="col-sm-6">@item.ProductName</td>
+            <td class="col-sm-2">@item.ProductPrice 元</td>
+            <td class="col-sm-2">
+                @Html.ActionLink("修改", "ProductEdit", "Admin", new { Id = item.ProductId, area = "Admin" }, new { @data_toggle = "modal", @data_target = "#itemModal" })
+                @Html.ActionLink("刪除", "ProductDelete", "Admin", new { Id = item.ProductId, area = "Admin" }, new { })
+            </td>
+        </tr>
+    }
+</table>
+<div id="pageitem">
+    @Html.PagedListPager(Model, page => Url.Action("ProductIndexPartial", new { page }), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions
+       {
+           InsertionMode = InsertionMode.Replace,
+           HttpMethod = "post",
+           UpdateTargetId = "ProductTable",
+       }))
+</div>

@@ -1,0 +1,31 @@
+﻿@model List<test.Models.MemberModel>
+@{
+    ViewBag.Title = "會員管理";
+    Layout = "~/Areas/Admin/Views/Shared/_NewLayout.cshtml";
+}
+<div class="col-sm-1">
+    @Html.ActionLink("新增", "MemberCreate", "Admin", new {area="Admin" }, new { @class = "btn btn-primary", @data_toggle = "modal", @data_target = "#itemModal" })
+</div>
+<span id="Bar" hidden>1</span>
+<table class="table hover">
+    <tr><td>會員帳號</td><td>會員名稱</td><td>電話</td><td>生日</td><td></td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-sm-1">@item.Account</td>
+            <td class="col-sm-1">@item.Name</td>
+            <td class="col-sm-1">@item.Phone</td>
+            <td class="col-sm-1">@item.Birth.ToString()</td>
+            <td class="col-sm-2">
+                @Html.ActionLink("修改", "MemberEdit", "Admin", new { Id = item.Account, area = "Admin" }, new { @data_toggle = "modal", @data_target = "#itemModal" })
+                @Html.ActionLink("刪除", "MemberDelete", "Admin", new { Id = item.Account, area = "Admin" }, new { })
+            </td>
+        </tr>
+    }
+</table>
+<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>

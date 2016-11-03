@@ -1,0 +1,127 @@
+﻿@*<!DOCTYPE html>
+    <html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+
+    </head>*@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html lang="zh-tw">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <title>
+        AReal Shop
+    </title>
+    <meta name="keywords" content="AReal Shop" />
+    <meta name="distribution" content="global" />
+    <meta name="robots" content="all" />
+    <meta name="Creation-Date" content="01-10-2010 00:00:00" />
+    <meta name="author" />
+    <meta name="Copyright" content="AReal Shop" />
+    <meta name="verify-v1" content="PpCLCIQSii0q6uAB6IOvnZrljtn1VExCw53GtkeZNjs=" />
+    <link href="~/Content/css_reset.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/menu.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="~/images/arealshop2.png" type="image/x-icon" />
+    <link rel="icon" href="~/images/arealshop2.png" type="image/x-icon" />
+    @RenderSection("css", required: false)
+    @Styles.Render("~/Content/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/detailCss")
+    @Styles.Render("~/Content/dataTables/css")
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/scripts/noty")
+    @Scripts.Render("~/bundles/public")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/scripts/datatables")
+    @Scripts.Render("~/bundles/detailMain")
+    <meta name="description" content="AReal Shop">
+    <link href="~/Content/temp01.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="~/Content/news_storetop.css">
+    <link href="~/Content/index.css" rel="stylesheet" type="text/css">
+    <script>
+    var _root = "";
+    </script>
+    <script src="~/api/proxies"></script>
+    <script src="~/Scripts/echart/echarts.js"></script>
+    <style type="text/css">
+        .clear {
+            clear: both;
+        }
+
+        .ClothBOX li a {
+            background: url(images/index_triangle.gif) no-repeat;
+            font: bold 12px/5px Arial, 新細明體;
+            list-style: none;
+            width: 232px;
+        }
+
+        .groceryBOX li {
+            background: url(images/index_triangle.gif) no-repeat;
+            background-position: left 7px;
+            font: bold 12px/5px Arial, 新細明體;
+            list-style: none;
+            width: 112px;
+            float: left;
+            margin-left: 12px;
+        }
+
+        .newbox a {
+            color: #333;
+        }
+
+            .newbox a:hover {
+                color: #7f0019;
+            }
+
+        .foodBOX h5 {
+            font-weight: bold;
+        }
+    </style>
+    @*<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.4.min.js"></script>*@
+
+
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=209816012562375&amp;ev=PixelInitialized" /></noscript>
+</head>
+<body>
+   
+    
+        @RenderBody()
+        
+
+    @*@RenderSection("scripts", required: false)
+        @RenderSection("beforeafterJs", required: false)*@
+    <script src="//assets.adobedtm.com/a6e9b8b912d51aecbc12256558ef49a48670b2e5/satelliteLib-a875c754111844f884632cc05b3dfff025e27b12.js"></script>
+    <script src="~/JQuery/urchin.js" type="text/javascript"></script>
+
+
+    <script>
+        (function () {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+            _fbq.push(['addPixelId', '209816012562375']);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+</body>
+</html>
+@RenderSection("scripts", required: false)

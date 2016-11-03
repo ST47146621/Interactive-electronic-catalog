@@ -1,0 +1,75 @@
+﻿@model test.Models.Member
+@{
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-sm-12">
+    <button id="btn-edit" class="btn btn-primary">編輯</button>
+    <button id="btn-save" class="btn btn-primary" style="display:none;">存檔</button>
+</div>
+<span id="Bar" hidden>0</span>
+<div style="margin-top:50px;">
+    @using (Html.BeginForm("UserEdit", "User", new { @Area = "User" }, FormMethod.Post, new { @id = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.Hidden("Password")
+        @Html.Hidden("Role", "USER")
+        <div class="form-group col-sm-10">
+            @Html.Label("帳號", new { @class = "col-sm-2 label-control" })
+            <div class="col-sm-3">
+                @Html.TextBoxFor(m => m.Account, new { @class = "form-control col-sm-2", @readonly = true })
+                @Html.ValidationMessageFor(m => m.Account, "", new { @class = "label label-danger" })
+            </div>
+            @Html.Label("名稱", new { @class = "col-sm-2 label-control" })
+            <div class="col-sm-3">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control col-sm-2" })
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "label label-danger" })
+            </div>
+        </div>
+        <div class="form-group col-sm-10">
+            @Html.Label("電話", new { @class = "col-sm-2 label-control" })
+            <div class="col-sm-3">
+                @Html.TextBoxFor(m => m.Phone, new { @class = "form-control col-sm-2" })
+                @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "label label-danger" })
+            </div>
+            @Html.Label("生日", new { @class = "col-sm-2 label-control" })
+            <div class="col-sm-3">
+                @Html.TextBoxFor(m => m.Birth, "{0:yyyy/MM/dd}", new { @class = "form-control col-sm-2 datepicker" })
+                @Html.ValidationMessageFor(m => m.Birth, "", new { @class = "label label-danger" })
+            </div>
+        </div>
+        <div class="form-group col-sm-10">
+            @Html.Label("地址", new { @class = "col-sm-2 label-control" })
+            <div class="col-sm-3">
+                @Html.TextBoxFor(m => m.Addr, new { @class = "form-control col-sm-7" })
+                @Html.ValidationMessageFor(m => m.Addr, "", new { @class = "label label-danger" })
+            </div>
+        </div>
+    }
+</div>
+<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("input").attr("readonly", true);
+
+        $("#btn-edit").click(function () {
+            $("#btn-edit").css("display", "none")
+            $("#btn-save").css("display", "block")
+            $("#Name,#Phone,#Addr").attr("readonly", false)
+            $(".datepicker").datepicker({ format: 'yyyy/mm/dd' });
+        });
+
+        $("#btn-save").click(function () {
+            $("#Name,#Phone,#Addr").attr("readonly", true)
+            $(".datepicker").datepicker("remove");
+            $("#form").submit();
+        });
+    });
+
+</script>

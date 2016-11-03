@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ARealShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AllViews">
+    <Key>
+      <PropertyRef Name="TableName" />
+    </Key>
+    <Property Name="TableName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsHead" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AllViewsColumn">
+    <Key>
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="Language" />
+    </Key>
+    <Property Name="TableName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Language" Type="int" Nullable="false" />
+    <Property Name="SerialString" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ApkUrl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApkUrl" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsServer" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CategoryTable">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ProductId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Test" Type="bit" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="10" />
+    <Property Name="Sharp" Type="nvarchar" MaxLength="7" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Sid" />
+    </Key>
+    <Property Name="Sid" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Addr" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="12" Nullable="false" />
+    <Property Name="Img" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetailURL">
+    <Key>
+      <PropertyRef Name="ViewAttachName" />
+    </Key>
+    <Property Name="ViewAttachName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ViewURL" Type="varchar" MaxLength="50" />
+    <Property Name="Width" Type="decimal" Precision="7" Scale="3" />
+    <Property Name="Height" Type="decimal" Precision="7" Scale="3" />
+  </EntityType>
+  <EntityType Name="DriverLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ShopId" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="DriverId" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Longitude" Type="decimal" Precision="20" Scale="6" Nullable="false" />
+    <Property Name="Latitude" Type="decimal" Precision="20" Scale="6" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="Account" />
+    </Key>
+    <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Addr" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Birth" Type="datetime" Nullable="false" />
+    <Property Name="Role" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Sex" Type="bit" />
+    <Property Name="Job" Type="tinyint" />
+    <Property Name="Style" Type="tinyint" />
+    <Property Name="Money" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductSpec" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProductPrice" Type="int" Nullable="false" />
+    <Property Name="Sid" Type="nvarchar" MaxLength="20" />
+    <Property Name="ProductMemo1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProductMemo2" Type="nvarchar(max)" />
+    <Property Name="ProductMemo3" Type="nvarchar(max)" />
+    <Property Name="ProductImgUrl1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProductImgUrl2" Type="nvarchar(max)" />
+    <Property Name="ProductImgUrl3" Type="nvarchar(max)" />
+    <Property Name="ProductImgUrl4" Type="nvarchar(max)" />
+    <Property Name="ProductImgUrl5" Type="nvarchar(max)" />
+    <Property Name="ProductCost" Type="int" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="PushHot" Type="bit" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="OnShelf" Type="bit" Nullable="false" />
+    <Property Name="OrgPrice" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Summary" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" />
+    <Property Name="EndTime" Type="datetime" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="Sid" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ProductColor">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Color" />
+    </Key>
+    <Property Name="ProductId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Color" Type="int" Nullable="false" />
+    <Property Name="Text" Type="bit" />
+  </EntityType>
+  <EntityType Name="ProductImage">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ProductId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ProductImgUrl" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductPayment">
+    <Key>
+      <PropertyRef Name="Year" />
+    </Key>
+    <Property Name="Year" Type="nvarchar" MaxLength="6" Nullable="false" />
+    <Property Name="Cost" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductRating">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Account" />
+    </Key>
+    <Property Name="ProductId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Star" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="tinyint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reply">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Time" Type="datetime" Nullable="false" />
+    <Property Name="Account" Type="nvarchar" MaxLength="20" />
+    <Property Name="RId" Type="int" />
+    <Property Name="ProductId" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShopCart">
+    <Key>
+      <PropertyRef Name="ShopId" />
+    </Key>
+    <Property Name="Account" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ShopId" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Price" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Payment" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="ShopCartList">
+    <Key>
+      <PropertyRef Name="ShopId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ShopId" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="IsPush" Type="int" />
+  </EntityType>
+  <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'Fantasy.dbo.FuckSaleReport' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="FuckSaleReport">
+          <Property Name="ShopId" Type="varchar" MaxLength="6" />
+          <Property Name="Total" Type="nvarchar(max)" />
+          <Property Name="Payment" Type="nvarchar(max)" />
+          <Property Name="Income" Type="nvarchar(max)" />
+          <Property Name="COST" Type="nvarchar(max)" />
+          <Property Name="Final" Type="nvarchar(max)" />
+        </EntityType>-->
+  <!--產生期間發現錯誤:
+警告 6013: 資料表/檢視 'Fantasy.dbo.SaleReport' 未定義主索引鍵，也無法推斷有效的主索引鍵。此資料表/檢視已被排除。如果要使用此實體，您必須檢閱您的結構描述，加入正確的索引鍵，並將它取消註解。
+        <EntityType Name="SaleReport">
+          <Property Name="ShopId" Type="varchar" MaxLength="6" />
+          <Property Name="Total" Type="nvarchar(max)" />
+          <Property Name="Payment" Type="nvarchar(max)" />
+          <Property Name="Income" Type="nvarchar(max)" />
+          <Property Name="COST" Type="nvarchar(max)" />
+        </EntityType>-->
+  <Association Name="FK__ProductIm__Produ__1ED998B2">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="ProductImage" Type="Self.ProductImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductImage">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCart__Accoun__21B6055D">
+    <End Role="Member" Type="Self.Member" Multiplicity="1" />
+    <End Role="ShopCart" Type="Self.ShopCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Account" />
+      </Principal>
+      <Dependent Role="ShopCart">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCartL__Produ__276EDEB3">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="ShopCartList" Type="Self.ShopCartList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ShopCartList">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCartL__ShopI__267ABA7A">
+    <End Role="ShopCart" Type="Self.ShopCart" Multiplicity="1" />
+    <End Role="ShopCartList" Type="Self.ShopCartList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShopCart">
+        <PropertyRef Name="ShopId" />
+      </Principal>
+      <Dependent Role="ShopCartList">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AllViewsColumn_AllViews">
+    <End Role="AllViews" Type="Self.AllViews" Multiplicity="1" />
+    <End Role="AllViewsColumn" Type="Self.AllViewsColumn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AllViews">
+        <PropertyRef Name="TableName" />
+      </Principal>
+      <Dependent Role="AllViewsColumn">
+        <PropertyRef Name="TableName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryTable_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="CategoryTable" Type="Self.CategoryTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="CategoryTable">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryTable_ProductCategory">
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="1" />
+    <End Role="CategoryTable" Type="Self.CategoryTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CategoryTable">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DriverLocation_ShopCart_ShopId">
+    <End Role="ShopCart" Type="Self.ShopCart" Multiplicity="1" />
+    <End Role="DriverLocation" Type="Self.DriverLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShopCart">
+        <PropertyRef Name="ShopId" />
+      </Principal>
+      <Dependent Role="DriverLocation">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Sid" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductCategory_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="0..1" />
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Sid" />
+      </Principal>
+      <Dependent Role="ProductCategory">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductColor_Color">
+    <End Role="Color" Type="Self.Color" Multiplicity="1" />
+    <End Role="ProductColor" Type="Self.ProductColor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductColor">
+        <PropertyRef Name="Color" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductColor_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="ProductColor" Type="Self.ProductColor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductColor">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductRating_Member">
+    <End Role="Member" Type="Self.Member" Multiplicity="1" />
+    <End Role="ProductRating" Type="Self.ProductRating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Account" />
+      </Principal>
+      <Dependent Role="ProductRating">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductRating_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="ProductRating" Type="Self.ProductRating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductRating">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reply_Member">
+    <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
+    <End Role="Reply" Type="Self.Reply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Account" />
+      </Principal>
+      <Dependent Role="Reply">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reply_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Reply" Type="Self.Reply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="Reply">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reply_Reply">
+    <End Role="Reply" Type="Self.Reply" Multiplicity="0..1" />
+    <End Role="Reply1" Type="Self.Reply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reply">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reply1">
+        <PropertyRef Name="RId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShopCart_PurchaseStatus">
+    <End Role="PurchaseStatus" Type="Self.PurchaseStatus" Multiplicity="0..1" />
+    <End Role="ShopCart" Type="Self.ShopCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ShopCart">
+        <PropertyRef Name="Payment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ARealShopModelStoreContainer">
+    <EntitySet Name="AllViews" EntityType="Self.AllViews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AllViewsColumn" EntityType="Self.AllViewsColumn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApkUrl" EntityType="Self.ApkUrl" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoryTable" EntityType="Self.CategoryTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetailURL" EntityType="Self.DetailURL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DriverLocation" EntityType="Self.DriverLocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductColor" EntityType="Self.ProductColor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductImage" EntityType="Self.ProductImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductPayment" EntityType="Self.ProductPayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductRating" EntityType="Self.ProductRating" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PurchaseStatus" EntityType="Self.PurchaseStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reply" EntityType="Self.Reply" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShopCart" EntityType="Self.ShopCart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShopCartList" EntityType="Self.ShopCartList" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ProductIm__Produ__1ED998B2" Association="Self.FK__ProductIm__Produ__1ED998B2">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductImage" EntitySet="ProductImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCart__Accoun__21B6055D" Association="Self.FK__ShopCart__Accoun__21B6055D">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="ShopCart" EntitySet="ShopCart" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCartL__Produ__276EDEB3" Association="Self.FK__ShopCartL__Produ__276EDEB3">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ShopCartList" EntitySet="ShopCartList" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCartL__ShopI__267ABA7A" Association="Self.FK__ShopCartL__ShopI__267ABA7A">
+      <End Role="ShopCart" EntitySet="ShopCart" />
+      <End Role="ShopCartList" EntitySet="ShopCartList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AllViewsColumn_AllViews" Association="Self.FK_AllViewsColumn_AllViews">
+      <End Role="AllViews" EntitySet="AllViews" />
+      <End Role="AllViewsColumn" EntitySet="AllViewsColumn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryTable_Product" Association="Self.FK_CategoryTable_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="CategoryTable" EntitySet="CategoryTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryTable_ProductCategory" Association="Self.FK_CategoryTable_ProductCategory">
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+      <End Role="CategoryTable" EntitySet="CategoryTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DriverLocation_ShopCart_ShopId" Association="Self.FK_DriverLocation_ShopCart_ShopId">
+      <End Role="ShopCart" EntitySet="ShopCart" />
+      <End Role="DriverLocation" EntitySet="DriverLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Company" Association="Self.FK_Product_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductCategory_Company" Association="Self.FK_ProductCategory_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductColor_Color" Association="Self.FK_ProductColor_Color">
+      <End Role="Color" EntitySet="Color" />
+      <End Role="ProductColor" EntitySet="ProductColor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductColor_Product" Association="Self.FK_ProductColor_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductColor" EntitySet="ProductColor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductRating_Member" Association="Self.FK_ProductRating_Member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="ProductRating" EntitySet="ProductRating" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductRating_Product" Association="Self.FK_ProductRating_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductRating" EntitySet="ProductRating" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reply_Member" Association="Self.FK_Reply_Member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="Reply" EntitySet="Reply" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reply_Product" Association="Self.FK_Reply_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Reply" EntitySet="Reply" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reply_Reply" Association="Self.FK_Reply_Reply">
+      <End Role="Reply" EntitySet="Reply" />
+      <End Role="Reply1" EntitySet="Reply" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShopCart_PurchaseStatus" Association="Self.FK_ShopCart_PurchaseStatus">
+      <End Role="PurchaseStatus" EntitySet="PurchaseStatus" />
+      <End Role="ShopCart" EntitySet="ShopCart" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

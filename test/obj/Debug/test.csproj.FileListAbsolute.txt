@@ -1,0 +1,860 @@
+C:\Users\user\Desktop\test\test\bin\AutoMapper.Net4.dll
+C:\Users\user\Desktop\test\test\bin\test.dll.config
+C:\Users\user\Desktop\test\test\bin\test.dll
+C:\Users\user\Desktop\test\test\bin\test.pdb
+C:\Users\user\Desktop\test\test\bin\Antlr3.Runtime.dll
+C:\Users\user\Desktop\test\test\bin\AutoMapper.dll
+C:\Users\user\Desktop\test\test\bin\EntityFramework.dll
+C:\Users\user\Desktop\test\test\bin\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\test\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user\Desktop\test\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user\Desktop\test\test\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Desktop\test\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\user\Desktop\test\test\bin\Newtonsoft.Json.dll
+C:\Users\user\Desktop\test\test\bin\System.Linq.Dynamic.dll
+C:\Users\user\Desktop\test\test\bin\System.Net.Http.Formatting.dll
+C:\Users\user\Desktop\test\test\bin\System.Web.Http.dll
+C:\Users\user\Desktop\test\test\bin\System.Web.Http.WebHost.dll
+C:\Users\user\Desktop\test\test\bin\System.Web.Mvc.dll
+C:\Users\user\Desktop\test\test\bin\System.Web.Optimization.dll
+C:\Users\user\Desktop\test\test\bin\System.Web.Providers.dll
+C:\Users\user\Desktop\test\test\bin\System.Web.Razor.dll
+C:\Users\user\Desktop\test\test\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user\Desktop\test\test\bin\System.Web.WebPages.dll
+C:\Users\user\Desktop\test\test\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\Desktop\test\test\bin\WebGrease.dll
+C:\Users\user\Desktop\test\test\bin\AutoMapper.xml
+C:\Users\user\Desktop\test\test\bin\EntityFramework.xml
+C:\Users\user\Desktop\test\test\bin\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\test\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user\Desktop\test\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user\Desktop\test\test\bin\Newtonsoft.Json.xml
+C:\Users\user\Desktop\test\test\bin\System.Net.Http.Formatting.xml
+C:\Users\user\Desktop\test\test\bin\System.Web.Http.xml
+C:\Users\user\Desktop\test\test\bin\System.Web.Http.WebHost.xml
+C:\Users\user\Desktop\test\test\bin\System.Web.Mvc.xml
+C:\Users\user\Desktop\test\test\bin\System.Web.Razor.xml
+C:\Users\user\Desktop\test\test\bin\System.Web.WebPages.xml
+C:\Users\user\Desktop\test\test\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user\Desktop\test\test\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Desktop\test\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Http.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\user\Desktop\test\test\obj\Debug\test.dll
+C:\Users\user\Desktop\test\test\obj\Debug\test.pdb
+C:\Users\user\Desktop\test\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\user\Desktop\test\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\test\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+D:\Users\user\Desktop\test\test\bin\AutoMapper.Net4.dll
+D:\Users\user\Desktop\test\test\bin\test.dll.config
+D:\Users\user\Desktop\test\test\bin\test.dll
+D:\Users\user\Desktop\test\test\bin\test.pdb
+D:\Users\user\Desktop\test\test\bin\Antlr3.Runtime.dll
+D:\Users\user\Desktop\test\test\bin\AutoMapper.dll
+D:\Users\user\Desktop\test\test\bin\EntityFramework.dll
+D:\Users\user\Desktop\test\test\bin\EntityFramework.SqlServer.dll
+D:\Users\user\Desktop\test\test\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Users\user\Desktop\test\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Users\user\Desktop\test\test\bin\Microsoft.Web.Infrastructure.dll
+D:\Users\user\Desktop\test\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Users\user\Desktop\test\test\bin\Newtonsoft.Json.dll
+D:\Users\user\Desktop\test\test\bin\System.Linq.Dynamic.dll
+D:\Users\user\Desktop\test\test\bin\System.Net.Http.Formatting.dll
+D:\Users\user\Desktop\test\test\bin\System.Web.Http.dll
+D:\Users\user\Desktop\test\test\bin\System.Web.Http.WebHost.dll
+D:\Users\user\Desktop\test\test\bin\System.Web.Mvc.dll
+D:\Users\user\Desktop\test\test\bin\System.Web.Optimization.dll
+D:\Users\user\Desktop\test\test\bin\System.Web.Providers.dll
+D:\Users\user\Desktop\test\test\bin\System.Web.Razor.dll
+D:\Users\user\Desktop\test\test\bin\System.Web.WebPages.Deployment.dll
+D:\Users\user\Desktop\test\test\bin\System.Web.WebPages.dll
+D:\Users\user\Desktop\test\test\bin\System.Web.WebPages.Razor.dll
+D:\Users\user\Desktop\test\test\bin\WebGrease.dll
+D:\Users\user\Desktop\test\test\bin\AutoMapper.xml
+D:\Users\user\Desktop\test\test\bin\EntityFramework.xml
+D:\Users\user\Desktop\test\test\bin\EntityFramework.SqlServer.xml
+D:\Users\user\Desktop\test\test\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Users\user\Desktop\test\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Users\user\Desktop\test\test\bin\Newtonsoft.Json.xml
+D:\Users\user\Desktop\test\test\bin\System.Net.Http.Formatting.xml
+D:\Users\user\Desktop\test\test\bin\System.Web.Http.xml
+D:\Users\user\Desktop\test\test\bin\System.Web.Http.WebHost.xml
+D:\Users\user\Desktop\test\test\bin\System.Web.Mvc.xml
+D:\Users\user\Desktop\test\test\bin\System.Web.Razor.xml
+D:\Users\user\Desktop\test\test\bin\System.Web.WebPages.xml
+D:\Users\user\Desktop\test\test\bin\System.Web.WebPages.Deployment.xml
+D:\Users\user\Desktop\test\test\bin\System.Web.WebPages.Razor.xml
+D:\Users\user\Desktop\test\test\bin\zh-Hant\EntityFramework.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Http.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Providers.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.Razor.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+D:\Users\user\Desktop\test\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+D:\Users\user\Desktop\test\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+D:\Users\user\Desktop\test\test\obj\Debug\test.Properties.Resources.resources
+D:\Users\user\Desktop\test\test\obj\Debug\test.csproj.GenerateResource.Cache
+D:\Users\user\Desktop\test\test\obj\Debug\test.dll
+D:\Users\user\Desktop\test\test\obj\Debug\test.pdb
+C:\Users\ericlinAAA\Desktop\test\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\ericlinAAA\Desktop\test\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\Users\ericlinAAA\Desktop\test\test\bin\AutoMapper.Net4.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\test.dll.config
+C:\Users\ericlinAAA\Desktop\test\test\bin\test.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\test.pdb
+C:\Users\ericlinAAA\Desktop\test\test\bin\Antlr3.Runtime.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\AutoMapper.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\EntityFramework.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\EntityFramework.SqlServer.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\Newtonsoft.Json.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Linq.Dynamic.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Net.Http.Formatting.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.Http.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.Http.WebHost.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.Mvc.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.Optimization.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.Providers.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.Razor.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.WebPages.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.WebPages.Razor.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\WebGrease.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\AutoMapper.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\EntityFramework.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\EntityFramework.SqlServer.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\Newtonsoft.Json.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Net.Http.Formatting.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.Http.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.Http.WebHost.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.Mvc.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.Razor.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.WebPages.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\System.Web.WebPages.Razor.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\System.Web.Http.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\ericlinAAA\Desktop\test\test\obj\Debug\test.dll
+C:\Users\ericlinAAA\Desktop\test\test\obj\Debug\test.pdb
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\AutoMapper.Net4.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\test.dll.config
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\test.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\test.pdb
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\Antlr3.Runtime.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\AutoMapper.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\EntityFramework.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\EntityFramework.SqlServer.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\Newtonsoft.Json.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Linq.Dynamic.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Net.Http.Formatting.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.Http.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.Http.WebHost.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.Mvc.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.Optimization.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.Providers.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.Razor.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.WebPages.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.WebPages.Razor.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\WebGrease.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\AutoMapper.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\EntityFramework.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\EntityFramework.SqlServer.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\Newtonsoft.Json.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Net.Http.Formatting.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.Http.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.Http.WebHost.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.Mvc.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.Razor.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.WebPages.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\System.Web.WebPages.Razor.xml
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\System.Web.Http.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\ericlinAAA\Desktop\test - eip\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\Users\ericlinAAA\Desktop\test - eip\test\obj\Debug\test.dll
+C:\Users\ericlinAAA\Desktop\test - eip\test\obj\Debug\test.pdb
+C:\Users\ericlinAAA\Desktop\test - eip\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\AutoMapper.Net4.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\test.dll.config
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\test.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\test.pdb
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\Antlr3.Runtime.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\AutoMapper.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\EntityFramework.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\EntityFramework.SqlServer.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\Newtonsoft.Json.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Linq.Dynamic.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Net.Http.Formatting.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.Http.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.Http.WebHost.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.Mvc.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.Optimization.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.Providers.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.Razor.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.WebPages.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.WebPages.Razor.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\WebGrease.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\AutoMapper.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\EntityFramework.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\EntityFramework.SqlServer.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\Newtonsoft.Json.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Net.Http.Formatting.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.Http.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.Http.WebHost.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.Mvc.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.Razor.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.WebPages.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\System.Web.WebPages.Razor.xml
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\System.Web.Http.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\obj\Debug\test.dll
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\obj\Debug\test.pdb
+C:\Users\ericlinAAA\Desktop\test - 複製 - 複製\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+C:\Project\ARealShop\test\test\bin\AutoMapper.Net4.dll
+C:\Project\ARealShop\test\test\bin\test.dll.config
+C:\Project\ARealShop\test\test\bin\test.dll
+C:\Project\ARealShop\test\test\bin\test.pdb
+C:\Project\ARealShop\test\test\bin\Antlr3.Runtime.dll
+C:\Project\ARealShop\test\test\bin\AutoMapper.dll
+C:\Project\ARealShop\test\test\bin\EntityFramework.dll
+C:\Project\ARealShop\test\test\bin\EntityFramework.SqlServer.dll
+C:\Project\ARealShop\test\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Project\ARealShop\test\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Project\ARealShop\test\test\bin\Microsoft.Web.Infrastructure.dll
+C:\Project\ARealShop\test\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Project\ARealShop\test\test\bin\Newtonsoft.Json.dll
+C:\Project\ARealShop\test\test\bin\ProxyApi.dll
+C:\Project\ARealShop\test\test\bin\System.Linq.Dynamic.dll
+C:\Project\ARealShop\test\test\bin\System.Net.Http.Formatting.dll
+C:\Project\ARealShop\test\test\bin\System.Web.Http.dll
+C:\Project\ARealShop\test\test\bin\System.Web.Http.WebHost.dll
+C:\Project\ARealShop\test\test\bin\System.Web.Mvc.dll
+C:\Project\ARealShop\test\test\bin\System.Web.Optimization.dll
+C:\Project\ARealShop\test\test\bin\System.Web.Providers.dll
+C:\Project\ARealShop\test\test\bin\System.Web.Razor.dll
+C:\Project\ARealShop\test\test\bin\System.Web.WebPages.Deployment.dll
+C:\Project\ARealShop\test\test\bin\System.Web.WebPages.dll
+C:\Project\ARealShop\test\test\bin\System.Web.WebPages.Razor.dll
+C:\Project\ARealShop\test\test\bin\WebGrease.dll
+C:\Project\ARealShop\test\test\bin\AutoMapper.xml
+C:\Project\ARealShop\test\test\bin\EntityFramework.xml
+C:\Project\ARealShop\test\test\bin\EntityFramework.SqlServer.xml
+C:\Project\ARealShop\test\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Project\ARealShop\test\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Project\ARealShop\test\test\bin\Newtonsoft.Json.xml
+C:\Project\ARealShop\test\test\bin\System.Net.Http.Formatting.xml
+C:\Project\ARealShop\test\test\bin\System.Web.Http.xml
+C:\Project\ARealShop\test\test\bin\System.Web.Http.WebHost.xml
+C:\Project\ARealShop\test\test\bin\System.Web.Mvc.xml
+C:\Project\ARealShop\test\test\bin\System.Web.Razor.xml
+C:\Project\ARealShop\test\test\bin\System.Web.WebPages.xml
+C:\Project\ARealShop\test\test\bin\System.Web.WebPages.Deployment.xml
+C:\Project\ARealShop\test\test\bin\System.Web.WebPages.Razor.xml
+C:\Project\ARealShop\test\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\System.Web.Http.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Project\ARealShop\test\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Project\ARealShop\test\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+C:\Project\ARealShop\test\test\obj\Debug\test.Properties.Resources.resources
+C:\Project\ARealShop\test\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\Project\ARealShop\test\test\obj\Debug\test.dll
+C:\Project\ARealShop\test\test\obj\Debug\test.pdb
+C:\Users\ericlinAAA\Desktop\test\test\bin\ProxyApi.dll
+C:\Users\Eric\Desktop\專案王\test\bin\AutoMapper.Net4.dll
+C:\Users\Eric\Desktop\專案王\test\bin\test.dll.config
+C:\Users\Eric\Desktop\專案王\test\bin\test.dll
+C:\Users\Eric\Desktop\專案王\test\bin\test.pdb
+C:\Users\Eric\Desktop\專案王\test\bin\Antlr3.Runtime.dll
+C:\Users\Eric\Desktop\專案王\test\bin\AutoMapper.dll
+C:\Users\Eric\Desktop\專案王\test\bin\EntityFramework.dll
+C:\Users\Eric\Desktop\專案王\test\bin\EntityFramework.SqlServer.dll
+C:\Users\Eric\Desktop\專案王\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Eric\Desktop\專案王\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Eric\Desktop\專案王\test\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Eric\Desktop\專案王\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Eric\Desktop\專案王\test\bin\Newtonsoft.Json.dll
+C:\Users\Eric\Desktop\專案王\test\bin\ProxyApi.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Linq.Dynamic.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Net.Http.Formatting.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.Http.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.Http.WebHost.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.Mvc.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.Optimization.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.Providers.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.Razor.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.WebPages.dll
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.WebPages.Razor.dll
+C:\Users\Eric\Desktop\專案王\test\bin\WebGrease.dll
+C:\Users\Eric\Desktop\專案王\test\bin\AutoMapper.xml
+C:\Users\Eric\Desktop\專案王\test\bin\EntityFramework.xml
+C:\Users\Eric\Desktop\專案王\test\bin\EntityFramework.SqlServer.xml
+C:\Users\Eric\Desktop\專案王\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Eric\Desktop\專案王\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Eric\Desktop\專案王\test\bin\Newtonsoft.Json.xml
+C:\Users\Eric\Desktop\專案王\test\bin\System.Net.Http.Formatting.xml
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.Http.xml
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.Http.WebHost.xml
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.Mvc.xml
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.Razor.xml
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.WebPages.xml
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Eric\Desktop\專案王\test\bin\System.Web.WebPages.Razor.xml
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\System.Web.Http.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Eric\Desktop\專案王\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\Eric\Desktop\專案王\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\Eric\Desktop\專案王\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\Users\Eric\Desktop\專案王\test\obj\Debug\test.dll
+C:\Users\Eric\Desktop\專案王\test\obj\Debug\test.pdb
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\AutoMapper.Net4.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\test.dll.config
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\test.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\test.pdb
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\Antlr3.Runtime.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\AutoMapper.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\EntityFramework.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\EntityFramework.SqlServer.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\Newtonsoft.Json.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\ProxyApi.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Linq.Dynamic.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Net.Http.Formatting.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.Http.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.Http.WebHost.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.Mvc.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.Optimization.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.Providers.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.Razor.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.WebPages.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.WebPages.Razor.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\WebGrease.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\AutoMapper.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\EntityFramework.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\EntityFramework.SqlServer.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\Newtonsoft.Json.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Net.Http.Formatting.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.Http.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.Http.WebHost.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.Mvc.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.Razor.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.WebPages.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\System.Web.WebPages.Razor.xml
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\System.Web.Http.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\ericlinAAA\Desktop\test - 複製\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\Users\ericlinAAA\Desktop\test - 複製\test\obj\Debug\test.dll
+C:\Users\ericlinAAA\Desktop\test - 複製\test\obj\Debug\test.pdb
+C:\Users\ericlinAAA\Desktop\test - 複製\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+C:\ARealShop\test\obj\Debug\test.Properties.Resources.resources
+C:\ARealShop\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\ARealShop\test\bin\AutoMapper.Net4.dll
+C:\ARealShop\test\bin\test.dll.config
+C:\ARealShop\test\bin\test.dll
+C:\ARealShop\test\bin\test.pdb
+C:\ARealShop\test\bin\Antlr3.Runtime.dll
+C:\ARealShop\test\bin\AutoMapper.dll
+C:\ARealShop\test\bin\EntityFramework.dll
+C:\ARealShop\test\bin\EntityFramework.SqlServer.dll
+C:\ARealShop\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\ARealShop\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\ARealShop\test\bin\Microsoft.Web.Infrastructure.dll
+C:\ARealShop\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\ARealShop\test\bin\Newtonsoft.Json.dll
+C:\ARealShop\test\bin\ProxyApi.dll
+C:\ARealShop\test\bin\System.Linq.Dynamic.dll
+C:\ARealShop\test\bin\System.Net.Http.Formatting.dll
+C:\ARealShop\test\bin\System.Web.Http.dll
+C:\ARealShop\test\bin\System.Web.Http.WebHost.dll
+C:\ARealShop\test\bin\System.Web.Mvc.dll
+C:\ARealShop\test\bin\System.Web.Optimization.dll
+C:\ARealShop\test\bin\System.Web.Providers.dll
+C:\ARealShop\test\bin\System.Web.Razor.dll
+C:\ARealShop\test\bin\System.Web.WebPages.Deployment.dll
+C:\ARealShop\test\bin\System.Web.WebPages.dll
+C:\ARealShop\test\bin\System.Web.WebPages.Razor.dll
+C:\ARealShop\test\bin\WebGrease.dll
+C:\ARealShop\test\bin\AutoMapper.xml
+C:\ARealShop\test\bin\EntityFramework.xml
+C:\ARealShop\test\bin\EntityFramework.SqlServer.xml
+C:\ARealShop\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\ARealShop\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\ARealShop\test\bin\Newtonsoft.Json.xml
+C:\ARealShop\test\bin\System.Net.Http.Formatting.xml
+C:\ARealShop\test\bin\System.Web.Http.xml
+C:\ARealShop\test\bin\System.Web.Http.WebHost.xml
+C:\ARealShop\test\bin\System.Web.Mvc.xml
+C:\ARealShop\test\bin\System.Web.Razor.xml
+C:\ARealShop\test\bin\System.Web.WebPages.xml
+C:\ARealShop\test\bin\System.Web.WebPages.Deployment.xml
+C:\ARealShop\test\bin\System.Web.WebPages.Razor.xml
+C:\ARealShop\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\ARealShop\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\ARealShop\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\ARealShop\test\bin\zh-Hant\System.Web.Http.resources.dll
+C:\ARealShop\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\ARealShop\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\ARealShop\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\ARealShop\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\ARealShop\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\ARealShop\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\ARealShop\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\ARealShop\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\ARealShop\test\obj\Debug\test.dll
+C:\ARealShop\test\obj\Debug\test.pdb
+F:\專案王\0509\test\bin\AutoMapper.Net4.dll
+F:\專案王\0509\test\bin\test.dll.config
+F:\專案王\0509\test\bin\test.dll
+F:\專案王\0509\test\bin\test.pdb
+F:\專案王\0509\test\bin\Antlr3.Runtime.dll
+F:\專案王\0509\test\bin\AutoMapper.dll
+F:\專案王\0509\test\bin\EntityFramework.dll
+F:\專案王\0509\test\bin\EntityFramework.SqlServer.dll
+F:\專案王\0509\test\bin\Microsoft.AspNet.Identity.Core.dll
+F:\專案王\0509\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\專案王\0509\test\bin\Microsoft.Web.Infrastructure.dll
+F:\專案王\0509\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\專案王\0509\test\bin\Newtonsoft.Json.dll
+F:\專案王\0509\test\bin\ProxyApi.dll
+F:\專案王\0509\test\bin\System.Linq.Dynamic.dll
+F:\專案王\0509\test\bin\System.Net.Http.Formatting.dll
+F:\專案王\0509\test\bin\System.Web.Http.dll
+F:\專案王\0509\test\bin\System.Web.Http.WebHost.dll
+F:\專案王\0509\test\bin\System.Web.Mvc.dll
+F:\專案王\0509\test\bin\System.Web.Optimization.dll
+F:\專案王\0509\test\bin\System.Web.Providers.dll
+F:\專案王\0509\test\bin\System.Web.Razor.dll
+F:\專案王\0509\test\bin\System.Web.WebPages.Deployment.dll
+F:\專案王\0509\test\bin\System.Web.WebPages.dll
+F:\專案王\0509\test\bin\System.Web.WebPages.Razor.dll
+F:\專案王\0509\test\bin\WebGrease.dll
+F:\專案王\0509\test\bin\AutoMapper.xml
+F:\專案王\0509\test\bin\EntityFramework.xml
+F:\專案王\0509\test\bin\EntityFramework.SqlServer.xml
+F:\專案王\0509\test\bin\Microsoft.AspNet.Identity.Core.xml
+F:\專案王\0509\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\專案王\0509\test\bin\Newtonsoft.Json.xml
+F:\專案王\0509\test\bin\System.Net.Http.Formatting.xml
+F:\專案王\0509\test\bin\System.Web.Http.xml
+F:\專案王\0509\test\bin\System.Web.Http.WebHost.xml
+F:\專案王\0509\test\bin\System.Web.Mvc.xml
+F:\專案王\0509\test\bin\System.Web.Razor.xml
+F:\專案王\0509\test\bin\System.Web.WebPages.xml
+F:\專案王\0509\test\bin\System.Web.WebPages.Deployment.xml
+F:\專案王\0509\test\bin\System.Web.WebPages.Razor.xml
+F:\專案王\0509\test\bin\zh-Hant\EntityFramework.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\System.Web.Http.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\System.Web.Providers.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\System.Web.Razor.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+F:\專案王\0509\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+F:\專案王\0509\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+F:\專案王\0509\test\obj\Debug\test.Properties.Resources.resources
+F:\專案王\0509\test\obj\Debug\test.csproj.GenerateResource.Cache
+F:\專案王\0509\test\obj\Debug\test.dll
+F:\專案王\0509\test\obj\Debug\test.pdb
+C:\Users\Eric\Desktop\專案王\test\bin\PagedList.dll
+C:\Users\Eric\Desktop\專案王\test\bin\PagedList.Mvc.dll
+C:\Users\Eric\Desktop\專案王\test\bin\PagedList.xml
+C:\Users\Eric\Desktop\專案王\test\bin\PagedList.Mvc.xml
+C:\Users\Eric\Desktop\專案王\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+C:\ARealShop\test\bin\PagedList.dll
+C:\ARealShop\test\bin\PagedList.Mvc.dll
+C:\ARealShop\test\bin\PagedList.xml
+C:\ARealShop\test\bin\PagedList.Mvc.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\PagedList.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\PagedList.Mvc.dll
+C:\Users\ericlinAAA\Desktop\test\test\bin\PagedList.xml
+C:\Users\ericlinAAA\Desktop\test\test\bin\PagedList.Mvc.xml
+C:\Users\ericlinAAA\Desktop\test\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+D:\Users\user\Desktop\test\test\bin\PagedList.dll
+D:\Users\user\Desktop\test\test\bin\PagedList.Mvc.dll
+D:\Users\user\Desktop\test\test\bin\ProxyApi.dll
+D:\Users\user\Desktop\test\test\bin\PagedList.xml
+D:\Users\user\Desktop\test\test\bin\PagedList.Mvc.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\AutoMapper.Net4.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\test.dll.config
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\test.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\test.pdb
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\Antlr3.Runtime.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\AutoMapper.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\EntityFramework.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\EntityFramework.SqlServer.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\Newtonsoft.Json.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\PagedList.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\PagedList.Mvc.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\ProxyApi.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Linq.Dynamic.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Net.Http.Formatting.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.Http.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.Http.WebHost.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.Mvc.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.Optimization.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.Providers.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.Razor.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.WebPages.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.WebPages.Razor.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\WebGrease.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\AutoMapper.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\EntityFramework.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\EntityFramework.SqlServer.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\PagedList.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\PagedList.Mvc.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\Newtonsoft.Json.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Net.Http.Formatting.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.Http.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.Http.WebHost.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.Mvc.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.Razor.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.WebPages.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\System.Web.WebPages.Razor.xml
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\System.Web.Http.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\ericlinAAA\Desktop\test_bak\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\Users\ericlinAAA\Desktop\test_bak\test\obj\Debug\test.dll
+C:\Users\ericlinAAA\Desktop\test_bak\test\obj\Debug\test.pdb
+C:\Users\ericlinAAA\Desktop\test_bak\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+H:\專案王\Final\test_bak\test\bin\AutoMapper.Net4.dll
+H:\專案王\Final\test_bak\test\bin\test.dll.config
+H:\專案王\Final\test_bak\test\bin\test.dll
+H:\專案王\Final\test_bak\test\bin\test.pdb
+H:\專案王\Final\test_bak\test\bin\Antlr3.Runtime.dll
+H:\專案王\Final\test_bak\test\bin\AutoMapper.dll
+H:\專案王\Final\test_bak\test\bin\EntityFramework.dll
+H:\專案王\Final\test_bak\test\bin\EntityFramework.SqlServer.dll
+H:\專案王\Final\test_bak\test\bin\Microsoft.AspNet.Identity.Core.dll
+H:\專案王\Final\test_bak\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+H:\專案王\Final\test_bak\test\bin\Microsoft.Web.Infrastructure.dll
+H:\專案王\Final\test_bak\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+H:\專案王\Final\test_bak\test\bin\Newtonsoft.Json.dll
+H:\專案王\Final\test_bak\test\bin\PagedList.dll
+H:\專案王\Final\test_bak\test\bin\PagedList.Mvc.dll
+H:\專案王\Final\test_bak\test\bin\ProxyApi.dll
+H:\專案王\Final\test_bak\test\bin\System.Linq.Dynamic.dll
+H:\專案王\Final\test_bak\test\bin\System.Net.Http.Formatting.dll
+H:\專案王\Final\test_bak\test\bin\System.Web.Http.dll
+H:\專案王\Final\test_bak\test\bin\System.Web.Http.WebHost.dll
+H:\專案王\Final\test_bak\test\bin\System.Web.Mvc.dll
+H:\專案王\Final\test_bak\test\bin\System.Web.Optimization.dll
+H:\專案王\Final\test_bak\test\bin\System.Web.Providers.dll
+H:\專案王\Final\test_bak\test\bin\System.Web.Razor.dll
+H:\專案王\Final\test_bak\test\bin\System.Web.WebPages.Deployment.dll
+H:\專案王\Final\test_bak\test\bin\System.Web.WebPages.dll
+H:\專案王\Final\test_bak\test\bin\System.Web.WebPages.Razor.dll
+H:\專案王\Final\test_bak\test\bin\WebGrease.dll
+H:\專案王\Final\test_bak\test\bin\AutoMapper.xml
+H:\專案王\Final\test_bak\test\bin\EntityFramework.xml
+H:\專案王\Final\test_bak\test\bin\EntityFramework.SqlServer.xml
+H:\專案王\Final\test_bak\test\bin\Microsoft.AspNet.Identity.Core.xml
+H:\專案王\Final\test_bak\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+H:\專案王\Final\test_bak\test\bin\PagedList.xml
+H:\專案王\Final\test_bak\test\bin\PagedList.Mvc.xml
+H:\專案王\Final\test_bak\test\bin\Newtonsoft.Json.xml
+H:\專案王\Final\test_bak\test\bin\System.Net.Http.Formatting.xml
+H:\專案王\Final\test_bak\test\bin\System.Web.Http.xml
+H:\專案王\Final\test_bak\test\bin\System.Web.Http.WebHost.xml
+H:\專案王\Final\test_bak\test\bin\System.Web.Mvc.xml
+H:\專案王\Final\test_bak\test\bin\System.Web.Razor.xml
+H:\專案王\Final\test_bak\test\bin\System.Web.WebPages.xml
+H:\專案王\Final\test_bak\test\bin\System.Web.WebPages.Deployment.xml
+H:\專案王\Final\test_bak\test\bin\System.Web.WebPages.Razor.xml
+H:\專案王\Final\test_bak\test\bin\zh-Hant\EntityFramework.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\System.Net.Http.Formatting.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\System.Web.Http.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\System.Web.Http.WebHost.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\System.Web.Providers.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\System.Web.Razor.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+H:\專案王\Final\test_bak\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+H:\專案王\Final\test_bak\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+H:\專案王\Final\test_bak\test\obj\Debug\test.Properties.Resources.resources
+H:\專案王\Final\test_bak\test\obj\Debug\test.csproj.GenerateResource.Cache
+H:\專案王\Final\test_bak\test\obj\Debug\test.dll
+H:\專案王\Final\test_bak\test\obj\Debug\test.pdb
+D:\Fantasy\test_bak\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+D:\Fantasy\test_bak\test\obj\Debug\test.Properties.Resources.resources
+D:\Fantasy\test_bak\test\obj\Debug\test.csproj.GenerateResource.Cache
+D:\Fantasy\test_bak\test\obj\Debug\test.dll
+D:\Fantasy\test_bak\test\bin\AutoMapper.Net4.dll
+D:\Fantasy\test_bak\test\bin\test.dll.config
+D:\Fantasy\test_bak\test\bin\test.dll
+D:\Fantasy\test_bak\test\bin\test.pdb
+D:\Fantasy\test_bak\test\bin\Antlr3.Runtime.dll
+D:\Fantasy\test_bak\test\bin\AutoMapper.dll
+D:\Fantasy\test_bak\test\bin\EntityFramework.dll
+D:\Fantasy\test_bak\test\bin\EntityFramework.SqlServer.dll
+D:\Fantasy\test_bak\test\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Fantasy\test_bak\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Fantasy\test_bak\test\bin\Microsoft.Web.Infrastructure.dll
+D:\Fantasy\test_bak\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Fantasy\test_bak\test\bin\Newtonsoft.Json.dll
+D:\Fantasy\test_bak\test\bin\PagedList.dll
+D:\Fantasy\test_bak\test\bin\PagedList.Mvc.dll
+D:\Fantasy\test_bak\test\bin\ProxyApi.dll
+D:\Fantasy\test_bak\test\bin\System.Linq.Dynamic.dll
+D:\Fantasy\test_bak\test\bin\System.Web.Mvc.dll
+D:\Fantasy\test_bak\test\bin\System.Web.Optimization.dll
+D:\Fantasy\test_bak\test\bin\System.Web.Providers.dll
+D:\Fantasy\test_bak\test\bin\System.Web.Razor.dll
+D:\Fantasy\test_bak\test\bin\System.Web.WebPages.Deployment.dll
+D:\Fantasy\test_bak\test\bin\System.Web.WebPages.dll
+D:\Fantasy\test_bak\test\bin\System.Web.WebPages.Razor.dll
+D:\Fantasy\test_bak\test\bin\WebGrease.dll
+D:\Fantasy\test_bak\test\bin\AutoMapper.xml
+D:\Fantasy\test_bak\test\bin\EntityFramework.xml
+D:\Fantasy\test_bak\test\bin\EntityFramework.SqlServer.xml
+D:\Fantasy\test_bak\test\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Fantasy\test_bak\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Fantasy\test_bak\test\bin\PagedList.xml
+D:\Fantasy\test_bak\test\bin\PagedList.Mvc.xml
+D:\Fantasy\test_bak\test\bin\Newtonsoft.Json.xml
+D:\Fantasy\test_bak\test\bin\System.Web.Mvc.xml
+D:\Fantasy\test_bak\test\bin\System.Web.Razor.xml
+D:\Fantasy\test_bak\test\bin\System.Web.WebPages.xml
+D:\Fantasy\test_bak\test\bin\System.Web.WebPages.Deployment.xml
+D:\Fantasy\test_bak\test\bin\System.Web.WebPages.Razor.xml
+D:\Fantasy\test_bak\test\bin\zh-Hant\EntityFramework.resources.dll
+D:\Fantasy\test_bak\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+D:\Fantasy\test_bak\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+D:\Fantasy\test_bak\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+D:\Fantasy\test_bak\test\bin\zh-Hant\System.Web.Providers.resources.dll
+D:\Fantasy\test_bak\test\bin\zh-Hant\System.Web.Razor.resources.dll
+D:\Fantasy\test_bak\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+D:\Fantasy\test_bak\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+D:\Fantasy\test_bak\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+D:\Fantasy\test_bak\test\obj\Debug\test.pdb
+C:\Users\Ayue\Desktop\test_bak\test\bin\AutoMapper.Net4.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\test.dll.config
+C:\Users\Ayue\Desktop\test_bak\test\bin\test.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\test.pdb
+C:\Users\Ayue\Desktop\test_bak\test\bin\Antlr3.Runtime.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\AutoMapper.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\EntityFramework.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\EntityFramework.SqlServer.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\Newtonsoft.Json.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\PagedList.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\PagedList.Mvc.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\ProxyApi.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Linq.Dynamic.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.Mvc.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.Optimization.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.Providers.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.Razor.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.WebPages.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.WebPages.Razor.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\WebGrease.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\AutoMapper.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\EntityFramework.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\EntityFramework.SqlServer.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\PagedList.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\PagedList.Mvc.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\Newtonsoft.Json.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.Mvc.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.Razor.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.WebPages.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\System.Web.WebPages.Razor.xml
+C:\Users\Ayue\Desktop\test_bak\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Ayue\Desktop\test_bak\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\Ayue\Desktop\test_bak\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+C:\Users\Ayue\Desktop\test_bak\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\Ayue\Desktop\test_bak\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\Users\Ayue\Desktop\test_bak\test\obj\Debug\test.dll
+C:\Users\Ayue\Desktop\test_bak\test\obj\Debug\test.pdb
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\AutoMapper.Net4.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\test.dll.config
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\test.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\test.pdb
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\Antlr3.Runtime.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\AutoMapper.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\EntityFramework.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\EntityFramework.SqlServer.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\Newtonsoft.Json.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\PagedList.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\PagedList.Mvc.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\ProxyApi.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Linq.Dynamic.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.Mvc.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.Optimization.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.Providers.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.Razor.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.WebPages.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.WebPages.Razor.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\WebGrease.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\AutoMapper.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\EntityFramework.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\EntityFramework.SqlServer.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\PagedList.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\PagedList.Mvc.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\Newtonsoft.Json.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.Mvc.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.Razor.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.WebPages.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\System.Web.WebPages.Razor.xml
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\zh-Hant\EntityFramework.resources.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\zh-Hant\System.Web.Mvc.resources.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\zh-Hant\System.Web.Optimization.resources.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\zh-Hant\System.Web.Providers.resources.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\zh-Hant\System.Web.Razor.resources.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\zh-Hant\System.Web.WebPages.resources.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\zh-Hant\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\bin\zh-Hant\System.Web.WebPages.Razor.resources.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\obj\Debug\test.csprojResolveAssemblyReference.cache
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\obj\Debug\test.Properties.Resources.resources
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\obj\Debug\test.csproj.GenerateResource.Cache
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\obj\Debug\test.dll
+C:\Users\Yuze8924\Desktop\test_bak - 複製\test\obj\Debug\test.pdb

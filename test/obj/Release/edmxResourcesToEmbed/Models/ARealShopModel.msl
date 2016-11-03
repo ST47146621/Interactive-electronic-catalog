@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ARealShopModelStoreContainer" CdmEntityContainer="ARealShopEntities">
+    <EntitySetMapping Name="AllViews">
+      <EntityTypeMapping TypeName="ARealShopModel.AllViews">
+        <MappingFragment StoreEntitySet="AllViews">
+          <ScalarProperty Name="IsHead" ColumnName="IsHead" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllViewsColumn">
+      <EntityTypeMapping TypeName="ARealShopModel.AllViewsColumn">
+        <MappingFragment StoreEntitySet="AllViewsColumn">
+          <ScalarProperty Name="SerialString" ColumnName="SerialString" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryTable">
+      <EntityTypeMapping TypeName="ARealShopModel.CategoryTable">
+        <MappingFragment StoreEntitySet="CategoryTable">
+          <ScalarProperty Name="Test" ColumnName="Test" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Color">
+      <EntityTypeMapping TypeName="ARealShopModel.Color">
+        <MappingFragment StoreEntitySet="Color">
+          <ScalarProperty Name="Sharp" ColumnName="Sharp" />
+          <ScalarProperty Name="Color1" ColumnName="Color" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Company">
+      <EntityTypeMapping TypeName="ARealShopModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Addr" ColumnName="Addr" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetailURL">
+      <EntityTypeMapping TypeName="ARealShopModel.DetailURL">
+        <MappingFragment StoreEntitySet="DetailURL">
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="ViewURL" ColumnName="ViewURL" />
+          <ScalarProperty Name="ViewAttachName" ColumnName="ViewAttachName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DriverLocation">
+      <EntityTypeMapping TypeName="ARealShopModel.DriverLocation">
+        <MappingFragment StoreEntitySet="DriverLocation">
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="DriverId" ColumnName="DriverId" />
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Member">
+      <EntityTypeMapping TypeName="ARealShopModel.Member">
+        <MappingFragment StoreEntitySet="Member">
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="Style" ColumnName="Style" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Birth" ColumnName="Birth" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Addr" ColumnName="Addr" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="ARealShopModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="ARealShopModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="OrgPrice" ColumnName="OrgPrice" />
+          <ScalarProperty Name="OnShelf" ColumnName="OnShelf" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="PushHot" ColumnName="PushHot" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="ProductCost" ColumnName="ProductCost" />
+          <ScalarProperty Name="ProductImgUrl5" ColumnName="ProductImgUrl5" />
+          <ScalarProperty Name="ProductImgUrl4" ColumnName="ProductImgUrl4" />
+          <ScalarProperty Name="ProductImgUrl3" ColumnName="ProductImgUrl3" />
+          <ScalarProperty Name="ProductImgUrl2" ColumnName="ProductImgUrl2" />
+          <ScalarProperty Name="ProductImgUrl1" ColumnName="ProductImgUrl1" />
+          <ScalarProperty Name="ProductMemo3" ColumnName="ProductMemo3" />
+          <ScalarProperty Name="ProductMemo2" ColumnName="ProductMemo2" />
+          <ScalarProperty Name="ProductMemo1" ColumnName="ProductMemo1" />
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductSpec" ColumnName="ProductSpec" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductCategory">
+      <EntityTypeMapping TypeName="ARealShopModel.ProductCategory">
+        <MappingFragment StoreEntitySet="ProductCategory">
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductColor">
+      <EntityTypeMapping TypeName="ARealShopModel.ProductColor">
+        <MappingFragment StoreEntitySet="ProductColor">
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductImage">
+      <EntityTypeMapping TypeName="ARealShopModel.ProductImage">
+        <MappingFragment StoreEntitySet="ProductImage">
+          <ScalarProperty Name="ProductImgUrl" ColumnName="ProductImgUrl" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPayment">
+      <EntityTypeMapping TypeName="ARealShopModel.ProductPayment">
+        <MappingFragment StoreEntitySet="ProductPayment">
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductRating">
+      <EntityTypeMapping TypeName="ARealShopModel.ProductRating">
+        <MappingFragment StoreEntitySet="ProductRating">
+          <ScalarProperty Name="Star" ColumnName="Star" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseStatus">
+      <EntityTypeMapping TypeName="ARealShopModel.PurchaseStatus">
+        <MappingFragment StoreEntitySet="PurchaseStatus">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reply">
+      <EntityTypeMapping TypeName="ARealShopModel.Reply">
+        <MappingFragment StoreEntitySet="Reply">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="RId" ColumnName="RId" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopCart">
+      <EntityTypeMapping TypeName="ARealShopModel.ShopCart">
+        <MappingFragment StoreEntitySet="ShopCart">
+          <ScalarProperty Name="Payment" ColumnName="Payment" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopCartList">
+      <EntityTypeMapping TypeName="ARealShopModel.ShopCartList">
+        <MappingFragment StoreEntitySet="ShopCartList">
+          <ScalarProperty Name="IsPush" ColumnName="IsPush" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ShopId" ColumnName="ShopId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApkUrl">
+      <EntityTypeMapping TypeName="ARealShopModel.ApkUrl">
+        <MappingFragment StoreEntitySet="ApkUrl">
+          <ScalarProperty Name="IsServer" ColumnName="IsServer" />
+          <ScalarProperty Name="ApkUrl1" ColumnName="ApkUrl" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

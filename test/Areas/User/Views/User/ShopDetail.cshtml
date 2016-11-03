@@ -1,0 +1,39 @@
+﻿@model test.Models.ShopCart
+
+<div class="modal-header">
+    <h1 class="modal-title" id="myModalLabel">購物單詳細資料</h1>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="form-group col-md-12">
+            @Html.Label("購物單編號", new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.ShopId, new { @class = "form-control", @readonly = "readonly" })
+                @Html.ValidationMessageFor(m => m.ShopId)
+            </div>
+        </div>
+        @*<div class="form-group col-md-12">
+                @Html.Label("代號", new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.TextBoxFor(m => m.Pid, new { @class = "form-control", @readonly = "readonly" })
+                    @Html.ValidationMessageFor(m => m.Pid)
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                @Html.Label("Package", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.PackageNo, new { @class = "form-control", @readonly = "readonly" })
+                    @Html.ValidationMessageFor(m => m.PackageNo)
+                </div>
+            </div>
+            <div class="form-group col-sm-12">
+                @Html.Label("敘述", new { @class = "control-label col-sm-2" })
+                <div class="col-sm-10">
+                    @Html.TextAreaFor(m => m.Describe, new { @class = "form-control", @style = "height:200px;" })
+                    @Html.ValidationMessageFor(m => m.Describe)
+                </div>*@
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+</div>

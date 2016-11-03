@@ -1,0 +1,1006 @@
+﻿<html lang="zh-tw">
+<head>
+
+    <title>AReal Shop</title>
+    <link rel="stylesheet" href="~/Content/normalize.css">
+    <link rel="stylesheet" href="~/Content/muji.2.0.css">
+    <link rel="stylesheet" href="~/Content/muji_tw.css">
+    <link rel="stylesheet" href="~/Content/portal.css">
+    <link rel="stylesheet" href="~/Content/portal_tw.css">
+    <link rel="stylesheet" href="~/Content/marker.css">
+    <link rel="stylesheet" href="~/Content/self_marker.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="~/JQuery/jquery-ui-1.8.13.custom.min.js"></script>
+    @* <script type="text/javascript" src="~/JQuery/jquery.beforeafter-1.3.min.js"></script>*@
+    <script type="text/javascript" src="~/JQuery/zoomer.js"></script>
+    @*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="~/JQuery/jquery.beforeafter.js"></script>
+        <link type="text/css" rel="stylesheet" href="~/Content/index_beforeafter.css" />*@
+    <link type="text/css" rel="stylesheet" href="~/Content/reset.css" />
+    @*<script>window.jQuery || document.write('<script src="/js/lib/jquery.min.1.11.0.js"><\/script>')</script>*@
+    <script>window.jQuery || document.write('<script src="/Scripts/jquery-1.10.2.min.js"><\/script>')</script>
+    <!--[if lt IE 9]>
+        <script src="/js/lib/html5.js"></script>
+        <script src="/js/lib/respond.js"></script>
+    <![endif]-->
+
+    <script src="//assets.adobedtm.com/a6e9b8b912d51aecbc12256558ef49a48670b2e5/satelliteLib-a875c754111844f884632cc05b3dfff025e27b12.js"></script>
+
+</head>
+
+<body>
+    @*<script type="text/javascript">
+        $(document).ready(function () {
+            $('ul.thumb li').Zoomer({ speedView: 200, speedRemove: 400, altAnim: true, speedTitle: 400, debug: false });
+        });
+        </script>*@
+    <header id="globalHeader" class="black">
+        <div class="headerWrap">
+
+            <h1 id="siteName"><a href="~/home/Index"><img src="~/images/logo-text.png" alt="AReal Shop"></a></h1>
+
+            <nav id="hGlobalNav">
+                <h1>選單</h1>
+                <div class="wrapper">
+                    <div class="cancel"></div>
+                    <ul>
+                        @*<li class="home"><a href="/tw/">首頁</a></li>*@
+                        <li><a href="~/home/TEST">首頁</a></li>
+                        <li><a href="~/home/Products">商品情報</a></li>
+
+                        @*<li><a href="javascript:void(0)">店舖一覽</a></li>
+
+                            <li><a href="javascript:void(0)">企業情報</a></li>
+
+                            <li><a href="javascript:void(0)">顧客服務</a></li>
+
+                            <li><a href="javascript:void(0)">卡友專區</a></li>
+
+                            <li><a href="javascript:void(0)">人才募集</a></li>*@
+
+                    </ul>
+                </div>
+            </nav>
+
+
+        </div><!-- .headerWrap -->
+    </header>
+
+    <div id="main">
+
+        <style>
+            #content {
+                overflow: visible;
+            }
+        </style>
+        @*<section id="mainCampaign">
+                <div id="wrap">
+                    <div id="content">
+                        <div id="container">
+                            <div id="v1">
+                                <p class="v1-1"></p>
+                                <p class="v1-2"></p>
+                                <p class="v1-3"></p>
+                                <p class="v1-4"></p>
+
+                                <a href="javascript:void(0)"><p class="v1-5"></p></a>
+                                <p class="v1-6"></p>
+                                @* <p class="message"></p>
+                                <a href="javascript:void(0)"><p class="v1-7"></p></a>
+                                <p class="v1-8"></p>
+                                <a href="javascript:void(0)"><p class="plus1 plus-button pb1 pp"></p></a>
+                                <a href="javascript:void(0)"><p class="plus_1 plus-button pb2 pp"></p></a>
+                                <a href="javascript:void(0)"><p class="plus2 plus-button pb1 pp"></p></a>
+                                <a href="javascript:void(0)"><p class="plus_2 plus-button pb2 pp"></p></a>
+                                <a href="javascript:void(0)"><p class="plus3 plus-button pb1 pp"></p></a>
+                                <a href="javascript:void(0)"><p class="plus_3 plus-button pb2 pp"></p></a>
+                                <a href="javascript:void(0)"><p class="plus4 plus-button pb1 pp"></p></a>
+                                <a href="javascript:void(0)"><p class="plus_4 plus-button pb2 pp"></p></a>
+                                <a href="javascript:void(0)"><p class="plus5 plus-button pb1 pp"></p></a>
+                                <a href="javascript:void(0)"><p class="plus_5 plus-button pb2 pp"></p></a>
+
+                            </div>
+                            <div id="v2">
+                                <img src="~/images/back.png" width="1000" height="580" />
+                                <p class="v1-1"></p>
+                                <p class="v1-2"></p>
+                                <p class="v1-3"></p>
+                                <p class="v1-4"></p>
+                                <a href="javascript:void(0)"><p class="v1-5"></p></a>
+                                <p class="v1-6"></p>
+                                @* <p class="message"></p>
+                                <a href="javascript:void(0)"><p class="v1-7"></p></a>
+                                <p class="v1-8"></p>
+                                <a href="javascript:void(0)"><p class="plus1 plus-button pb1 p"></p></a>
+                                <a href="javascript:void(0)"><p class="plus_1 plus-button pb2 p"></p></a>
+                                <a href="javascript:void(0)"><p class="plus2 plus-button pb1 p"></p></a>
+                                <a href="javascript:void(0)"><p class="plus_2 plus-button pb2 p"></p></a>
+                                <a href="javascript:void(0)"><p class="plus3 plus-button pb1 p"></p></a>
+                                <a href="javascript:void(0)"><p class="plus_3 plus-button pb2 p"></p></a>
+                                <a href="javascript:void(0)"><p class="plus4 plus-button pb1 p"></p></a>
+                                <a href="javascript:void(0)"><p class="plus_4 plus-button pb2 p"></p></a>
+                                <a href="javascript:void(0)"><p class="plus5 plus-button pb1 p"></p></a>
+                                <a href="javascript:void(0)"><p class="plus_5 plus-button pb2 p"></p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>*@
+
+        <section id="mainCampaign">
+            <a href="javascript:void(0)">
+                <figure>
+                    <img src="~/images/IndexBanner_Index.jpg" alt="">
+                </figure>
+
+                <div class="titleContainer">
+                    <h1 class="mainCampaignTitle"></h1>
+                    <!-- 			<a href="http://www.muji.tw/110"></a> -->
+                </div>
+
+                <div id="skip"></div>
+            </a>
+        </section>
+
+        <section id="product">
+            <h1>商品情報</h1>
+
+
+            <div class="more"><a href="~/home/Products">更多商品</a></div>
+
+
+            <div class="viewport">
+                <ul class="flipsnap">
+
+
+                    <li><a href="~/home/Section" data-category="garment"><img src="~/images/indeximg_45.jpg" alt=""><br>女裝</a></li>
+
+                    <li><a href="~/home/Section" data-category="garment"><img src="~/images/indeximg_45.jpg" alt=""><br>男裝</a></li>
+
+                    <li><a href="~/home/Section" data-category="kids"><img src="~/images/indeximg_45.jpg" alt=""><br>兒童</a></li>
+
+                    <li><a href="~/home/Section" data-category="garment"><img src="~/images/indeximg_45.jpg" alt=""><br>服飾雜貨</a></li>
+
+                    <li><a href="~/home/Section" data-category="garment"><img src="~/images/indeximg_45.jpg" alt=""><br>內衣及家居服</a></li>
+
+                    <li><a href="~/home/Section" data-category="garment"><img src="~/images/indeximg_45.jpg" alt=""><br>鞋.包</a></li>
+
+                    <li><a href="~/home/Section" data-category="homeware"><img src="~/images/indeximg_45.jpg" alt=""><br>傢俱</a></li>
+
+                    <li><a href="~/home/Section" data-category="homeware"><img src="~/images/indeximg_45.jpg" alt=""><br>織品</a></li>
+
+                    <li><a href="~/home/Section" data-category="stationary"><img src="~/images/indeximg_45.jpg" alt=""><br>文具</a></li>
+
+                    <li><a href="~/home/Section" data-category="homeware"><img src="~/images/indeximg_45.jpg" alt=""><br>電器．室內家飾</a></li>
+
+                    <li><a href="~/home/Section" data-category="homeware"><img src="~/images/indeximg_45.jpg" alt=""><br>戶外用品</a></li>
+
+                    <li><a href="~/home/Section" data-category="homeware"><img src="~/images/indeximg_45.jpg" alt=""><br>家庭清潔．收納用品</a></li>
+
+                    <li><a href="~/home/Section" data-category="homeware"><img src="~/images/indeximg_45.jpg" alt=""><br>廚具．餐具</a></li>
+
+                    <li><a href="~/home/Section" data-category="hb"><img src="~/images/indeximg_45.jpg" alt=""><br>泡澡．芬香用品</a></li>
+
+                    <li><a href="~/home/Section" data-category="hb"><img src="~/images/indeximg_45.jpg" alt=""><br>清潔．衛生用品</a></li>
+
+                    <li><a href="~/home/Section" data-category="travel"><img src="~/images/indeximg_45.jpg" alt=""><br>分裝．旅行用品</a></li>
+
+                    <li><a href="~/home/Section" data-category="hb"><img src="~/images/indeximg_45.jpg" alt=""><br>彩妝用品</a></li>
+
+                    <li><a href="~/home/Section" data-category="hb"><img src="~/images/indeximg_45.jpg" alt=""><br>保養．美髮用品</a></li>
+
+                    <li><a href="~/home/Section" data-category="food"><img src="~/images/indeximg_45.jpg" alt=""><br>調味料.食品</a></li>
+
+                    <li><a href="~/home/Section" data-category="food"><img src="~/images/indeximg_45.jpg" alt=""><br>果子</a></li>
+
+                    <li><a href="~/home/Section" data-category="food"><img src="~/images/indeximg_45.jpg" alt=""><br>飲料</a></li>
+
+
+                </ul>
+            </div>
+            <p class="controls">
+                <button class="prev" disabled="disabled">prev</button>
+                <button class="next">next</button>
+            </p>
+        </section>
+
+
+
+        <section id="campaign" class="contentSection">
+            <h1>活動特輯</h1>
+
+
+            <div class="more"><a href="~/home/Event">更多特輯</a></div>
+
+
+            <div class="viewport">
+                <ul class="flipsnap" style="transition-property: transform; -webkit-transition-property: transform; transition-timing-function: cubic-bezier(0, 0, 0.25, 1); -webkit-transition-timing-function: cubic-bezier(0, 0, 0.25, 1); transition-duration: 350ms; -webkit-transition-duration: 350ms; transform: translate3d(0px, 0px, 0px);">
+                    <li><a href="javascript:void(0)" data-category="7-11" data-panelrank="4"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title"></span></a></li>
+                    <li><a href="javascript:void(0)" data-category="" data-panelrank="3"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">有機棉</span></a></li>
+                    <li><a href="javascript:void(0)" data-category="" data-panelrank="2"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">有機棉混丹寧褲</span></a></li>
+                    <li><a href="javascript:void(0)" data-category="furniture" data-panelrank="1"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">有機棉寢織</span></a></li>
+                    <li><a href="javascript:void(0)" data-category="" data-panelrank="0"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">春保養</span></a></li>
+                    <li><a href="javascript:void(0)" data-category="" data-panelrank="0"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">春收納</span></a></li>
+                    <li><a href="javascript:void(0)" data-category="shop" data-panelrank="0"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title"></span></a></li>
+                    <li><a href="javascript:void(0)" data-category="IA" data-panelrank="0"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">傢俱諮詢</span></a></li>
+                </ul>
+            </div>
+            <p class="controls">
+                <button class="prev" disabled="disabled">prev</button>
+                <button class="next">next</button>
+            </p>
+        </section>
+
+
+        <section id="event" class="contentSection">
+            <h1>生活提案</h1>
+
+            <div class="viewport">
+                <ul class="flipsnap" style="transition-property: transform; -webkit-transition-property: transform; transition-timing-function: cubic-bezier(0, 0, 0.25, 1); -webkit-transition-timing-function: cubic-bezier(0, 0, 0.25, 1); transition-duration: 350ms; -webkit-transition-duration: 350ms; transform: translate3d(0px, 0px, 0px);">
+                    <li><a href="javascript:void(0)" data-category="" data-panelrank="0"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">空氣清淨機</span></a></li>
+                    <li><a href="javascript:void(0)" data-category="stationary" data-panelrank="0"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">文具風景</span></a></li>
+                    <li><a href="javascript:void(0)" data-category="hb" data-panelrank="0"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">芬香生活</span></a></li>
+                    <li><a href="javascript:void(0)" data-category="" data-panelrank="0"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">收納生活</span></a></li>
+                    <li><a href="javascript:void(0)" data-category="" data-panelrank="0"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">敏感肌保養</span></a></li>
+                    <li><a href="javascript:void(0)" data-category="" data-panelrank="0"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">每日兒童服</span></a></li>
+                </ul>
+            </div>
+            <p class="controls">
+                <button class="prev" disabled="disabled">prev</button>
+                <button class="next">next</button>
+            </p>
+        </section>
+
+
+
+        <section id="lab" class="contentSection">
+            <h1>主題活動</h1>
+
+
+
+            <div class="viewport">
+                <ul class="flipsnap">
+
+
+                    <li><a href="javascript:void(0)"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">title</span></a></li>
+
+                    <li><a href="javascript:void(0)"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">title</span></a></li>
+
+                    <li><a href="javascript:void(0)"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">title</span></a></li>
+
+                    <li><a href="javascript:void(0)"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">title</span></a></li>
+
+                    <li><a href="javascript:void(0)"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">title</span></a></li>
+
+                    <li><a href="javascript:void(0)"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">title</span></a></li>
+
+                    <li><a href="javascript:void(0)"><img src="~/images/indeximg_45.jpg" alt=""><br><span class="title">title</span></a></li>
+
+
+                </ul>
+            </div>
+            <p class="controls">
+                <button class="prev" disabled="disabled">prev</button>
+                <button class="next">next</button>
+            </p>
+        </section>
+
+
+
+
+
+
+        <section id="information">
+            <h1>最新消息</h1>
+
+
+            <div class="more"><a href="~/home/News">更多消息</a></div>
+
+
+            <div class="viewport">
+
+                <ul class="flipsnap atom_import" style="transition-property: transform; -webkit-transition-property: transform; transition-timing-function: cubic-bezier(0, 0, 0.25, 1); -webkit-transition-timing-function: cubic-bezier(0, 0, 0.25, 1); transition-duration: 350ms; -webkit-transition-duration: 350ms; transform: translate3d(0px, 0px, 0px);">
+                    <li><span class="date">2015-03-13</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-03-06</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-03-06</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-03-02</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-03-02</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-02-25</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-02-13</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-02-08</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-02-05</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-01-30</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-01-27</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-01-26</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2015-01-15</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-12-31</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-12-29</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-12-29</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-12-29</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-12-22</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-11-28</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-10-24</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-10-20</span><a href="javascript:void(0)">狂賀 AReal Shop 新開幕</a></li>
+                    <li>
+                        <span class="date">2014-10-14</span><a href="https://www.muji.tw/news.aspx?id=538">
+                            狂賀 AReal Shop 新開幕
+                        </a>
+                    </li>
+                    <li><span class="date">2014-10-08</span><a href="https://www.muji.tw/news.aspx?id=537">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-10-01</span><a href="https://www.muji.tw/news.aspx?id=536">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-09-29</span><a href="https://www.muji.tw/news.aspx?id=535">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-09-23</span><a href="https://www.muji.tw/news.aspx?id=534">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-09-23</span><a href="https://www.muji.tw/news.aspx?id=533">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-09-22</span><a href="https://www.muji.tw/news.aspx?id=532">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-09-19</span><a href="https://www.muji.tw/news.aspx?id=531">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-09-04</span><a href="https://www.muji.tw/news.aspx?id=525">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-08-22</span><a href="https://www.muji.tw/news.aspx?id=522">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-08-14</span><a href="https://www.muji.tw/news.aspx?id=520">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-08-07</span><a href="https://www.muji.tw/news.aspx?id=516">狂賀 AReal Shop 新開幕</a></li>
+                    <li><span class="date">2014-07-28</span><a href="https://www.muji.tw/news.aspx?id=512">狂賀 AReal Shop 新開幕</a></li>
+                </ul>
+            </div>
+            <p class="controls">
+                <button class="prev" disabled="disabled">prev</button>
+                <button class="next">next</button>
+            </p>
+        </section>
+
+    </div><!-- #main -->
+
+
+    <aside id="misc">
+        <div class="content">
+            <ul class="sns">
+
+                <li class="facebook"><a href="https://www.facebook.com/pages/BlueFunc/1406361129671861?fref=ts" target="_blank"><img src="~/images/misc_facebook.png" alt="Facebook"></a></li>
+
+            </ul>
+
+        </div>
+    </aside>
+
+    <footer>
+
+        <nav id="footerNav">
+        </nav>
+        <p id="copyright">
+            <span class="copyright"><smhome>Fantasy　Copyright &copy;</smhome></span>
+        </p>
+    </footer>
+
+
+
+    <style>
+        body {
+            position: relative;
+        }
+
+        #review {
+            margin: 0;
+            line-height: 1.5;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            padding: 0;
+            z-index: 9999;
+            margin: 0; /* color: #fff; */
+        }
+
+            #review a {
+                text-decoration: none;
+            }
+
+            #review p {
+                font-size: 14px;
+                margin: 0 0 10px;
+            }
+
+            #review .replyReview,
+            #review .replyFinish {
+                display: none;
+            }
+
+            #review .replyReview {
+                background: #ccc;
+                margin: 0;
+                padding: 10px 20px;
+            }
+
+            #review img {
+                vertical-align: middle;
+                margin-left: 3px;
+            }
+
+            #review .title {
+                display: block;
+                padding: 8px 10px;
+                color: #fff;
+                border-radius: 8px 0 0 0;
+                font-size: 12px;
+                border: 0;
+                width: auto;
+                background: rgba(102,102,102,.6);
+                filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77000000,EndColorStr=#77000000);
+                -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#77000000,EndColorStr=#77000000)";
+            }
+
+                #review .title:not(:target) {
+                    filter: none;
+                    -ms-filter: none;
+                }
+
+                #review .title.show {
+                    background: #ccc;
+                    width: 290px;
+                }
+
+            #review .submit {
+                display: inline-block;
+                margin: 10px 10px 0 0;
+                padding: 10px 20px;
+                background: #666;
+                color: #fff;
+                border-radius: 3px;
+                font-size: 14px;
+                border: 0;
+                float: left;
+            }
+
+                #review .submit:hover {
+                    background: #999;
+                }
+
+            #review textarea {
+                width: 260px;
+                height: 100px;
+                color: #000;
+                outline: none;
+            }
+
+            #review button {
+                cursor: pointer;
+            }
+
+            #review .close {
+                position: absolute;
+                top: 0;
+                right: 5px;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            #review .note {
+                font-size: 13px;
+                color: #444;
+                margin-top: 20px;
+            }
+
+            #review .replyReview:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+    </style>
+
+
+    <script src="~/JQuery/modernizr.custom.47384.js"></script>
+    <script src="~/JQuery/cssua.js"></script>
+    <script src="~/JQuery/fastclick.js"></script>
+
+    @*<script src="~/JQuery/jquery-ui-1.8.13.custom.min.js"></script>
+        <script src="~/JQuery/jquery.beforeafter-1.3.min.js"></script>
+        <script src="~/JQuery/index.js"></script>*@
+
+
+    <!--[if gt IE 8]><!-->
+    <script src="~/JQuery/flipsnap.fix.js"></script>
+    <!--<![endif]-->
+
+    <script src="~/JQuery/muji-1.0.js"></script>
+    <script src="~/JQuery/portal-1.1.js"></script>
+    <script src="~/JQuery/portal_tw.js"></script>
+    <script src="~/JQuery/jquery.scrollTo.js"></script>
+
+
+
+    <script>
+        $('#container').beforeAfter({
+            animateIntro: true,
+            introDelay: 300,
+            introDuration: 500,
+            showFullLinks: false
+        });
+        /*背景 可鎖定*/
+        var timer;
+        var speed = 100;
+
+        $(".plus-button").hover(function () {
+            clearTimeout(timer);
+            clearTimeout(timer2);
+            var button = $(this);
+        }, function () {
+            timer = setTimeout(autoShow, speed);
+            timer2 = setTimeout(autoShow2, speed2);
+        });
+        var i = 0, j = 0, k = 0;
+        function autoShow() {
+            $("#v1 .v1-3,#v2 .v1-3").animate({ "background-position": "-=4px" }, 80);
+            $(".plus-button").animate({ "left": "-=4px", }, 80);
+            i += 4;
+            j += 4;
+            if (k == 1) {
+                if (i >= 2000) {
+                    $(".pb1").animate({ "top": "+=1000px" }, 80);
+                    $(".pb1").animate({ "left": "+=2000px" }, 80);
+                    $(".pb1").animate({ "top": "-=1000px" }, 80);
+                    i = 0;
+                }
+            }
+            if (k == 0) {
+                if (i >= 1000) {
+                    $(".pb1").animate({ "top": "+=1000px" }, 80);
+                    $(".pb1").animate({ "left": "+=2000px" }, 80);
+                    $(".pb1").animate({ "top": "-=1000px" }, 80);
+                    k = 1;
+                    i = 0;
+                }
+            }
+            if (j >= 2000) {
+                $(".pb2").animate({ "top": "+=1000px" }, 80);
+                $(".pb2").animate({ "left": "+=2000px" }, 80);
+                $(".pb2").animate({ "top": "-=1000px" }, 80);
+                j = 0
+            }
+            timer = setTimeout(autoShow, speed);
+        }
+        autoShow();
+
+
+        /*背景 天地*/
+        var timer1;
+        var speed1 = 100;
+
+        function autoShow1() {
+            $("#v1 .v1-1,#v2 .v1-1").animate({ "background-position": "-=2px" }, 80);
+            $("#v1 .v1-4,#v2 .v1-4").animate({ "background-position": "+=1px" }, 80);
+            timer1 = setTimeout(autoShow1, speed1);
+        }
+        autoShow1();
+
+
+        var timer2;
+        var speed2 = 3000;
+        function autoShow2() {
+            $(".plus-button").animate({ "width": "30px" }, 100).animate({ "background-position": "-45px" }, 0);
+            $(".plus-button").animate({ "width": "21px" }, 50).animate({ "background-position": "20px" }, 0);
+            timer2 = setTimeout(autoShow2, speed2);
+        }
+        autoShow2();
+
+
+        $("#v1 .v1-8").hide(); $("#v2 .v1-8").hide();
+        $("#v1 .v1-5").mouseenter(function () { $("#v1 .v1-8").show(300); $("#v2 .v1-8").show(); });
+        $("#v1 .v1-5").mouseleave(function () { $("#v1 .v1-8").hide(); $("#v2 .v1-8").hide(); });
+        $("#v1 .v1-5").click(function () { $("#v1 .message").show(); $("#v2 .message").show(); });
+        $("#v1 .v1-7").click(function () { $("#v1 .message").hide(); $("#v2 .message").hide(); });
+        $("#v1 .v1-7").mouseenter(function () { $("#v1 .v1-7").css({ "background-position": "0px" }); });
+        $("#v1 .v1-7").mouseleave(function () { $("#v1 .v1-7").css({ "background-position": "15px" }); });
+
+        $("#v2 .v1-5").mouseenter(function () { $("#v1 .v1-8").show(); $("#v2 .v1-8").show(); });
+        $("#v2 .v1-5").mouseleave(function () { $("#v1 .v1-8").hide(); $("#v2 .v1-8").hide(); });
+        $("#v2 .v1-5").click(function () { $("#v1 .message").show(); $("#v2 .message").show(); });
+        $("#v2 .v1-7").click(function () { $("#v1 .message").hide(); $("#v2 .message").hide(); });
+        $("#v2 .v1-7").mouseenter(function () { $("#v2 .v1-7").css({ "background-position": "0px" }); });
+        $("#v2 .v1-7").mouseleave(function () { $("#v2 .v1-7").css({ "background-position": "15px" }); });
+        $("#down .db").mouseenter(function () { var db = $(this); db.animate({ "background-position": "+=162px" }, 100) });
+        $("#down .db").mouseleave(function () { var db = $(this); db.animate({ "background-position": "-=162px" }, 100) });
+        $("#down .db").click(function () { var db = $(this); $("#down .db2").css({ "background-position": "-224px" }); $("#down .db").css({ "background-position": "-324px" }); db.css({ "background-position": "0px" }); });
+
+        $("#down .db2").mouseenter(function () { var db2 = $(this); db2.animate({ "background-position": "+=112px" }, 100) });
+        $("#down .db2").mouseleave(function () { var db2 = $(this); db2.animate({ "background-position": "-=112px" }, 100) });
+        $("#down .db2").click(function () { var db2 = $(this); $("#down .db2").css({ "background-position": "-224px" }); $("#down .db").css({ "background-position": "-324px" }); db2.css({ "background-position": "0px" }); });
+    </script>
+
+    <script>
+
+        //FastClick
+        if (cssua.ua.mobile) {
+            $(function () {
+                var selectors = [
+                    $("#hGlobalNav h1").get(0),
+                    $("#hSearch h1").get(0),
+                    $(".cancel").get(0),
+                    $(".prev").get(0),
+                    $(".next").get(0),
+                    $(".avater").get(0)
+                ];
+
+                for (var i = 0, sLen = selectors.length; i < sLen; i++) {
+                    if (selectors[i] != undefined) {
+                        FastClick.attach(selectors[i]);
+                    }
+                }
+            });
+        }
+
+    </script>
+
+    <script src="~/JQuery/jquery.cookie.js"></script>
+
+
+    <script>
+
+        $(function () {
+
+            /*!
+            *
+            * Panel Parsonalize
+            *
+            */
+
+            // Parse json value
+
+            $.cookie.json = true;
+
+
+            // Read Cookie
+
+            var visit = $.cookie("visit") ? $.cookie("visit") : {};
+
+
+            // Max Visit Value
+
+            var totalVisit = 0;
+
+            $.each(visit, function (i, val) {
+                totalVisit += val;
+            });
+
+            if (totalVisit > 10) {
+                for (var i in visit) {
+                    visit[i] = Math.floor(visit[i] / 2);
+                    if (visit[i] == 0) {
+                        delete visit[i];
+                    }
+                }
+                $.cookie("visit", visit, { expires: 90, path: '/tw/' });
+            }
+
+
+            // campaign list
+
+            var campaign = [
+
+                {
+                    "title": "",
+                    "src": "/tw/img/100-7-11.jpg",
+                    "href": "#",
+                    "panelRank": 4,
+                    "category": "7-11"
+                },
+
+                {
+                    "title": "有機棉混丹寧褲",
+                    "src": "/tw/img/panel/cottonjean.jpg",
+                    "href": "#",
+                    "panelRank": 2,
+                    "category": ""
+                },
+
+                {
+                    "title": "春保養",
+                    "src": "/tw/img/panel/springcare.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "MUJI to Relax",
+                    "src": "/tw/img/panel/beadssofa_640.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "有機棉",
+                    "src": "/tw/img/panel/cotton.jpg",
+                    "href": "#",
+                    "panelRank": 3,
+                    "category": ""
+                },
+
+                {
+                    "title": "有機棉寢織",
+                    "src": "/tw/img/panel/cottonbed.jpg",
+                    "href": "#",
+                    "panelRank": 1,
+                    "category": "furniture"
+                },
+
+                {
+                    "title": "春收納",
+                    "src": "/tw/img/panel/springstorage.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "Card",
+                    "src": "/tw/img/panel/recruitmember_new.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "棉",
+                    "src": "/tw/img/panel/2015ss.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "",
+                    "src": "/tw/img/panel/1220reopen.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": "shop"
+                },
+
+                {
+                    "title": "傢俱諮詢",
+                    "src": "/tw/img/panel/IA.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": "IA"
+                },
+
+            {}
+            ];
+
+            campaign.pop();
+
+            // increment each campaign panelRank from Cookie value
+
+            for (var i = 0; i < campaign.length; i++) {
+                if (visit.hasOwnProperty(campaign[i].category)) {
+                    campaign[i].panelRank += visit[campaign[i].category];
+                }
+            }
+
+
+            // sort campaign
+
+            campaign.sort(function (a, b) {
+                //		return a.panelRank < b.panelRank;
+                if (a.panelRank < b.panelRank) return 1;
+                if (a.panelRank > b.panelRank) return -1;
+                return 0;
+            })
+
+            //	$("#campaign").append("<ul>");
+
+            for (var i = 0; i < campaign.length; i++) {
+
+                var cat = campaign[i].category ? campaign[i].category : "";
+                var alt = (campaign[i].titleShow == true || campaign[i].titleShow == undefined) ? "" : campaign[i].title;
+                var titleText = (campaign[i].titleShow == true || campaign[i].titleShow == undefined) ? campaign[i].title : "";
+                $("#campaign ul").append("<li><a href='" + campaign[i].href + "' data-category='" + cat + "' data-panelrank='" + campaign[i].panelRank + "'><img src='" + campaign[i].src + "' alt='" + alt + "'><br><span class='title'>" + titleText + "</span></a></li>");
+
+            }
+
+
+
+
+            // event list
+
+            var event = [
+
+                {
+                    "title": "空氣清淨機",
+                    "src": "/tw/img/life/airpurifier.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "直角襪",
+                    "src": "/tw/img/panel/socks.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "文具風景",
+                    "src": "/tw/img/life/stationeryview.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": "stationary"
+                },
+
+                {
+                    "title": "芬香生活",
+                    "src": "/tw/img/life/Fragrance.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": "hb"
+                },
+
+                {
+                    "title": "收納生活",
+                    "src": "/tw/img/life/storagefurniture.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "Life",
+                    "src": "/tw/img/life/mujilife.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "敏感肌保養",
+                    "src": "/tw/img/life/sensitiveskincare.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "每日兒童服",
+                    "src": "/tw/img/life/kidsclothes.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+                {
+                    "title": "",
+                    "src": "/tw/img/life/mtg.jpg",
+                    "href": "#",
+                    "panelRank": 0,
+                    "category": ""
+                },
+
+            {}
+            ];
+
+            event.pop();
+
+            // increment each event panelRank from Cookie value
+
+            for (var i = 0; i < event.length; i++) {
+                if (visit.hasOwnProperty(event[i].category)) {
+                    event[i].panelRank += visit[event[i].category];
+                }
+            }
+
+
+            // sort campaign
+
+            event.sort(function (a, b) {
+                if (a.panelRank < b.panelRank) return 1;
+                if (a.panelRank > b.panelRank) return -1;
+                return 0;
+            })
+
+            //	$("#event").append("<ul>");
+
+            for (var i = 0; i < event.length; i++) {
+
+                var cat = event[i].category ? event[i].category : "";
+                var alt = (event[i].titleShow == true || event[i].titleShow == undefined) ? "" : event[i].title;
+                var titleText = (event[i].titleShow == true || event[i].titleShow == undefined) ? event[i].title : "";
+                $("#event ul").append("<li><a href='" + event[i].href + "' data-category='" + cat + "' data-panelrank='" + event[i].panelRank + "'><img src='" + event[i].src + "' alt='" + alt + "'><br><span class='title'>" + titleText + "</span></a></li>");
+
+            }
+
+
+
+
+            // write cookie
+
+            $("a").on("click", function (e) {
+                //		e.preventDefault();
+                if ($(this).attr("data-category") != "" && $(this).attr("data-category") != undefined) {
+                    if (visit.hasOwnProperty($(this).attr("data-category"))) {
+                        visit[$(this).attr("data-category")] += 1;
+                    } else {
+                        visit[$(this).attr("data-category")] = 1;
+                    }
+                    $.cookie("visit", visit, { expires: 90, path: '/tw/' });
+                }
+            });
+
+
+            // Debug
+            //console.log($.cookie("visit"));
+            //console.log(campaign);
+            //console.log(event);
+
+        });
+    </script>
+
+    <script>
+        //feedback
+        $(function () {
+            $("#review .title").on("click", function (e) {
+                $("#review .replyReview").show();
+                $("textarea#suggestion").focus();
+                $("#review .title").addClass('show');
+                e.preventDefault();
+            });
+            $("#review .close").on("click", function () {
+                $("#review .replyReview").hide();
+                $("#review .title").removeClass('show');
+            });
+            $("#review .submitBtn").on("click", function () {
+                $("#review textarea, #review .lead, #review .submitBtn, #review .note").hide();
+                $("#review p.replyFinish").show();
+                var suggestion = $("#suggestion").val();
+                var data = "suggestion=" + suggestion;
+                data += "&ua=" + navigator.userAgent
+
+                $.ajax({
+                    type: "POST",
+                    url: "/service-bin/portal_suggestion/portal_suggestion_get.php",
+                    data: data,
+
+                    success: function (data) {
+                        //console.log("success");
+                    },
+                    error: function (data) {
+                        //console.log("fail");
+
+                    }
+                });
+
+            });
+        });
+    </script>
+
+
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <!--[if !IE]><!-->
+    <script src="~/JQuery/map.js"></script>
+    <!--<![endif]-->
+
+
+    <script>
+        MAP_LIMIT_SHOPLIST = 10; /* Maximum number of stores list */
+        MAP_LIMIT_MARKER = 100; /* Maximum number of stores placed on the map */
+        MAP_IMG_MARKER = "/img/marker_red_default.png";
+        MAP_IMG_SELF_POS = "/img/self_position.png";
+
+
+
+
+        MAP_MARKER_LINK_URL = "http://www.muji.com/storelocator/?c=tw";
+        MAP_SHOPLIST_JSON_URL = "http://www.muji.com/storelocator/?c=tw&_ACTION=_SEARCH";
+
+        MAP_DEFAULT_ZOOM = 8;
+        MAP_DEFAULT_LAT = 23.298787;
+        MAP_DEFAULT_LON = 121.811704;
+        MAP_LOAD_DIV_ID = "map";
+    </script>
+
+
+
+    <script type="text/javascript">_satellite.pageBottom();</script>
+
+</body>
+
+</html>

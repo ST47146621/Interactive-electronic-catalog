@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-main-title="">@ViewBag.Head</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap")
+    @RenderSection("styles", required: false)
+    @{
+        string actionlink = ViewBag.Head;
+    }
+</head>
+<body>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <div id="top-side" class="navbar navbar-default navbar-fixed-top dot-bg" role="navigation" style="background-color:none">
+        <div class="container-fluid">
+            @Html.ActionLink(actionlink, "ProductIndex", "Home", null, new { @class = "navbar-brand text-bold", style = "padding-right:0;" })
+            <span id="view-title" class="navbar-brand text-bold"></span>
+            <div class="navbar-form navbar-right padding-top-5">
+                <span class="text-bold">
+                    <a href="@Url.Action("Index", "Home", new { })">
+                        Hi Admin !
+                    </a>
+                    ，
+                    @Html.ActionLink("登出", "LogOut", "Home", new { area = "" }, new { @class = "" })
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="row">
+            <div id="left-side" class="col-md-2 dot-bg padding-0">
+                <ul class="nav nav-pills nav-stacked" role="tablist">
+                    <li role="presentation" class="Bar"><a href="~/Admin/Admin/ProductIndex">產品資料</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Admin/Admin/MemberIndex">會員帳號管理</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Admin/Admin/ShopCartIndex">購物單管理</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Admin/Admin/WeekIndex">周銷售量比較</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Admin/Admin/MonthIndex">月銷售量比較</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Admin/Admin/YearIndex">年銷售量比較</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Admin/Admin/HotIndex">熱門商品推薦</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Home/LogOut">登出</a></li>
+                </ul>
+            </div>
+            <div id="main-side" class="col-md-10">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+
+<script>
+    $(function () {
+        $($(".Bar")[$("#Bar").html()]).attr("class", "Bar active");
+    })
+</script>
+@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Styles.Render("~/Content/bootstrap")
+        @RenderSection("scripts", required: false)
+    </head>
+    <body id="body">
+        <h2><b>@ViewBag.Head</b></h2>
+        <hr />
+        <div class="tab-v1">
+            <div class="col-sm-2">
+                <ul class="nav nav-pills nav-stacked" role="tablist">
+                    <li role="presentation" class="Bar"><a href="~/Home/ProductIndex">產品資料</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Home/MemberIndex">會員帳號管理</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Home/ShopCartIndex">購物單管理</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Home/WeekIndex">周銷售量比較</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Home/MonthIndex">月銷售量比較</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Home/YearIndex">年銷售量比較</a></li>
+                    <li role="presentation" class="Bar"><a href="~/Home/HotIndex">熱門商品推薦</a></li>
+                </ul>
+
+    </div>
+            <div class="col-sm-6">
+                 @RenderBody()
+            </div>
+            </div>
+    </body>
+    </html>
+    <script>
+        $(function () {
+            $($(".Bar")[$("#Bar").html()]).attr("class", "Bar active");
+        })
+    </script>*@

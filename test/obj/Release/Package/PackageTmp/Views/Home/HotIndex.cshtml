@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "熱門商品推薦";
+}
+
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+        google.load("visualization", "1.1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var finalresult = [
+                    ['', '', { role: 'style' }]];
+            $.ajaxSettings.async = false;
+            var result;
+            $.getJSON("HotChart", {}, function (res) {
+                result = res;
+            });
+            for (var j = 0; j < result.length; j++) {
+                    result[j][1] = parseInt(result[j][1]);
+            }
+            for (var i = 0; i < result.length; i++) {
+                finalresult.push(result[i]);
+                console.log(result[i]);
+            }
+            console.log(finalresult);
+            var data = google.visualization.arrayToDataTable(finalresult/*[
+                    ['', '', { role: 'style' }],
+                    ['產品A', 1940, '#b87333'],            // RGB value
+                    ['產品B', 1343, 'silver'],            // English color name
+                    ['產品C',1245 , 'gold'],
+
+                  ['產品D', 1735, 'color: #e5e4e2'], // CSS-style declaration
+            ]*/);
+
+            var options = {
+                title: '熱門商品推薦',
+
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+
+        }
+</script>
+
+<span id="Bar" hidden>6</span>
+<div id="chart_div" style="width: 1024px; height: 600px;"></div>

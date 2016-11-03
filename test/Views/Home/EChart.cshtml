@@ -1,0 +1,81 @@
+﻿<script src="../Scripts/echart/echarts.js"></script>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+<div id="main" style="width:600px;height:400px"></div>
+<script type="text/javascript">
+    require.config({
+        paths: {
+            echarts: '../Scripts/echart/'
+        }
+    });
+    var head = [];
+    var body = [];
+    var option = {
+        title: {
+            text: 'Test資料',
+            subtext: '純屬亂倫'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: head
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                mark: { show: true },
+                dataView: { show: true, readOnly: false },
+                magicType: { show: true, type: ['line', 'bar'] },
+                restore: { show: true },
+                saveAsImage: { show: true }
+            }
+        },
+        calculable: true,
+        xAxis: [
+            {
+                type: 'category',
+                boundaryGap: false,
+                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                axisLabel: {
+                    formatter: '{value} °C'
+                }
+            }
+        ],
+        series: [
+            {
+                name: '資料一',
+                type: 'line',
+                data: /*[11, 11, 15, 13, 12, 13, 10]*/body,
+                markPoint: {
+                    data: [
+                        { type: 'max', name: '最大值' },
+                        { type: 'min', name: '最小值' }
+                    ]
+                },
+                markLine: {
+                    data: [
+                        { type: 'average', name: '平均值' }
+                    ]
+                }
+            }
+        ]
+    };
+    var echarts;
+    require(['echarts',
+            'echarts/chart/line',
+            'echarts/chart/bar'], function (ec) {
+                echarts = ec;
+                var myChart = ec.init(document.getElementById('main'));
+                myChart.setOption(option);
+            });
+    
+    //var myChart = echarts.init(document.getElementById('main'));
+    //myChart.setOption(option);
+    
+</script>

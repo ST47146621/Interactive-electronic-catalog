@@ -1,0 +1,34 @@
+
+/*#campaign li:first-child a img{border:1px solid #CCC;}bigpanelborder*/
+#campaign li a:hover img{border:1px solid #7f0019;}
+#campaign p{text-align:right;}
+#campaign p a{font-weight:bold;margin:0 2px;}
+#news{width:100%;padding:15px;background-color:#F1F1F1;margin-top:15px}
+#news h2{float:left;border:0;font-size:12px;margin-bottom:10px;padding-bottom:0; font-weight:bold;}
+#news a{text-decoration:none;}
+#news .option{float:right;}
+#news .option li{float:left;margin-left:15px;font-size:10px;line-height:14px;}
+#news .option a{display:block;padding:0 0 0 19px;background:url(/img/store/top/icon.png) no-repeat;}
+#news .option .rss a{background-position:0 0;}
+#news .option .rss a:hover{background-position:0 -50px;}
+#news .option .twitter a{background-position:0 -100px;}
+#news .option .twitter a:hover{background-position:0 -150px;}
+#news dl{clear:both;overflow:hidden;margin-bottom:15px;_zoom:1;}
+#news dl dt{float:left;clear:both;margin:0 3px 5px 0;}
+#news dl dt,.info dt{color:#999;font-weight:bold;font-family:"Helvetica","Lucida Grande","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W6","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;}
+#news dl dd{overflow:hidden;margin-bottom:5px;}
+#news .newsButton a{display:block;padding:8px;font-size:10px;text-align:center;}
+#news .newsButton a{background-color:#e1e1e1;color:#333;}
+#news .newsButton a:hover{background-color:#7f0019;color:#fff;}
+#news .newsButton strong{padding-left:10px;background:url(/img/store/top/icon_openclose.gif) no-repeat;}
+#news .newsButton a strong{background-position:0 3px;}
+#news .newsButton a:hover strong{background-position:0 -47px;}
+#news #storeNewsClose a strong{background-position:0 -97px;}
+#news #storeNewsClose a:hover strong{background-position:0 -147px;}
+#news .more,#storeNewsClose{display:none;}
+#recommend .itemList ul,
+#manualrecommend .itemList ul{margin-right:-20px;letter-spacing:-.40em;}
+#recommend .itemList li,
+#manualrecommend .itemList li{display:-moz-inline-box;display:inline-block;*display:inline;*zoom:1;width:160px;margin:0 20px 10px 0;vertical-align:top;letter-spacing:normal;}
+#manualrecommend .itemList li{position:relative;width:105px;padding-left:55px;}
+#manualrecommend .itemList img{position:absolute;left:0;top:0;width:50px;height:50px; -ms-interpolation-mode: bicubic;}

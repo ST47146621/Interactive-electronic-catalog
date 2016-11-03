@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-main-title="">@ViewBag.Head</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap")
+    @RenderSection("styles", required: false)
+    @{
+        string actionlink = ViewBag.Head;
+    }
+</head>
+<body>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <div id="top-side" class="navbar navbar-default navbar-fixed-top dot-bg" role="navigation" style="background-color:none">
+        <div class="container-fluid">
+            @Html.ActionLink(actionlink, "ProductIndex", "Home", null, new { @class = "navbar-brand text-bold", style = "padding-right:0;" })
+            <span id="view-title" class="navbar-brand text-bold"></span>
+            <div class="navbar-form navbar-right padding-top-5">
+                <span class="text-bold">
+                    <a href="@Url.Action("Index", "Home", new { })">
+                        Hi @HttpContext.Current.Request.Cookies["UIC"]["Name"] !
+                    </a>
+                    ，
+                    @Html.ActionLink("登出", "LogOut", "Home", new { area = "" }, new { @class = "" })
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="row">
+            <div id="left-side" class="col-md-2 dot-bg padding-0">
+                <ul class="nav nav-pills nav-stacked" role="tablist">
+                    <li role="presentation" class="Bar"><a href="~/User/User/UserIndex">使用者資料管理</a></li>
+                    <li role="presentation" class="Bar"><a href="~/User/User/ShopIndex">購物單管理</a></li>
+                </ul>
+            </div>
+            <div id="main-side" class="col-md-10">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+
+<script>
+    $(function () {
+        $($(".Bar")[$("#Bar").html()]).attr("class", "Bar active");
+    })
+</script>

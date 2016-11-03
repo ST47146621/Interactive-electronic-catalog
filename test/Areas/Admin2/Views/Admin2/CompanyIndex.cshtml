@@ -1,0 +1,31 @@
+﻿@model List<test.Models.CompanyModel>
+@{
+    ViewBag.Title = "會員管理";
+    Layout = "~/Areas/Admin2/Views/Shared/_NewLayout.cshtml";
+}
+<div class="col-sm-1">
+    @Html.ActionLink("新增", "CompanyCreate", "Admin2", new { area = "Admin2" }, new { @class = "btn btn-primary", @data_toggle = "modal", @data_target = "#itemModal" })
+</div>
+<span id="Bar" hidden>1</span>
+<table class="table hover">
+    <tr><td>廠商代號</td><td>廠商名稱</td><td>廠商地址</td><td>廠商電話</td><td></td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="col-sm-1">@item.Sid</td>
+            <td class="col-sm-1">@item.Name</td>
+            <td class="col-sm-2">@item.Addr</td>
+            <td class="col-sm-1">@item.Phone</td>
+            <td class="col-sm-2">
+                @Html.ActionLink("修改", "CompanyEdit", "Admin2", new { Sid = item.Sid, area = "Admin2" }, new { @data_toggle = "modal", @data_target = "#itemModal" })
+                @Html.ActionLink("刪除", "CompanyDelete", "Admin2", new { Sid = item.Sid, area = "Admin2" }, new { })
+            </td>
+        </tr>
+    }
+</table>
+<div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+    </div>
+</div>

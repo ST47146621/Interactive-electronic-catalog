@@ -1,0 +1,119 @@
+﻿@charset "utf-8";
+/*左側商品類別目錄選單及搜尋區*/
+/* 左選單 */
+.error {
+    color:#ff0000
+}
+#regist{
+    margin: 0 30px 0 0;
+}
+#menu {
+	width: 150px;
+	margin: 0 30px 0 0;
+	float: left;
+	overflow: hidden;
+}
+/* 搜尋區塊 */
+#searchBlock {
+	width: 143px;
+	height: 50px;
+	margin-bottom: 30px;
+	padding: 10px 0 0 7px;
+	background: url(../images/searchBlockBg.gif) no-repeat 0 0;
+}
+#searchBlock h4 {
+	text-align: right;
+	margin: 0 10px 5px 0;
+	font-weight: 400;
+}
+#searchBlock h4 a {
+	color: #333;
+    font-weight: bold;
+    font-family: "Yu Gothic", SimHei;
+}
+#searchBlock input.txt {
+	width: 100px;
+}
+/* 活動連結 */
+ul#eventBlock {
+	border-top: solid 1px #666;
+	border-bottom: solid 1px #666;
+	margin-bottom: 30px;
+	width: 150px;
+}
+ul#eventBlock li {
+	border-bottom: solid 1px;
+	border-bottom-color: #fff;
+	height: 29px;
+	overflow: hidden;
+}
+ul#eventBlock li.first {
+	border-bottom-color: #e8e8e8;
+}
+/* 商品分類 */
+#categories {
+	width: 150px;
+}
+#categories {
+}
+ul#sortBlock {
+	width: 150px;
+}
+ul#sortBlock li {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+ul#sortBlock li li {
+	margin-bottom: 0;
+	border-bottom: solid 1px #e8e8e8;
+	overflow: hidden;
+}
+ul#sortBlock li li.select {
+	margin-bottom: 0;
+	border-bottom: 0;
+	overflow: hidden;
+}
+ul#sortBlock ol {
+	font: 400 12px/20px Arial, 新細明體;
+	border-top: solid 1px #e8e8e8;
+	color: #333;
+	padding: 8px 0 4px 21px;
+}
+ul#sortBlock ol li {
+	border: 0;
+}
+ul#sortBlock ol li.select {
+	color: #7f0019;
+}
+ul#sortBlock ol li a:link, ul#sortBlock ol li a:visited, ul#sortBlock ol li a:active {
+	color: #333;
+	text-decoration: none;
+}
+ul#sortBlock ol li a:hover {
+	color: #7f0019;
+	text-decoration: none;
+}
+
+/* 最新消息左選單 */
+ol#newMenu  {
+	font: 400 12px/22px Arial, 新細明體;
+	border-top: solid 1px #666;
+	color: #303030;
+	margin: 0 25px 0 0;
+	width: 155px;
+	float: left;
+}
+ol#newMenu li {
+	border: 0;
+	background: url(../images/iconGrayArrow.gif) no-repeat 0 8px;
+	margin: 0 0 0 30px;
+	padding: 0 0 0 10px;
+	text-decoration: underline;
+}
+ol#newMenu li a:link, ol#newMenu li a:visited, ol#newMenu li a:active {
+	color: #303030;
+}
+ol#newMenu li a:hover {
+	color: #7f0019;
+}
+

@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "年銷售量比較";
+}
+
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1.1", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            $.ajaxSettings.async = false;
+            var result;
+            $.getJSON("YearChart", {}, function (res) {
+                result = res;
+            });
+            for (var j = 1; j < result.length; j++) {
+                for (var i = 1; i < result[j].length; i++) {
+                    result[j][i] = parseInt(result[j][i]);
+                }
+            }
+            var data = google.visualization.arrayToDataTable(result/*[
+              ['Year', '產品A', '產品B', '產品C','產品D'],
+              ['2014', 125000, 40640, 25600,65000],
+              ['2015', 111270, 46500, 25710,75120],
+              ['2016', 65460, 11250, 35600,90010],
+              ['2017', 102130, 54540, 70350,101200]
+            ]*/);
+            var d = new Date();
+            var n = d.getFullYear();
+            var options = {
+                title: (n - 2) + "-" + n + '年銷售量比較',
+                hAxis: { title: '年' },
+                vAxis: { minValue: 0 }
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('columnchart_material'));
+
+            chart.draw(data, options);
+        }
+</script>
+<span id="Bar" hidden>5</span>
+<div id="columnchart_material" style="width: 1024px; height: 600px;"></div>

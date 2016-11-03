@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ARealShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ARealShopEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AllViews" EntityType="ARealShopModel.AllViews" />
+    <EntitySet Name="AllViewsColumn" EntityType="ARealShopModel.AllViewsColumn" />
+    <EntitySet Name="CategoryTable" EntityType="ARealShopModel.CategoryTable" />
+    <EntitySet Name="Color" EntityType="ARealShopModel.Color" />
+    <EntitySet Name="Company" EntityType="ARealShopModel.Company" />
+    <EntitySet Name="DetailURL" EntityType="ARealShopModel.DetailURL" />
+    <EntitySet Name="DriverLocation" EntityType="ARealShopModel.DriverLocation" />
+    <EntitySet Name="Member" EntityType="ARealShopModel.Member" />
+    <EntitySet Name="News" EntityType="ARealShopModel.News" />
+    <EntitySet Name="Product" EntityType="ARealShopModel.Product" />
+    <EntitySet Name="ProductCategory" EntityType="ARealShopModel.ProductCategory" />
+    <EntitySet Name="ProductColor" EntityType="ARealShopModel.ProductColor" />
+    <EntitySet Name="ProductImage" EntityType="ARealShopModel.ProductImage" />
+    <EntitySet Name="ProductPayment" EntityType="ARealShopModel.ProductPayment" />
+    <EntitySet Name="ProductRating" EntityType="ARealShopModel.ProductRating" />
+    <EntitySet Name="PurchaseStatus" EntityType="ARealShopModel.PurchaseStatus" />
+    <EntitySet Name="Reply" EntityType="ARealShopModel.Reply" />
+    <EntitySet Name="ShopCart" EntityType="ARealShopModel.ShopCart" />
+    <EntitySet Name="ShopCartList" EntityType="ARealShopModel.ShopCartList" />
+    <AssociationSet Name="FK_AllViewsColumn_AllViews" Association="ARealShopModel.FK_AllViewsColumn_AllViews">
+      <End Role="AllViews" EntitySet="AllViews" />
+      <End Role="AllViewsColumn" EntitySet="AllViewsColumn" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryTable_Product" Association="ARealShopModel.FK_CategoryTable_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="CategoryTable" EntitySet="CategoryTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryTable_ProductCategory" Association="ARealShopModel.FK_CategoryTable_ProductCategory">
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+      <End Role="CategoryTable" EntitySet="CategoryTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductColor_Color" Association="ARealShopModel.FK_ProductColor_Color">
+      <End Role="Color" EntitySet="Color" />
+      <End Role="ProductColor" EntitySet="ProductColor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Company" Association="ARealShopModel.FK_Product_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductCategory_Company" Association="ARealShopModel.FK_ProductCategory_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DriverLocation_ShopCart_ShopId" Association="ARealShopModel.FK_DriverLocation_ShopCart_ShopId">
+      <End Role="ShopCart" EntitySet="ShopCart" />
+      <End Role="DriverLocation" EntitySet="DriverLocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCart__Accoun__21B6055D" Association="ARealShopModel.FK__ShopCart__Accoun__21B6055D">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="ShopCart" EntitySet="ShopCart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductRating_Member" Association="ARealShopModel.FK_ProductRating_Member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="ProductRating" EntitySet="ProductRating" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reply_Member" Association="ARealShopModel.FK_Reply_Member">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="Reply" EntitySet="Reply" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductIm__Produ__1ED998B2" Association="ARealShopModel.FK__ProductIm__Produ__1ED998B2">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductImage" EntitySet="ProductImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCartL__Produ__276EDEB3" Association="ARealShopModel.FK__ShopCartL__Produ__276EDEB3">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ShopCartList" EntitySet="ShopCartList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductColor_Product" Association="ARealShopModel.FK_ProductColor_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductColor" EntitySet="ProductColor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductRating_Product" Association="ARealShopModel.FK_ProductRating_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductRating" EntitySet="ProductRating" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reply_Product" Association="ARealShopModel.FK_Reply_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Reply" EntitySet="Reply" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShopCart_PurchaseStatus" Association="ARealShopModel.FK_ShopCart_PurchaseStatus">
+      <End Role="PurchaseStatus" EntitySet="PurchaseStatus" />
+      <End Role="ShopCart" EntitySet="ShopCart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reply_Reply" Association="ARealShopModel.FK_Reply_Reply">
+      <End Role="Reply" EntitySet="Reply" />
+      <End Role="Reply1" EntitySet="Reply" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShopCartL__ShopI__267ABA7A" Association="ARealShopModel.FK__ShopCartL__ShopI__267ABA7A">
+      <End Role="ShopCart" EntitySet="ShopCart" />
+      <End Role="ShopCartList" EntitySet="ShopCartList" />
+    </AssociationSet>
+    <EntitySet Name="ApkUrl" EntityType="ARealShopModel.ApkUrl" />
+  </EntityContainer>
+  <EntityType Name="AllViews">
+    <Key>
+      <PropertyRef Name="TableName" />
+    </Key>
+    <Property Name="TableName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IsHead" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="AllViewsColumn" Relationship="ARealShopModel.FK_AllViewsColumn_AllViews" FromRole="AllViews" ToRole="AllViewsColumn" />
+  </EntityType>
+  <EntityType Name="AllViewsColumn">
+    <Key>
+      <PropertyRef Name="TableName" />
+      <PropertyRef Name="Language" />
+    </Key>
+    <Property Name="TableName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Language" Type="Int32" Nullable="false" />
+    <Property Name="SerialString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AllViews" Relationship="ARealShopModel.FK_AllViewsColumn_AllViews" FromRole="AllViewsColumn" ToRole="AllViews" />
+  </EntityType>
+  <EntityType Name="CategoryTable">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ProductId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Test" Type="Boolean" />
+    <NavigationProperty Name="Product" Relationship="ARealShopModel.FK_CategoryTable_Product" FromRole="CategoryTable" ToRole="Product" />
+    <NavigationProperty Name="ProductCategory" Relationship="ARealShopModel.FK_CategoryTable_ProductCategory" FromRole="CategoryTable" ToRole="ProductCategory" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Color1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Sharp" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductColor" Relationship="ARealShopModel.FK_ProductColor_Color" FromRole="Color" ToRole="ProductColor" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Sid" />
+    </Key>
+    <Property Name="Sid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Addr" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="Img" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="ARealShopModel.FK_Product_Company" FromRole="Company" ToRole="Product" />
+    <NavigationProperty Name="ProductCategory" Relationship="ARealShopModel.FK_ProductCategory_Company" FromRole="Company" ToRole="ProductCategory" />
+  </EntityType>
+  <EntityType Name="DetailURL">
+    <Key>
+      <PropertyRef Name="ViewAttachName" />
+    </Key>
+    <Property Name="ViewAttachName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ViewURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Width" Type="Decimal" Precision="7" Scale="3" />
+    <Property Name="Height" Type="Decimal" Precision="7" Scale="3" />
+  </EntityType>
+  <EntityType Name="DriverLocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShopId" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="DriverId" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Longitude" Type="Decimal" Nullable="false" Precision="20" Scale="6" />
+    <Property Name="Latitude" Type="Decimal" Nullable="false" Precision="20" Scale="6" />
+    <NavigationProperty Name="ShopCart" Relationship="ARealShopModel.FK_DriverLocation_ShopCart_ShopId" FromRole="DriverLocation" ToRole="ShopCart" />
+  </EntityType>
+  <EntityType Name="Member">
+    <Key>
+      <PropertyRef Name="Account" />
+    </Key>
+    <Property Name="Account" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Addr" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Birth" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Role" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Sex" Type="Boolean" />
+    <Property Name="Job" Type="Byte" />
+    <Property Name="Style" Type="Byte" />
+    <Property Name="Money" Type="Byte" />
+    <NavigationProperty Name="ShopCart" Relationship="ARealShopModel.FK__ShopCart__Accoun__21B6055D" FromRole="Member" ToRole="ShopCart" />
+    <NavigationProperty Name="ProductRating" Relationship="ARealShopModel.FK_ProductRating_Member" FromRole="Member" ToRole="ProductRating" />
+    <NavigationProperty Name="Reply" Relationship="ARealShopModel.FK_Reply_Member" FromRole="Member" ToRole="Reply" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProductSpec" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPrice" Type="Int32" Nullable="false" />
+    <Property Name="Sid" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProductMemo1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductMemo2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductMemo3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImgUrl1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImgUrl2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImgUrl3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImgUrl4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductImgUrl5" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProductCost" Type="Int32" Nullable="false" />
+    <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PushHot" Type="Boolean" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="OnShelf" Type="Boolean" Nullable="false" />
+    <Property Name="OrgPrice" Type="Int32" />
+    <NavigationProperty Name="CategoryTable" Relationship="ARealShopModel.FK_CategoryTable_Product" FromRole="Product" ToRole="CategoryTable" />
+    <NavigationProperty Name="Company" Relationship="ARealShopModel.FK_Product_Company" FromRole="Product" ToRole="Company" />
+    <NavigationProperty Name="ProductImage" Relationship="ARealShopModel.FK__ProductIm__Produ__1ED998B2" FromRole="Product" ToRole="ProductImage" />
+    <NavigationProperty Name="ShopCartList" Relationship="ARealShopModel.FK__ShopCartL__Produ__276EDEB3" FromRole="Product" ToRole="ShopCartList" />
+    <NavigationProperty Name="ProductColor" Relationship="ARealShopModel.FK_ProductColor_Product" FromRole="Product" ToRole="ProductColor" />
+    <NavigationProperty Name="ProductRating" Relationship="ARealShopModel.FK_ProductRating_Product" FromRole="Product" ToRole="ProductRating" />
+    <NavigationProperty Name="Reply" Relationship="ARealShopModel.FK_Reply_Product" FromRole="Product" ToRole="Reply" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Summary" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="Sid" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CategoryTable" Relationship="ARealShopModel.FK_CategoryTable_ProductCategory" FromRole="ProductCategory" ToRole="CategoryTable" />
+    <NavigationProperty Name="Company" Relationship="ARealShopModel.FK_ProductCategory_Company" FromRole="ProductCategory" ToRole="Company" />
+  </EntityType>
+  <EntityType Name="ProductColor">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Color" />
+    </Key>
+    <Property Name="ProductId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Color" Type="Int32" Nullable="false" />
+    <Property Name="Text" Type="Boolean" />
+    <NavigationProperty Name="Color1" Relationship="ARealShopModel.FK_ProductColor_Color" FromRole="ProductColor" ToRole="Color" />
+    <NavigationProperty Name="Product" Relationship="ARealShopModel.FK_ProductColor_Product" FromRole="ProductColor" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="ProductImage">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ProductId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ProductImgUrl" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="ARealShopModel.FK__ProductIm__Produ__1ED998B2" FromRole="ProductImage" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="ProductPayment">
+    <Key>
+      <PropertyRef Name="Year" />
+    </Key>
+    <Property Name="Year" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Cost" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductRating">
+    <Key>
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Account" />
+    </Key>
+    <Property Name="ProductId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Account" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Star" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Member" Relationship="ARealShopModel.FK_ProductRating_Member" FromRole="ProductRating" ToRole="Member" />
+    <NavigationProperty Name="Product" Relationship="ARealShopModel.FK_ProductRating_Product" FromRole="ProductRating" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="PurchaseStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ShopCart" Relationship="ARealShopModel.FK_ShopCart_PurchaseStatus" FromRole="PurchaseStatus" ToRole="ShopCart" />
+  </EntityType>
+  <EntityType Name="Reply">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Account" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RId" Type="Int32" />
+    <Property Name="ProductId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Member" Relationship="ARealShopModel.FK_Reply_Member" FromRole="Reply" ToRole="Member" />
+    <NavigationProperty Name="Product" Relationship="ARealShopModel.FK_Reply_Product" FromRole="Reply" ToRole="Product" />
+    <NavigationProperty Name="Reply1" Relationship="ARealShopModel.FK_Reply_Reply" FromRole="Reply" ToRole="Reply1" />
+    <NavigationProperty Name="Reply2" Relationship="ARealShopModel.FK_Reply_Reply" FromRole="Reply1" ToRole="Reply" />
+  </EntityType>
+  <EntityType Name="ShopCart">
+    <Key>
+      <PropertyRef Name="ShopId" />
+    </Key>
+    <Property Name="Account" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ShopId" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Payment" Type="Byte" />
+    <NavigationProperty Name="DriverLocation" Relationship="ARealShopModel.FK_DriverLocation_ShopCart_ShopId" FromRole="ShopCart" ToRole="DriverLocation" />
+    <NavigationProperty Name="Member" Relationship="ARealShopModel.FK__ShopCart__Accoun__21B6055D" FromRole="ShopCart" ToRole="Member" />
+    <NavigationProperty Name="PurchaseStatus" Relationship="ARealShopModel.FK_ShopCart_PurchaseStatus" FromRole="ShopCart" ToRole="PurchaseStatus" />
+    <NavigationProperty Name="ShopCartList" Relationship="ARealShopModel.FK__ShopCartL__ShopI__267ABA7A" FromRole="ShopCart" ToRole="ShopCartList" />
+  </EntityType>
+  <EntityType Name="ShopCartList">
+    <Key>
+      <PropertyRef Name="ShopId" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ShopId" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="IsPush" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="ARealShopModel.FK__ShopCartL__Produ__276EDEB3" FromRole="ShopCartList" ToRole="Product" />
+    <NavigationProperty Name="ShopCart" Relationship="ARealShopModel.FK__ShopCartL__ShopI__267ABA7A" FromRole="ShopCartList" ToRole="ShopCart" />
+  </EntityType>
+  <Association Name="FK_AllViewsColumn_AllViews">
+    <End Type="ARealShopModel.AllViews" Role="AllViews" Multiplicity="1" />
+    <End Type="ARealShopModel.AllViewsColumn" Role="AllViewsColumn" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AllViews">
+        <PropertyRef Name="TableName" />
+      </Principal>
+      <Dependent Role="AllViewsColumn">
+        <PropertyRef Name="TableName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryTable_Product">
+    <End Type="ARealShopModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="ARealShopModel.CategoryTable" Role="CategoryTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="CategoryTable">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryTable_ProductCategory">
+    <End Type="ARealShopModel.ProductCategory" Role="ProductCategory" Multiplicity="1" />
+    <End Type="ARealShopModel.CategoryTable" Role="CategoryTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CategoryTable">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductColor_Color">
+    <End Type="ARealShopModel.Color" Role="Color" Multiplicity="1" />
+    <End Type="ARealShopModel.ProductColor" Role="ProductColor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductColor">
+        <PropertyRef Name="Color" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Company">
+    <End Type="ARealShopModel.Company" Role="Company" Multiplicity="0..1" />
+    <End Type="ARealShopModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Sid" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductCategory_Company">
+    <End Type="ARealShopModel.Company" Role="Company" Multiplicity="0..1" />
+    <End Type="ARealShopModel.ProductCategory" Role="ProductCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Sid" />
+      </Principal>
+      <Dependent Role="ProductCategory">
+        <PropertyRef Name="Sid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DriverLocation_ShopCart_ShopId">
+    <End Type="ARealShopModel.ShopCart" Role="ShopCart" Multiplicity="1" />
+    <End Type="ARealShopModel.DriverLocation" Role="DriverLocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShopCart">
+        <PropertyRef Name="ShopId" />
+      </Principal>
+      <Dependent Role="DriverLocation">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCart__Accoun__21B6055D">
+    <End Type="ARealShopModel.Member" Role="Member" Multiplicity="1" />
+    <End Type="ARealShopModel.ShopCart" Role="ShopCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Account" />
+      </Principal>
+      <Dependent Role="ShopCart">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductRating_Member">
+    <End Type="ARealShopModel.Member" Role="Member" Multiplicity="1" />
+    <End Type="ARealShopModel.ProductRating" Role="ProductRating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Account" />
+      </Principal>
+      <Dependent Role="ProductRating">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reply_Member">
+    <End Type="ARealShopModel.Member" Role="Member" Multiplicity="0..1" />
+    <End Type="ARealShopModel.Reply" Role="Reply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="Account" />
+      </Principal>
+      <Dependent Role="Reply">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductIm__Produ__1ED998B2">
+    <End Type="ARealShopModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="ARealShopModel.ProductImage" Role="ProductImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductImage">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCartL__Produ__276EDEB3">
+    <End Type="ARealShopModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="ARealShopModel.ShopCartList" Role="ShopCartList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ShopCartList">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductColor_Product">
+    <End Type="ARealShopModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="ARealShopModel.ProductColor" Role="ProductColor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductColor">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductRating_Product">
+    <End Type="ARealShopModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="ARealShopModel.ProductRating" Role="ProductRating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="ProductRating">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reply_Product">
+    <End Type="ARealShopModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="ARealShopModel.Reply" Role="Reply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="Reply">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShopCart_PurchaseStatus">
+    <End Type="ARealShopModel.PurchaseStatus" Role="PurchaseStatus" Multiplicity="0..1" />
+    <End Type="ARealShopModel.ShopCart" Role="ShopCart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseStatus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ShopCart">
+        <PropertyRef Name="Payment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reply_Reply">
+    <End Type="ARealShopModel.Reply" Role="Reply" Multiplicity="0..1" />
+    <End Type="ARealShopModel.Reply" Role="Reply1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reply">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Reply1">
+        <PropertyRef Name="RId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShopCartL__ShopI__267ABA7A">
+    <End Type="ARealShopModel.ShopCart" Role="ShopCart" Multiplicity="1" />
+    <End Type="ARealShopModel.ShopCartList" Role="ShopCartList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShopCart">
+        <PropertyRef Name="ShopId" />
+      </Principal>
+      <Dependent Role="ShopCartList">
+        <PropertyRef Name="ShopId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ApkUrl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApkUrl1" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsServer" Type="Boolean" Nullable="false" />
+  </EntityType>
+</Schema>
